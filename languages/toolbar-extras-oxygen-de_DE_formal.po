@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Toolbar Extras for Oxygen Builder\n"
-"POT-Creation-Date: 2019-03-27 12:37+0100\n"
-"PO-Revision-Date: 2019-03-27 12:47+0100\n"
+"POT-Creation-Date: 2019-03-27 15:35+0100\n"
+"PO-Revision-Date: 2019-03-27 15:35+0100\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language: de_DE@formal\n"
@@ -30,7 +30,7 @@ msgid "First Step: Setup Environment"
 msgstr "Erster Schritt: Umgebung einrichten"
 
 #: includes/admin/admin-extras.php:55 includes/admin/tbexob-settings.php:490
-#: includes/admin/views/help-content-addon.php:75
+#: includes/admin/views/help-content-addon.php:83
 msgid "Oxygen Builder"
 msgstr "Oxygen Builder"
 
@@ -89,7 +89,7 @@ msgstr ""
 
 #. Plugin Name of the plugin/theme
 #: includes/admin/admin-extras.php:209 includes/admin/tbexob-settings.php:484
-#: includes/admin/views/help-content-addon.php:73
+#: includes/admin/views/help-content-addon.php:81
 msgid "Toolbar Extras for Oxygen Builder"
 msgstr "Toolbar Extras für Oxygen Builder"
 
@@ -102,11 +102,11 @@ msgctxt "Toolbar item label"
 msgid "Oxygen"
 msgstr "Oxygen"
 
-#: includes/admin/tbexob-settings.php:107
+#: includes/admin/tbexob-settings.php:110
 msgid "For Oxygen Builder"
 msgstr "Für Oxygen Builder"
 
-#: includes/admin/tbexob-settings.php:114
+#: includes/admin/tbexob-settings.php:117
 msgid "Name of Oxygen"
 msgstr "Name von Oxygen"
 
@@ -301,22 +301,22 @@ msgstr ""
 "Hinweis: Jeder dieser Links zeigt immer auf die Inhaltstyp-Tabelle, welches "
 "die Übersichtstabelle ist."
 
-#: includes/admin/views/help-content-addon.php:55
-msgid "How can I disable the link attributes (tooltips)?"
-msgstr "Wie kann ich die Link-Attribute (Tooltips) deaktivieren?"
-
 #: includes/admin/views/help-content-addon.php:58
-msgid "Go to"
-msgstr "Gehen Sie zu"
-
-#: includes/admin/views/help-content-addon.php:59
 msgid "Settings > Toolbar Extras > Tab: General > Section: Links Behavior"
 msgstr ""
 "Einstellungen > Toolbar Extras > Tab: Allgemeine Einstellungen > Bereich: "
 "Verhalten von Links"
 
-#. translators: %s - label, "Back to WP"
 #: includes/admin/views/help-content-addon.php:63
+msgid "How can I disable the link attributes (tooltips)?"
+msgstr "Wie kann ich die Link-Attribute (Tooltips) deaktivieren?"
+
+#: includes/admin/views/help-content-addon.php:66
+msgid "Go to"
+msgstr "Gehen Sie zu"
+
+#. translators: %s - label, "Back to WP"
+#: includes/admin/views/help-content-addon.php:71
 #, php-format
 msgid ""
 "Important note, this setting also applies to the %s section in Oxygen "
@@ -325,12 +325,12 @@ msgstr ""
 "Wichtiger Hinweis, diese Einstellung gilt auch für den Abschnitt %s in der "
 "Oxygen Builder-Oberfläche selbst."
 
-#: includes/admin/views/help-content-addon.php:69
+#: includes/admin/views/help-content-addon.php:77
 msgid "Add-On Support Info"
 msgstr "Add-On Support-Informationen"
 
 #. translators: %1$s - plugin name, "Toolbar Extras for Oxygen Builder" / %2$s - company name, "Oxygen/ Soflyy" / %3$s - product name, "Oxygen Builder"
-#: includes/admin/views/help-content-addon.php:72
+#: includes/admin/views/help-content-addon.php:80
 #, php-format
 msgid ""
 "Please note, the %1$s Add-On plugin is not officially endorsed by %2$s. It "
@@ -344,44 +344,44 @@ msgstr ""
 "der Toolbar und den Dingen, die damit verbunden sind, nicht der inneren "
 "Bedeutung von %3$s."
 
-#: includes/admin/views/help-content-addon.php:74
+#: includes/admin/views/help-content-addon.php:82
 msgid "Oxygen/ Soflyy"
 msgstr "Oxygen/ Soflyy"
 
-#: includes/admin/views/help-content-addon.php:80
+#: includes/admin/views/help-content-addon.php:88
 msgid "Important plugin links:"
 msgstr "Wichtige Plugin-Links:"
 
-#: includes/admin/views/help-content-addon.php:82
+#: includes/admin/views/help-content-addon.php:90
 msgid "Plugin website"
 msgstr "Plugin-Website"
 
-#: includes/admin/views/help-content-addon.php:84
+#: includes/admin/views/help-content-addon.php:92
 msgctxt "Help tab info"
 msgid "FAQ"
 msgstr "Häufige Fragen (FAQ)"
 
-#: includes/admin/views/help-content-addon.php:86
+#: includes/admin/views/help-content-addon.php:94
 msgctxt "Help tab info"
 msgid "Support"
 msgstr "Support"
 
-#: includes/admin/views/help-content-addon.php:88
+#: includes/admin/views/help-content-addon.php:96
 msgctxt "Help tab info"
 msgid "Facebook Group"
 msgstr "Facebook Gruppe"
 
-#: includes/admin/views/help-content-addon.php:90
+#: includes/admin/views/help-content-addon.php:98
 msgctxt "Help tab info"
 msgid "Translations"
 msgstr "Übersetzungen"
 
-#: includes/admin/views/help-content-addon.php:92
+#: includes/admin/views/help-content-addon.php:100
 msgctxt "Help tab info"
 msgid "Donate"
 msgstr "Spenden"
 
-#: includes/admin/views/help-content-addon.php:94
+#: includes/admin/views/help-content-addon.php:102
 msgctxt "Help tab info"
 msgid "Join our Newsletter"
 msgstr "Newsletter jetzt!"
@@ -428,9 +428,11 @@ msgstr "Hinweis"
 
 #. translators: %s - label, "Build Group"
 #: includes/admin/views/settings-tab-oxygen.php:128
-msgid "This only effects the Customizer links within the Toolbar's %."
+#, php-format
+msgid "This only effects the Customizer links within the Toolbar's %s."
 msgstr ""
-"Dies wirkt sich nur auf die Customizer-Links innerhalb der % der Toolbar aus."
+"Dies wirkt sich nur auf die Customizer-Links innerhalb der %s in der Toolbar "
+"aus."
 
 #: includes/admin/views/settings-tab-oxygen.php:134
 msgid "General info"
@@ -709,7 +711,7 @@ msgstr "CSS-Cache"
 msgid "Bloat Eliminator"
 msgstr "Bloat-Eliminator"
 
-#: includes/oxygen-official/items-oxygen-core.php:513 includes/tweaks.php:582
+#: includes/oxygen-official/items-oxygen-core.php:513 includes/tweaks.php:587
 msgid "Elements Library"
 msgstr "Elemente-Bibliothek"
 
@@ -987,33 +989,33 @@ msgid "Element"
 msgstr "Element"
 
 #. translators: %s - Word "Oxygen"
-#: includes/tweaks.php:434
+#: includes/tweaks.php:439
 #, php-format
 msgid "Current %s Builder Templates in use"
 msgstr "Aktuelle %s Builder Templates in Verwendung"
 
-#: includes/tweaks.php:501 includes/tweaks.php:502
+#: includes/tweaks.php:506 includes/tweaks.php:507
 msgid "Templates"
 msgstr "Templates"
 
-#: includes/tweaks.php:559
+#: includes/tweaks.php:564
 msgctxt "Label in Oxygen Toolbar"
 msgid "Templates"
 msgstr "Templates"
 
-#: includes/tweaks.php:563
+#: includes/tweaks.php:568
 msgid "Pages"
 msgstr "Seiten"
 
-#: includes/tweaks.php:572
+#: includes/tweaks.php:577
 msgid "Products"
 msgstr "Produkte"
 
-#: includes/tweaks.php:669
+#: includes/tweaks.php:674
 msgid "Opens in new tab/ window"
 msgstr "Öffnet in einem neuen Tab/ Fenster"
 
-#: includes/tweaks.php:669
+#: includes/tweaks.php:674
 msgid "Opens in same tab/ window"
 msgstr "Öffnet im gleichen Tab/ Fenster"
 

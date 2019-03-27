@@ -18,6 +18,7 @@
 
 #tab-link-tbexob-addon-help a:before {
 	clear: left;
+	color: #7e49c2;
 	content: "\f116";
 	float: left;
 	margin: 1px 5px 25px -3px;

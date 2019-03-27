@@ -125,7 +125,7 @@ function ddw_tbexob_settings_cb_oxygen_display_customizer() {
 				__( 'Note', 'toolbar-extras-oxygen' ),
 				sprintf(
 					/* translators: %s - label, "Build Group" */
-					__( 'This only effects the Customizer links within the Toolbar\'s %.', 'toolbar-extras-oxygen' ),
+					__( 'This only effects the Customizer links within the Toolbar\'s %s.', 'toolbar-extras-oxygen' ),
 					'"' . __( 'Build Group', 'toolbar-extras-oxygen' ) . '"'
 				)
 			); ?>

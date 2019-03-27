@@ -834,7 +834,7 @@ function ddw_tbexob_items_oxygen_core_resources( $admin_bar ) {
 		);
 
 		ddw_tbex_resource_item(
-			'blog',
+			'official-blog',
 			'oxygen-resources-blog',
 			'oxygen-resources',
 			ddw_tbex_get_resource_url( 'oxygen', 'url_blog' )
