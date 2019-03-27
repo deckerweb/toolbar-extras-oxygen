@@ -552,7 +552,12 @@ function ddw_tbexob_items_oxygen_core( $admin_bar ) {
 
 add_action( 'admin_bar_menu', 'ddw_tbexob_items_oxygen_settings_customizer', 100 );
 /**
- * Add main items for "Oxygen Builder" plugin (Premium, by Soflyy).
+ * Provide minimalistic Customizer access via the Toolbar to adjust "Site
+ *   Identity", "Custom CSS", "WooCommerce" and other third-party plugin stuff
+ *   there.
+ *
+ *   Note: Since the default Oxygen Builder environment does not need a theme,
+ *         this implementation does completely work theme-independent as well.
  *
  * @since 1.0.0
  *
