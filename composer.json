@@ -1,0 +1,22 @@
+{
+  "name": "deckerweb/toolbar-extras-oxygen",
+  "description": "A Toolbar Extras Add-On to enhance your workflow with the WordPress Toolbar (Admin Bar) with the amazing Oxygen Builder.",
+  "keywords": ["toolbar", "adminbar", "admin bar", "oxygen", "oxygen builder", "website", "builder", "add-on"],
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/deckerweb/toolbar-extras-oxygen",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "David Decker",
+      "homepage": "https://toolbarextras.com/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/deckerweb/toolbar-extras-oxygen/issues",
+    "source": "https://github.com/deckerweb/toolbar-extras-oxygen"
+  },
+  "require": {
+    "php": ">=5.6"
+  }
+}
