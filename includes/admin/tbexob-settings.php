@@ -91,6 +91,9 @@ function ddw_tbexob_register_settings_oxygen() {
 	/** Prepare conditional settings */
 	$plugin_inactive = ' plugin-inactive';
 
+	/** Status for "Oxygen Theme Enabler" plugin "dependency" */
+	$status_oxygen_theme_enabler = ! ddw_tbexob_is_oxygen_theme_enabler_active() ? ' plugin-oxygen-theme-enabler' : $plugin_inactive;
+
 	/** Settings args */
 	$tbexob_settings_args = array( 'sanitize_callback' => 'ddw_tbexob_validate_settings_oxygen' );
 
@@ -118,9 +121,6 @@ function ddw_tbexob_register_settings_oxygen() {
 				array( 'class' => 'tbexob-setting-oxygen-name' )
 			);
 
-			/** Settings Customizer display status */
-			$status_display_customizer = ! ddw_tbexob_is_oxygen_theme_enabler_active() ? ' oxygen-display-customizer' : $plugin_inactive;
-
 			add_settings_field(
 				'oxygen_display_customizer',
 				/* translators: %s - label, "Build Group" */
@@ -128,7 +128,7 @@ function ddw_tbexob_register_settings_oxygen() {
 				'ddw_tbexob_settings_cb_oxygen_display_customizer',
 				'tbexob_group_oxygen',
 				'tbexob-section-oxygen',
-				array( 'class' => 'tbexob-setting-oxygen-display-customizer tbex-setting-conditional' . $status_display_customizer )
+				array( 'class' => 'tbexob-setting-oxygen-display-customizer tbex-setting-conditional' . $status_oxygen_theme_enabler )
 			);
 
 			add_settings_field(
@@ -253,7 +253,7 @@ function ddw_tbexob_register_settings_oxygen() {
 				'ddw_tbexob_settings_cb_remove_submenu_themes',
 				'tbexob_group_oxygen',
 				'tbexob-section-tweaks',
-				array( 'class' => 'tbexob-setting-remove-submenu-themes' )
+				array( 'class' => 'tbexob-setting-remove-submenu-themes tbex-setting-conditional' . $status_oxygen_theme_enabler )
 			);
 
 			add_settings_field(
@@ -262,7 +262,7 @@ function ddw_tbexob_register_settings_oxygen() {
 				'ddw_tbexob_settings_cb_remove_submenu_customizer',
 				'tbexob_group_oxygen',
 				'tbexob-section-tweaks',
-				array( 'class' => 'tbexob-setting-remove-submenu-customizer' )
+				array( 'class' => 'tbexob-setting-remove-submenu-customizer tbex-setting-conditional' . $status_oxygen_theme_enabler )
 			);
 
 			add_settings_field(
@@ -271,7 +271,7 @@ function ddw_tbexob_register_settings_oxygen() {
 				'ddw_tbexob_settings_cb_remove_theme_editor',
 				'tbexob_group_oxygen',
 				'tbexob-section-tweaks',
-				array( 'class' => 'tbexob-setting-remove-theme-editor' )
+				array( 'class' => 'tbexob-setting-remove-theme-editor tbex-setting-conditional' . $status_oxygen_theme_enabler )
 			);
 
 			add_settings_field(

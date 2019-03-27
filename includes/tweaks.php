@@ -258,6 +258,11 @@ add_action( 'admin_menu', 'ddw_tbexob_maybe_remove_appearance_submenus', 1000 );
  *   would be highly confusing for users.
  *
  * @since 1.0.0
+ *
+ * @uses ddw_tbexob_is_oxygen_theme_enabler_active()
+ * @uses ddw_tbexob_use_tweak_remove_submenu_themes()
+ * @uses ddw_tbexob_use_tweak_remove_submenu_customizer()
+ * @uses ddw_tbexob_use_tweak_remove_theme_editor()
  */
 function ddw_tbexob_maybe_remove_appearance_submenus() {
 
