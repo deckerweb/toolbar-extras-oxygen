@@ -293,7 +293,7 @@ Enjoy using *Toolbar Extras for Oxygen Builder*? **[Please consider making a don
 Credit where credit is due. The following items were used, or used for inspiration for this plugin:
 
 * Oxygen "O" logo/icon and "OXYGEN" logo [courtesy of Soflyy](https://oxygenbuilder.com/)
-* JavaScript for link additions for "Back to WP" section in Oxygen inspired by plugin "Back to Oxygen Templates" by Sridhar Katakam (GPLv2 or later)
+* JavaScript for link additions for "Back to WP" section in Oxygen inspired by [plugin "Back to Oxygen Templates"](https://github.com/srikat/back-to-oxygen-templates) by [Sridhar Katakam](https://wpdevdesign.com/) (GPLv2 or later)
 
 
 
