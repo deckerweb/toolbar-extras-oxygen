@@ -16,12 +16,12 @@ Building websites with Oxygen? Your work will get easier & faster with this Tool
 
 ## Description 
 
-Quick Access to Your Oxygen Site Building Resources - Big Time Saver. Perfect for Non-Techies and Non-Coder Designers.  
+🚀 Quick Access to Your Oxygen Site Building Resources - Big Time Saver. Perfect for Non-Techies and Non-Coder Designers.  
 This smart WordPress plugin just adds some missed and **very useful Oxygen-specific admin links** to your Toolbar / Admin Bar. Save scrolling travel and time. Access settings and content pages faster from one central area in the Admin Dashboard AND when on the frontend of your site. Plus few optimizations for Oxygen's own Toolbar within the Builder :-).
 
-**Essential:** Toolbar Extras for Oxygen Builder is an **Add-On** plugin, it **requires** the base plugin "Toolbar Extras".  
-**Important:** "Oxygen Builder" is a **premium** plugin for WordPress by Soflyy.  
-**Disclaimer:** Toolbar Extras for Oxygen Builder is an **independent** free plugin by David Decker from DECKERWEB. It does **not** represent Soflyy/ Oxygen.
+ℹ️ **Essential:** Toolbar Extras for Oxygen Builder is an **Add-On** plugin, it **requires** the base plugin "Toolbar Extras".  
+ℹ️ **Important:** "Oxygen Builder" is a **premium** plugin for WordPress by Soflyy.  
+ℹ️ **Disclaimer:** Toolbar Extras for Oxygen Builder is an **independent** free plugin by David Decker from DECKERWEB. It does **not** represent Soflyy/ Oxygen.
 
 
 ### ♥️ Features - What the Plugin Does 
@@ -53,20 +53,20 @@ This smart WordPress plugin just adds some missed and **very useful Oxygen-speci
 * Fully internationalized and translateable - also tested/optimized for RTL languages
 
 
-### Oxygen Add-On Support/ Integration 
+### 🔌 Oxygen Add-On Support/ Integration 
 * [Oxygens Swiss Knife (free, by Marko Krstic)](https://github.com/krstivoja/Oxygens-Swiss-Knife)
 * [Oxygen Theme Enabler (free, by Sridhar Katakam)](https://github.com/srikat/oxygenthemeenabler) -- **Note:** The settings of this Add-On will be considered for Toolbar items! ;-)
 * [Builder Template Categories (free, by David Decker - DECKERWEB)](https://wordpress.org/plugins/builder-template-categories/)
 
 
-### A Typical Workflow / Usage 
+### 👉 A Typical Workflow / Usage 
 * Install Oxygen Builder, Toolbar Extras, plus the Toolbar Extras Oxygen Add-On - in that order
 * In Toolbar Extras settings set Oxygen as your default "Page Builder", set optional background color of Toolbar etc.
 * In the Oxygen-specific settings enable or disable various tweaks regarding Oxygen in WP-Admin, the Toolbar, and the Builder itself
 * When working on your site(s) focus on the Toolbar in the admin and on the frontend to get a habit for this "central hub"
 
 
-### Important: Required/ Recommended for plugin usage 
+### ℹ️ Important: Required/ Recommended for plugin usage 
 * Required: User has role `Administrator` (needed capabilities `manage_options` and `edit_theme_options`)
 * Required: Toolbar/ Admin Bar is enabled (user profile settings in WordPress)
 * Required: User is logged in (of course)
@@ -74,26 +74,26 @@ This smart WordPress plugin just adds some missed and **very useful Oxygen-speci
 * Recommended: Plugin's settings are enabled to show the wanted links (or any filter/ constant in code)
 
 
-### Translations 
+### 🌎 Translations 
 * English (United States) - `en_US` = default, always included
 * [German (informal, default)](https://translate.wordpress.org/locale/de/default/wp-plugins/toolbar-extras-oxygen) - `de_DE`
 * [German (formal)](https://translate.wordpress.org/locale/de/formal/wp-plugins/toolbar-extras-oxygen) - `de_DE_formal`
 * `.pot` file (`toolbar-extras-oxygen.pot`) for translators is always included in the plugin's 'languages' folder :)
 
 
-### Be a Contributor 
+### 😎 Be a Contributor 
 If you want to translate, [go to the Translation Portal at translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/toolbar-extras-oxygen).
 
 You can also contribute code-wise via our [Toolbar Extras for Oxygen Builder GitHub Repository](https://github.com/deckerweb/toolbar-extras-oxygen) - and see where you can help.
 
 
-### Documentation and Support 
+### 📝 Documentation and Support 
 * For more information about features, FAQs and documentation, check out our website at [Toolbar Extras for Oxygen Builder Plugin](https://toolbarextras.com/).
 * If you have any more questions, visit our support on the [Plugin's Forum](https://wordpress.org/support/plugin/toolbar-extras-oxygen).
 * An overview about the ongoing development you'll find on our [Trello Board for the Plugin's Roadmap](https://trello.com/b/JrpjwlX4/toolbar-extras-public-roadmap)
 
 
-### Liked Toolbar Extras for Oxygen Builder Plugin? 
+### ⚡ Liked Toolbar Extras for Oxygen Builder Plugin? 
 * Join our [Facebook Community Group](https://www.facebook.com/groups/ToolbarExtras/)
 * **Rate us 5 stars** on [WordPress.org](https://wordpress.org/support/plugin/toolbar-extras-oxygen/reviews/?filter=5/#new-post) :)
 * [**Subscribe to my Newsletter for insider info on this plugin**](https://eepurl.com/gbAUUn), plus tutorials and more stuff on deckerweb WordPress plugins - join a thriving community of site builders!
@@ -102,7 +102,7 @@ You can also contribute code-wise via our [Toolbar Extras for Oxygen Builder Git
 * Follow us on Twitter: [@ToolbarExtras](https://twitter.com/toolbarextras) and [@deckerweb](https://twitter.com/deckerweb)
 
 
-### This Plugin ... 
+### ☕ This Plugin ... 
 * ... scratches my own itch!
 * ... is *Quality Made in Germany*
 * ... was created with love (plus some coffee) :-) - [if you like it consider donating](https://www.paypal.me/deckerweb)
