@@ -82,12 +82,12 @@ You can also contribute code-wise via our [Toolbar Extras for Oxygen Builder Git
 * An overview about the ongoing development you'll find on our [Trello Board for the Plugin's Roadmap](https://trello.com/b/JrpjwlX4/toolbar-extras-public-roadmap)
 
 = ⚡ Liked Toolbar Extras for Oxygen Builder Plugin? =
-* Join our [Facebook Community Group](https://www.facebook.com/groups/ToolbarExtras/)
-* **Rate us 5 stars** on [WordPress.org](https://wordpress.org/support/plugin/toolbar-extras-oxygen/reviews/?filter=5/#new-post) :)
-* [**Subscribe to my Newsletter for insider info on this plugin**](https://eepurl.com/gbAUUn), plus tutorials and more stuff on deckerweb WordPress plugins - join a thriving community of site builders!
-* [**Become a Patron**](https://www.patreon.com/deckerweb) and support ongoing development, maintenance and support of this plugin
-* [**Follow us on Instagram**](https://www.instagram.com/toolbarextras) and like our content
-* Follow us on Twitter: [@ToolbarExtras](https://twitter.com/toolbarextras) and [@deckerweb](https://twitter.com/deckerweb)
+* Join our [Facebook Community Group 💬](https://www.facebook.com/groups/ToolbarExtras/)
+* **Rate us 5 stars** ⭐⭐⭐⭐⭐ on [WordPress.org](https://wordpress.org/support/plugin/toolbar-extras-oxygen/reviews/?filter=5/#new-post) :)
+* [**Subscribe to my Newsletter for insider info on this plugin** 💯](https://eepurl.com/gbAUUn), plus tutorials and more stuff on deckerweb WordPress plugins - join a thriving community of site builders!
+* [**Become a Patron** 💜](https://www.patreon.com/deckerweb) and support ongoing development, maintenance and support of this plugin
+* [**Follow us on Instagram** 📷](https://www.instagram.com/toolbarextras) and like our content
+* Follow us on Twitter 🐦: [@ToolbarExtras](https://twitter.com/toolbarextras) and [@deckerweb](https://twitter.com/deckerweb)
 
 = ☕ This Plugin ... =
 * ... scratches my own itch!
