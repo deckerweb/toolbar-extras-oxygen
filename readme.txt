@@ -83,7 +83,7 @@ You can also contribute code-wise via our [Toolbar Extras for Oxygen Builder Git
 
 = ⚡ Liked Toolbar Extras for Oxygen Builder Plugin? =
 * Join our [Facebook Community Group 💬](https://www.facebook.com/groups/ToolbarExtras/)
-* **Rate us 5 stars** ⭐⭐⭐⭐⭐ on [WordPress.org](https://wordpress.org/support/plugin/toolbar-extras-oxygen/reviews/?filter=5/#new-post) :)
+* **Rate us 5 ⭐ stars** on [WordPress.org](https://wordpress.org/support/plugin/toolbar-extras-oxygen/reviews/?filter=5/#new-post) :)
 * [**Subscribe to my Newsletter for insider info on this plugin** 💯](https://eepurl.com/gbAUUn), plus tutorials and more stuff on deckerweb WordPress plugins - join a thriving community of site builders!
 * [**Become a Patron** 💜](https://www.patreon.com/deckerweb) and support ongoing development, maintenance and support of this plugin
 * [**Follow us on Instagram** 📷](https://www.instagram.com/toolbarextras) and like our content
