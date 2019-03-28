@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  *
- * @uses  WP_UNINSTALL_PLUGIN
+ * @uses WP_UNINSTALL_PLUGIN
  */
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	header( 'Status: 403 Forbidden' );
@@ -31,9 +31,9 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
  *
  * @since 1.0.0
  *
- * @uses  is_user_logged_in()
- * @uses  current_user_can()
- * @uses  wp_die()
+ * @uses is_user_logged_in()
+ * @uses current_user_can()
+ * @uses wp_die()
  */
 if ( ! is_user_logged_in() ) {
 
@@ -61,8 +61,8 @@ if ( ! current_user_can( 'install_plugins' ) ) {
  *
  * @since 1.0.0
  *
- * @uses  delete_option()
- * @uses  delete_site_transient()
+ * @uses delete_option()
+ * @uses delete_site_transient()
  */
 function ddw_tbexob_delete_options_transients() {
 
@@ -80,14 +80,14 @@ function ddw_tbexob_delete_options_transients() {
  * Delete our options array (settings field) from the database.
  *    Note: Respects Multisite setups and single installs.
  *
- * @since  1.0.0
+ * @since 1.0.0
  *
- * @link   https://leaves-and-love.net/blog/making-plugin-multisite-compatible/
+ * @link https://leaves-and-love.net/blog/making-plugin-multisite-compatible/
  *
- * @uses   ddw_tbex_delete_options_transients()
+ * @uses ddw_tbex_delete_options_transients()
  *
- * @param  array $blogs
- * @param  int 	 $blog
+ * @param array $blogs
+ * @param int 	$blog
  *
  * @global $wpdb
  */
