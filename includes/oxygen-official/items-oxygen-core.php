@@ -362,18 +362,18 @@ function ddw_tbexob_items_oxygen_core( $admin_bar ) {
 				)
 			);
 
-			/** Template categories, via BTC plugin */
+			/** Elements Library categories, via BTC plugin */
 			if ( ddw_tbex_is_btcplugin_active() ) {
 
 				$admin_bar->add_node(
 					array(
 						'id'     => 'oxygen-elements-library-categories',
 						'parent' => 'oxygen-elements-library',
-						'title'  => ddw_btc_string_template( 'template' ),
+						'title'  => ddw_btc_string_template( 'library' ),
 						'href'   => esc_url( admin_url( 'edit-tags.php?taxonomy=builder-template-category&post_type=' . $type_library ) ),
 						'meta'   => array(
 							'target' => '',
-							'title'  => esc_html( ddw_btc_string_template( 'template' ) )
+							'title'  => esc_html( ddw_btc_string_template( 'library' ) )
 						)
 					)
 				);
