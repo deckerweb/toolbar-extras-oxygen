@@ -16,11 +16,11 @@ Building websites with Oxygen? Your work will get easier & faster with this Tool
 
 ## Description 
 
-Quick Access to Your Oxygen Site Building Resources - Big Time Saver. Perfect for Non-Techies and Non-Coder Designers.
+Quick Access to Your Oxygen Site Building Resources - Big Time Saver. Perfect for Non-Techies and Non-Coder Designers.  
 This smart WordPress plugin just adds some missed and **very useful Oxygen-specific admin links** to your Toolbar / Admin Bar. Save scrolling travel and time. Access settings and content pages faster from one central area in the Admin Dashboard AND when on the frontend of your site. Plus few optimizations for Oxygen's own Toolbar within the Builder :-).
 
-**Essential:** Toolbar Extras for Oxygen Builder is an **Add-On** plugin, it **requires** the base plugin "Toolbar Extras".
-**Important:** "Oxygen Builder" is a **premium** plugin for WordPress by Soflyy.
+**Essential:** Toolbar Extras for Oxygen Builder is an **Add-On** plugin, it **requires** the base plugin "Toolbar Extras".  
+**Important:** "Oxygen Builder" is a **premium** plugin for WordPress by Soflyy.  
 **Disclaimer:** Toolbar Extras for Oxygen Builder is an **independent** free plugin by David Decker from DECKERWEB. It does **not** represent Soflyy/ Oxygen.
 
 
@@ -99,6 +99,7 @@ You can also contribute code-wise via our [Toolbar Extras for Oxygen Builder Git
 * [**Subscribe to my Newsletter for insider info on this plugin**](https://eepurl.com/gbAUUn), plus tutorials and more stuff on deckerweb WordPress plugins - join a thriving community of site builders!
 * [**Become a Patron**](https://www.patreon.com/deckerweb) and support ongoing development, maintenance and support of this plugin
 * [**Follow us on Instagram**](https://www.instagram.com/toolbarextras) and like our content
+* Follow us on Twitter: [@ToolbarExtras](https://twitter.com/toolbarextras) and [@deckerweb](https://twitter.com/deckerweb)
 
 
 ### This Plugin ... 
