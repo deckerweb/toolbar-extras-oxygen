@@ -205,45 +205,35 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 
 ## Screenshots 
 
-### 1. Original Oxygen top-level item - now with icon, and customizable label
-[missing image]
+### 1. Original Oxygen top-level item - now with customizable icon and label
 
+### 2. Set Oxygen Builder as default builder in the "Build" Group
 
-### 2. Oxygen as default builder in the "Build" Group
-[missing image]
+### 3. Oxygen Builder quick jump links for all its settings in Build Group
 
+### 4. Oxygen Templates quick jump links in Build Group
 
-### 3. Oxygen Templates and Settings in Build Group
-[missing image]
+### 5. Extensive official resources always at hand
 
+### 6. Plus, awesome community resources always at hand
 
-### 4. Tweaks for Oxygen Template Post Types in "New Content" Group
-[missing image]
+### 7. Optimizations for Oxygen Template Post Types in "New Content" Group
 
+### 8. Optional Row Action "Edit with Oxygen" for a smarter, faster workflow
 
-### 5. Optional post type Row Action "Edit with Oxygen"
-[missing image]
+### 9. Optional Post State "Oxygen" for faster overview
 
+### 10. Very handy "Reusable Parts" view filter for Oxygen Templates
 
-### 6. Optional post type Post State "Oxygen"
-[missing image]
+### 11. Additional "Back to WP" links in Oxygen Builder's own Toolbar
 
+### 12. Add-On plugin support baked right in
 
-### 7. Reusable Parts view filter for Oxygen Templates
-[missing image]
+### 13. New "Oxygen" settings tab on Toolbar Extras settings page
 
+### 14. Help tab for the Oxygen Add-On
 
-### 8. Additional "Back to WP" links in Oxygen Builder's own Toolbar
-[missing image]
-
-
-### 9. Add-On plugin support baked right in
-[missing image]
-
-
-### 10. New "Oxygen" settings tab on Toolbar Extras settings page
-[missing image]
-
+### 15. Integrated Plugin Manager to easily install/activate all required, recommended and useful plugins
 
 
 
