@@ -31,7 +31,7 @@ function ddw_tbexob_default_options_oxygen() {
 		'tbexob/filter/options/default_oxygen',
 		array(
 
-			/** Oxygen components as Toolbar items */
+			/** Oxygen Builder in WP-Admin/ Toolbar items */
 			'oxygen_name'               => esc_attr_x( 'Oxygen', 'Toolbar item label', 'toolbar-extras-oxygen' ),	// "Oxygen"
 			'oxygen_display_customizer' => 'yes',
 			'oxygen_tl_use_icon'        => 'oxygen',
