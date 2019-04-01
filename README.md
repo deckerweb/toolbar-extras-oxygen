@@ -19,6 +19,9 @@ Building websites with Oxygen? Your work will get easier & faster with this Tool
 🚀 Quick Access to Your Oxygen Site Building Resources - Big Time Saver. Perfect for Non-Techies and Non-Coder Designers.  
 This smart WordPress plugin just adds some missed and **very useful Oxygen-specific admin links** to your Toolbar / Admin Bar. Save scrolling travel and time. Access settings and content pages faster from one central area in the Admin Dashboard AND when on the frontend of your site. Plus few optimizations for Oxygen's own Toolbar within the Builder :-).
 
+[![Video of Plugin's Live Demo and Walkthrough](https://img.youtube.com/vi/jmvFqH9pqrA/0.jpg)](https://www.youtube.com/watch?v=jmvFqH9pqrA)
+[**original video link**](https://www.youtube.com/watch?v=jmvFqH9pqrA) *by plugin developer David Decker*
+
 ℹ️ **Essential:** Toolbar Extras for Oxygen Builder is an **Add-On** plugin, it **requires** the base plugin "Toolbar Extras".  
 ℹ️ **Important:** "Oxygen Builder" is a **premium** plugin for WordPress by Soflyy.  
 ℹ️ **Disclaimer:** Toolbar Extras for Oxygen Builder is an **independent** free plugin by David Decker from DECKERWEB. It does **not** represent Soflyy/ Oxygen.
