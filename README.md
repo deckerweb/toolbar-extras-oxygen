@@ -207,34 +207,63 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 ## Screenshots 
 
 ### 1. Original Oxygen top-level item - now with customizable icon and label
+![Original Oxygen top-level item - now with customizable icon and label](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-1.png)
+
 
 ### 2. Set Oxygen Builder as default builder in the "Build" Group
+![Set Oxygen Builder as default builder in the "Build" Group](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-2.png)
+
 
 ### 3. Oxygen Builder quick jump links for all its settings in Build Group
+![Oxygen Builder quick jump links for all its settings in Build Group](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-3.png)
+
 
 ### 4. Oxygen Templates quick jump links in Build Group
+![Oxygen Templates quick jump links in Build Group](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-4.png)
+
 
 ### 5. Extensive official resources always at hand
+![Extensive official resources always at hand](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-5.png)
+
 
 ### 6. Plus, awesome community resources always at hand
+![Plus, awesome community resources always at hand](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-6.png)
+
 
 ### 7. Optimizations for Oxygen Template Post Types in "New Content" Group
+![Optimizations for Oxygen Template Post Types in "New Content" Group](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-7.png)
+
 
 ### 8. Optional Row Action "Edit with Oxygen" for a smarter, faster workflow
+![Optional Row Action "Edit with Oxygen" for a smarter, faster workflow](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-8.png)
+
 
 ### 9. Optional Post State "Oxygen" for faster overview
+![Optional Post State "Oxygen" for faster overview](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-9.png)
+
 
 ### 10. Very handy "Reusable Parts" view filter for Oxygen Templates
+![Very handy "Reusable Parts" view filter for Oxygen Templates](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-10.png)
+
 
 ### 11. Additional "Back to WP" links in Oxygen Builder's own Toolbar
+![Additional "Back to WP" links in Oxygen Builder's own Toolbar](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-11.png)
+
 
 ### 12. Add-On plugin support baked right in
+![Add-On plugin support baked right in](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-12.png)
+
 
 ### 13. New "Oxygen" settings tab on Toolbar Extras settings page
+![New "Oxygen" settings tab on Toolbar Extras settings page](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-13.png)
+
 
 ### 14. Help tab for the Oxygen Add-On
+![Help tab for the Oxygen Add-On](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-14.png)
+
 
 ### 15. Integrated Plugin Manager to easily install/activate all required, recommended and useful plugins
+![Integrated Plugin Manager to easily install/activate all required, recommended and useful plugins](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-15.png)
 
 
 
@@ -243,7 +272,7 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 ([For the full changelog of this plugin visit its website at ToolbarExtras.com](https://toolbarextras.com/changelog/))
 
 
-### 🎉 1.0.0 - 2019-03-?? 
+### 🎉 1.0.0 - 2019-04-02 
 * *Plugin launch. Everything's new!*
 * New: Including support for 2 Oxygen-specific Add-On plugins
 * New: New "Oxygen" tab on Toolbar Extras plugin settings page, with up to 16 different options

@@ -386,7 +386,9 @@ function ddw_tbexob_get_oxygen_item_priority() {
 }  // end function
 
 
-add_action( 'admin_bar_menu', 'ddw_tbexob_maybe_tweak_oxygen_toolbar_item', ddw_tbexob_get_oxygen_item_priority() );
+remove_action( 'admin_bar_menu', 'ct_oxygen_admin_menu', 1000 );
+add_action( 'admin_bar_menu', 'ct_oxygen_admin_menu', ddw_tbexob_get_oxygen_item_priority() );
+add_filter( 'admin_bar_menu', 'ddw_tbexob_maybe_tweak_oxygen_toolbar_item', ddw_tbexob_get_oxygen_item_priority() );
 /**
  * Based on settings render a logo/ and icon for the original "Oxygen" top-level
  *   item on the frontend.
@@ -397,8 +399,10 @@ add_action( 'admin_bar_menu', 'ddw_tbexob_maybe_tweak_oxygen_toolbar_item', ddw_
  * @uses ddw_tbexob_string_oxygen()
  * @uses ddw_tbex_item_title_with_settings_icon()
  * @uses ddw_tbex_meta_target()
+ *
+ * @param object $wp_admin_bar Holds all nodes of the Toolbar.
  */
-function ddw_tbexob_maybe_tweak_oxygen_toolbar_item( $admin_bar ) {
+function ddw_tbexob_maybe_tweak_oxygen_toolbar_item( $wp_admin_bar ) {
 
 	/** Bail early if not on the frontend! */
 	if ( is_admin() ) {
@@ -440,7 +444,7 @@ function ddw_tbexob_maybe_tweak_oxygen_toolbar_item( $admin_bar ) {
 		ddw_tbexob_string_oxygen()
 	);
 
-	$admin_bar->add_node(
+	$wp_admin_bar->add_node(
 		array(
 			'id'     => 'oxygen_admin_bar_menu',	// same as original!
 			'parent' => $parent,
@@ -492,6 +496,7 @@ add_action( 'admin_menu', 'ddw_tbexob_submenu_tweaks_oxygen', 999 );
  *
  * @uses remove_submenu_page()
  * @uses add_submenu_page()
+ * @uses ddw_tbexob_is_oxygen_theme_enabler_active()
  *
  * @global string $GLOBALS[ 'submenu' ]
  */
@@ -510,9 +515,19 @@ function ddw_tbexob_submenu_tweaks_oxygen() {
 	);
 
 	/** Thirdly, unset another "mystery occurrence" of Templates */
-	if ( isset( $GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][6] ) ) {
-		$GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][6] = null;
-	}
+	if ( ! ddw_tbexob_is_oxygen_theme_enabler_active() ) {
+
+		if ( isset( $GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][6] ) ) {
+			$GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][6] = null;
+		}
+
+	} elseif ( ddw_tbexob_is_oxygen_theme_enabler_active() ) {
+
+		if ( isset( $GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][7] ) ) {
+			$GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][7] = null;
+		}
+
+	}  // end if
 
 }  // end function
 

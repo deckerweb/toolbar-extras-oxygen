@@ -214,7 +214,7 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 ([For the full changelog of this plugin visit its website at ToolbarExtras.com](https://toolbarextras.com/changelog/))
 
 
-= 🎉 1.0.0 - 2019-03-?? =
+= 🎉 1.0.0 - 2019-04-02 =
 * *Plugin launch. Everything's new!*
 * New: Including support for 2 Oxygen-specific Add-On plugins
 * New: New "Oxygen" tab on Toolbar Extras plugin settings page, with up to 16 different options

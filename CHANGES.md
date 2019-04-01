@@ -13,7 +13,7 @@
 
 ## Changelog of the Plugin
 
-### 🎉 1.0.0 - 2019-03-??
+### 🎉 1.0.0 - 2019-04-02
 
 * *Plugin launch. Everything's new!*
 * New: Including support for 2 Oxygen-specific Add-On plugins

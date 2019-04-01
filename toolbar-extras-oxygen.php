@@ -21,8 +21,6 @@
  * Domain Path:       /languages/
  * Requires WP:       4.7
  * Requires PHP:      5.6
- * GitHub Plugin URI: https://github.com/deckerweb/toolbar-extras-oxygen
- * GitHub Branch:     master
  *
  * Copyright (c) 2019 David Decker - DECKERWEB
  */
@@ -162,7 +160,7 @@ function ddw_tbexob_check_plugin_enviroment() {
 	}  // end if
 
 	/** 2nd case: Plugin is installed & active but needs an update */
-	$tbex_version_required = '1.4.1';
+	$tbex_version_required = '1.4.2';
 
 	if ( version_compare( TBEX_PLUGIN_VERSION, $tbex_version_required, '<' ) ) {
 
@@ -287,7 +285,7 @@ function ddw_tbexob_activation_missing_toolbar_extras() {
 
 /**
  * Activation Logic: Show an admin (error) notice if the Toolbar Extras plugin
- *   is active but still on an older version (below v1.4.0).
+ *   is active but still on an older version (below v1.4.2).
  *
  * @since 1.0.0
  *
@@ -456,7 +454,7 @@ function ddw_tbexob_setup_plugin() {
 	if ( is_admin() ) {
 
 		if ( ddw_tbexob_is_toolbar_extras_active()
-			&& version_compare( TBEX_PLUGIN_VERSION, '1.4.1', '>=' )
+			&& version_compare( TBEX_PLUGIN_VERSION, '1.4.2', '>=' )
 		) {
 			require_once TBEXOB_PLUGIN_DIR . 'includes/plugin-manager.php';
 		}
