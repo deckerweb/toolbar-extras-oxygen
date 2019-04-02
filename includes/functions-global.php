@@ -30,7 +30,7 @@ function ddw_tbexob_info_values() {
 		'url_fb_group'      => 'https://www.facebook.com/groups/ToolbarExtras/',
 		'url_snippets'      => 'https://gist.github.com/deckerweb',
 		'first_code'        => '2019',
-		'url_plugin'        => 'https://toolbarextras.com/addon/oxygen-builder/',
+		'url_plugin'        => 'https://toolbarextras.com/addons/oxygen-builder/',
 		'url_plugin_docs'   => 'https://toolbarextras.com/docs-category/oxygen-builder-addon/',
 		'url_plugin_faq'    => 'https://toolbarextras.com/docs-category/faqs/',
 		'url_github'        => 'https://github.com/deckerweb/toolbar-extras-oxygen',

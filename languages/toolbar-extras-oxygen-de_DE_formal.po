@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Toolbar Extras for Oxygen Builder\n"
-"POT-Creation-Date: 2019-03-27 15:35+0100\n"
-"PO-Revision-Date: 2019-03-27 15:35+0100\n"
+"POT-Creation-Date: 2019-04-02 02:21+0200\n"
+"PO-Revision-Date: 2019-04-02 02:22+0200\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language: de_DE@formal\n"
@@ -677,7 +677,7 @@ msgstr "Allgemein"
 
 #: includes/oxygen-official/items-oxygen-core.php:419
 #: includes/oxygen-official/items-oxygen-core.php:423
-#: includes/oxygen-official/items-oxygen-core.php:661
+#: includes/oxygen-official/items-oxygen-core.php:666
 msgid "Role Manager"
 msgstr "Benutzerrollen verwalten"
 
@@ -711,7 +711,7 @@ msgstr "CSS-Cache"
 msgid "Bloat Eliminator"
 msgstr "Bloat-Eliminator"
 
-#: includes/oxygen-official/items-oxygen-core.php:513 includes/tweaks.php:587
+#: includes/oxygen-official/items-oxygen-core.php:513 includes/tweaks.php:602
 msgid "Elements Library"
 msgstr "Elemente-Bibliothek"
 
@@ -729,124 +729,124 @@ msgstr "Export &amp; Import"
 msgid "License"
 msgstr "Lizenz"
 
-#: includes/oxygen-official/items-oxygen-core.php:579
-#: includes/oxygen-official/items-oxygen-core.php:583
+#: includes/oxygen-official/items-oxygen-core.php:584
+#: includes/oxygen-official/items-oxygen-core.php:588
 msgid "Settings Customizer"
 msgstr "Einstellungen Customizer"
 
-#: includes/oxygen-official/items-oxygen-core.php:592
-#: includes/oxygen-official/items-oxygen-core.php:596
+#: includes/oxygen-official/items-oxygen-core.php:597
+#: includes/oxygen-official/items-oxygen-core.php:601
 msgid "Settings &amp; Design"
 msgstr "Einstellungen &amp; Design"
 
 #. translators: Autofocus section in the Customizer
-#: includes/oxygen-official/items-oxygen-core.php:606
-#: includes/oxygen-official/items-oxygen-core.php:610
+#: includes/oxygen-official/items-oxygen-core.php:611
+#: includes/oxygen-official/items-oxygen-core.php:615
 msgid "Site Identity"
 msgstr "Website-Identität"
 
 #. translators: Autofocus section in the Customizer
-#: includes/oxygen-official/items-oxygen-core.php:620
-#: includes/oxygen-official/items-oxygen-core.php:624
+#: includes/oxygen-official/items-oxygen-core.php:625
+#: includes/oxygen-official/items-oxygen-core.php:629
 msgid "Custom CSS"
 msgstr "Individuelles CSS"
 
 #. translators: Elementor "Role Manager" displayed in "my-account" Toolbar submenu - it's only a small area please use a short translation term!
-#: includes/oxygen-official/items-oxygen-core.php:656
+#: includes/oxygen-official/items-oxygen-core.php:661
 msgctxt "Oxygen Role Manager"
 msgid "Role Manager"
 msgstr "Benutzerrollen Verwalten"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:692
-#: includes/oxygen-official/items-oxygen-core.php:709
+#: includes/oxygen-official/items-oxygen-core.php:697
+#: includes/oxygen-official/items-oxygen-core.php:714
 #, php-format
 msgid "%s Template"
 msgstr "%s Template"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:699
+#: includes/oxygen-official/items-oxygen-core.php:704
 #, php-format
 msgid "%s Reusable Part"
 msgstr "%s Wiederverwendbarer Teil"
 
-#: includes/oxygen-official/items-oxygen-core.php:722
+#: includes/oxygen-official/items-oxygen-core.php:727
 msgid "Template"
 msgstr "Template"
 
-#: includes/oxygen-official/items-oxygen-core.php:734
+#: includes/oxygen-official/items-oxygen-core.php:739
 msgid "Reusable Part"
 msgstr "Wiederverwendbarer Teil"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:747
+#: includes/oxygen-official/items-oxygen-core.php:752
 #, php-format
 msgid "%s User Library Element"
 msgstr "%s Benutzer Bibliotheks-Element"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:757
+#: includes/oxygen-official/items-oxygen-core.php:762
 #, php-format
 msgid "%s Library Element"
 msgstr "%s Bibliotheks-Element"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:824
+#: includes/oxygen-official/items-oxygen-core.php:829
 #, php-format
 msgid "Getting Started - Learn %s Tutorials"
 msgstr "Erste Schritte - %s lernen Anleitungen"
 
-#: includes/oxygen-official/items-oxygen-core.php:854
+#: includes/oxygen-official/items-oxygen-core.php:859
 msgid "Bug Reports &amp; Feature Requests"
 msgstr "Fehlerberichte &amp; Feature-Anfragen"
 
-#: includes/oxygen-official/items-oxygen-core.php:859
+#: includes/oxygen-official/items-oxygen-core.php:864
 msgid "Bug Reports &amp; Feature Requests via GitHub Issues"
 msgstr "Fehlerberichte &amp; Feature-Anfragen via GitHub Issues"
 
-#: includes/oxygen-official/items-oxygen-core.php:900
+#: includes/oxygen-official/items-oxygen-core.php:905
 msgid "Slack Chat - Official Community Channel"
 msgstr "Slack-Chat - Offizieller Community-Kanal"
 
-#: includes/oxygen-official/items-oxygen-core.php:907
+#: includes/oxygen-official/items-oxygen-core.php:912
 msgid "Community Resources - Trello Board"
 msgstr "Community-Ressourcen - Trello-Board"
 
-#: includes/oxygen-official/items-oxygen-core.php:912
+#: includes/oxygen-official/items-oxygen-core.php:917
 msgid "Collected Community Resources - Trello Board"
 msgstr "Gesammelte Community-Ressourcen - Trello-Board"
 
-#: includes/oxygen-official/items-oxygen-core.php:921
+#: includes/oxygen-official/items-oxygen-core.php:926
 msgid "Tutorials on Oxygen &amp; WP"
 msgstr "Anleitungen zu Oxygen &amp; WP"
 
-#: includes/oxygen-official/items-oxygen-core.php:926
+#: includes/oxygen-official/items-oxygen-core.php:931
 msgid "Tutorials on Oxygen and WordPress - Community Blog"
 msgstr "Anleitungen zu Oxygen und WordPress - Community-Blog"
 
-#: includes/oxygen-official/items-oxygen-core.php:935
+#: includes/oxygen-official/items-oxygen-core.php:940
 msgid "Tutorials &amp; Tips"
 msgstr "Anleitungen &amp; Tipps"
 
-#: includes/oxygen-official/items-oxygen-core.php:940
+#: includes/oxygen-official/items-oxygen-core.php:945
 msgid "Tutorials &amp; Tips - Community Blog"
 msgstr "Anleitungen &amp; Tipps - Community-Blog"
 
-#: includes/oxygen-official/items-oxygen-core.php:983
+#: includes/oxygen-official/items-oxygen-core.php:988
 msgid "Install Website"
 msgstr "Website installieren"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:992
+#: includes/oxygen-official/items-oxygen-core.php:997
 #, php-format
 msgid "%s Design Library - Install a Different Website"
 msgstr "%s Design-Bibliothek - Eine andere Website installieren"
 
-#: includes/oxygen-official/items-oxygen-core.php:1006
+#: includes/oxygen-official/items-oxygen-core.php:1011
 msgid "Add Design Sets"
 msgstr "Design-Sets hinzufügen"
 
-#: includes/oxygen-official/items-oxygen-core.php:1011
+#: includes/oxygen-official/items-oxygen-core.php:1016
 msgid "Oxygen: Add Third-Party Design Set (Import)"
 msgstr "Oxygen: Design-Set eines Drittanbieters hinzufügen (Import)"
 
@@ -989,37 +989,37 @@ msgid "Element"
 msgstr "Element"
 
 #. translators: %s - Word "Oxygen"
-#: includes/tweaks.php:439
+#: includes/tweaks.php:443
 #, php-format
 msgid "Current %s Builder Templates in use"
 msgstr "Aktuelle %s Builder Templates in Verwendung"
 
-#: includes/tweaks.php:506 includes/tweaks.php:507
+#: includes/tweaks.php:511 includes/tweaks.php:512
 msgid "Templates"
 msgstr "Templates"
 
-#: includes/tweaks.php:564
+#: includes/tweaks.php:579
 msgctxt "Label in Oxygen Toolbar"
 msgid "Templates"
 msgstr "Templates"
 
-#: includes/tweaks.php:568
+#: includes/tweaks.php:583
 msgid "Pages"
 msgstr "Seiten"
 
-#: includes/tweaks.php:577
+#: includes/tweaks.php:592
 msgid "Products"
 msgstr "Produkte"
 
-#: includes/tweaks.php:674
+#: includes/tweaks.php:689
 msgid "Opens in new tab/ window"
 msgstr "Öffnet in einem neuen Tab/ Fenster"
 
-#: includes/tweaks.php:674
+#: includes/tweaks.php:689
 msgid "Opens in same tab/ window"
 msgstr "Öffnet im gleichen Tab/ Fenster"
 
-#: toolbar-extras-oxygen.php:245
+#: toolbar-extras-oxygen.php:244
 #, php-format
 msgid ""
 "The needed base plugin %s is already installed but not activated. (Toolbar "
@@ -1030,16 +1030,16 @@ msgstr ""
 "(Toolbar Extras for Oxygen Builder ist ein Add-On-Plugin, das von Toolbar "
 "Extras abhängt.)"
 
-#: toolbar-extras-oxygen.php:246 toolbar-extras-oxygen.php:264
-#: toolbar-extras-oxygen.php:309
+#: toolbar-extras-oxygen.php:245 toolbar-extras-oxygen.php:263
+#: toolbar-extras-oxygen.php:308
 msgid "Toolbar Extras"
 msgstr "Toolbar Extras"
 
-#: toolbar-extras-oxygen.php:251
+#: toolbar-extras-oxygen.php:250
 msgid "Activate Toolbar Extras Now"
 msgstr "Toolbar Extras jetzt aktivieren"
 
-#: toolbar-extras-oxygen.php:263
+#: toolbar-extras-oxygen.php:262
 #, php-format
 msgid ""
 "Toolbar Extras for Oxygen Builder is an Add-On plugin which DEPENDS on the "
@@ -1049,11 +1049,11 @@ msgstr ""
 "ABHÄNGT dass das (kostenlose) Plugin %s in Version 1.4.2 oder höher "
 "installiert und aktiviert worden ist."
 
-#: toolbar-extras-oxygen.php:269
+#: toolbar-extras-oxygen.php:268
 msgid "Install Toolbar Extras Now"
 msgstr "Toolbar Extras jetzt installieren"
 
-#: toolbar-extras-oxygen.php:308
+#: toolbar-extras-oxygen.php:307
 #, php-format
 msgid ""
 "Toolbar Extras for Oxygen Builder is not working yet because you are using "
@@ -1062,7 +1062,7 @@ msgstr ""
 "Toolbar Extras für Oxygen Builder funktioniert noch nicht, da Sie derzeit "
 "eine veraltete Version des Basis-Plugins %s verwenden."
 
-#: toolbar-extras-oxygen.php:314
+#: toolbar-extras-oxygen.php:313
 msgid "Update Toolbar Extras Now"
 msgstr "Toolbar Extras jetzt aktualisieren"
 
@@ -1075,24 +1075,29 @@ msgid "You do not have permission to run this script."
 msgstr "Sie haben keine Berechtigung, diese Funktion auszuführen."
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/deckerweb/toolbar-extras-oxygen"
-msgstr "https://github.com/deckerweb/toolbar-extras-oxygen"
+#. Author URI of the plugin/theme
+msgid "https://toolbarextras.com/"
+msgstr "https://toolbarextras.com/"
 
 #. Description of the plugin/theme
 msgid ""
-"A Toolbar Extras Add-On to enhance your workflow with the WordPress Toolbar "
-"(Admin Bar) with the amazing Oxygen Builder."
+"A Toolbar Extras Add-On to enhance your workflow with the amazing Oxygen "
+"Builder and the WordPress Toolbar (Admin Bar). Also comes with some very "
+"useful and smart Oxygen tweaks."
 msgstr ""
-"Ein Toolbar Extras Add-On, um Ihren Workflow mit der WordPress Toolbar "
-"(Admin Bar) in Verbindung mit dem Oxygen Builder zu verbessern."
+"Ein Toolbar Extras Add-On, um Ihren Workflow mit dem wunderbaren Oxygen "
+"Builder und der WordPress Toolbar (Admin Bar) zu verbessern. Ebenso dabei: "
+"einige sehr nützliche und smarte Oxygen Tweaks."
 
 #. Author of the plugin/theme
 msgid "David Decker - DECKERWEB"
 msgstr "David Decker - DECKERWEB"
 
-#. Author URI of the plugin/theme
-msgid "https://deckerweb.de/"
-msgstr "https://deckerweb.de/"
+#~ msgid "https://github.com/deckerweb/toolbar-extras-oxygen"
+#~ msgstr "https://github.com/deckerweb/toolbar-extras-oxygen"
+
+#~ msgid "https://deckerweb.de/"
+#~ msgstr "https://deckerweb.de/"
 
 #~ msgid "Plugin"
 #~ msgstr "Plugin"
