@@ -23,10 +23,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function ddw_tbexob_string_oxygen() {
 
+	$label = function_exists( 'ddw_tbex_get_option' ) ? ddw_tbex_get_option( 'oxygen', 'oxygen_name' ) : __( 'Oxygen', 'toolbar-extras-oxygen' );
+	
 	return esc_attr(
 		apply_filters(
 			'tbexob/filter/string/oxygen',
-			ddw_tbex_get_option( 'oxygen', 'oxygen_name' )
+			$label
 		)
 	);
 

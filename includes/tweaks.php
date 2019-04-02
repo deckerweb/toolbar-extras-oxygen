@@ -66,6 +66,96 @@ function ddw_tbexob_post_type_args_oxygen( $args, $post_type ) {
 }  // end function
 
 
+add_filter( 'parse_query', 'ddw_tbexob_oxygen_list_reusable_parts' );
+/**
+ * Create the necessary query adjustments for the "Reusable Parts" view for
+ *   Oxygen Templates.
+ *
+ * @since 1.0.0
+ *
+ * @see ddw_tbexob_views_oxygen_reusable_parts()
+ *
+ * @param object $query
+ */
+function ddw_tbexob_oxygen_list_reusable_parts( $query ) {
+
+	if ( is_admin() && 'ct_template' === $query->query[ 'post_type' ] ) {
+
+		if ( isset( $_GET[ 'oxygen-template-type' ] ) && 'reusable-parts' === sanitize_key( wp_unslash( $_GET[ 'oxygen-template-type' ] ) )	) {
+
+			$query_var = &$query->query_vars;
+
+			$query_var[ 'meta_query' ] = array(
+				array(
+					'key'     => 'ct_template_type',
+					'compare' => 'EXISTS',
+					'value'   => 'reusable_part',
+				)
+			);
+
+		}  // end if
+
+	}  // end if
+
+}  // end function
+
+
+add_filter( 'views_edit-ct_template', 'ddw_tbexob_views_oxygen_reusable_parts', 15 );
+/**
+ * Add additional view for "Reusable Parts" template type for the Oxygen
+ *   Templates post type list table.
+ *
+ *   Note: This is a necessaray in-between step so we can link to this view
+ *         independently from the Toolbar.
+ *
+ * @since 1.0.0
+ *
+ * @param array $views Array which holds all views.
+ * @return array Modified array of views.
+ */
+function ddw_tbexob_views_oxygen_reusable_parts( $views ) {
+
+	/** Set custom query arguments */
+	$args = array(
+		'post_type'  => 'ct_template',
+		'meta_query' => array(
+			array(
+				'key'     => 'ct_template_type',
+				'compare' => 'EXISTS',
+				'value'   => 'reusable_part'
+			),
+		)
+	);
+
+	/** Do the query and reset */
+	$result_reusable = new WP_Query( $args );
+	wp_reset_postdata();
+
+	/** Conditions for the necessary "current" class */
+	$class_reusable = ( isset( $_GET[ 'oxygen-template-type' ] ) && 'reusable-parts' === sanitize_key( wp_unslash( $_GET[ 'oxygen-template-type' ] ) ) ) ? ' class="current"' : '';
+
+	/** URL query arguments */
+	$admin_url_reusable = add_query_arg(
+		'oxygen-template-type',
+		'reusable-parts',
+		admin_url( 'edit.php?post_type=ct_template' )
+	);
+
+	/** Finally build the additional view */
+	$views[ 'tbexob-reusable-parts' ] = sprintf(
+		'<a href="%1$s"%2$s>%3$s <span class="count">(%4$d)</span></a>',
+		esc_url( $admin_url_reusable ),
+		$class_reusable,
+		__( 'Reusable Parts', 'toolbar-extras-oxygen' ),
+		$result_reusable->found_posts
+	);
+
+	/** Return the modified $views array */
+	return $views;
+
+}  // end function
+
+
 add_filter( 'post_row_actions', 'ddw_tbexob_add_row_action_oxygen_types', 100, 2 );
 /**
  * For Oxygen's own template post types adds an additional row action for

@@ -523,7 +523,7 @@ function ddw_tbexob_settings_cb_unload_td_oxygen() {
 			<?php echo sprintf(
 				/* translators: %s - text domain strings, for example 'oxygen' */
 				__( 'Effected text domains: %s', 'toolbar-extras-oxygen' ),
-				'<code>oxygen</code>'
+				'<code>oxygen, component-theme, oxygen-acf, oxygen-toolset</code>'
 			); ?>
 		</p>
 	<?php

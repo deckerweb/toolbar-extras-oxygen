@@ -43,6 +43,35 @@ function ddw_tbexob_info_values() {
 }  // end function
 
 
+add_filter( 'tbex_filter_get_pagebuilders', 'ddw_tbexob_register_pagebuilder_oxygen' );
+/**
+ * Register Oxygen Builder.
+ *
+ * @since 1.0.0
+ *
+ * @param array $builders Holds array of all registered Page Builders.
+ * @return array Tweaked array of Registered Page Builders.
+ */
+function ddw_tbexob_register_pagebuilder_oxygen( array $builders ) {
+
+	$builders[ 'oxygen' ] = array(
+		/* translators: Label for registered Page Builder, used on plugin's settings page */
+		'label'       => esc_attr_x( 'Oxygen', 'Label, used on plugin\'s settings page', 'toolbar-extras-oxygen' ),
+		/* translators: (Linked) Title for registered Page Builder */
+		'title'       => esc_attr_x( 'Oxygen Builder', 'Oxygen title name', 'toolbar-extras-oxygen' ),
+		/* translators: Title attribute for registered Page Builder */
+		'title_attr'  => esc_attr_x( 'Oxygen Builder', 'Oxygen title attribute name', 'toolbar-extras-oxygen' ),
+		'admin_url'   => esc_url( apply_filters( 'tbexob/filter/oxygen/admin_url', admin_url( 'edit.php?post_type=ct_template' ) ) ),
+		'color'       => '#7046db',		// '#6f59dc',
+		'color_name'  => __( 'Oxygen Blue', 'toolbar-extras-oxygen' ),
+		'plugins_tab' => 'no',
+	);
+
+	return $builders;
+
+}  // end function
+
+
 /**
  * Helper: URL Meta - Target Tag for "Back to WP" links in Oxygen Builder.
  *

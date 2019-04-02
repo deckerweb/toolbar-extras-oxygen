@@ -13,6 +13,14 @@
 
 ## Changelog of the Plugin
 
+### ⚡ 1.0.1 - 2019-04-02
+
+* New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=jmvFqH9pqrA)
+* Tweak: Further performance optimization to load as minimal stuff as possible
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* Fix: Fixed fatal error on activation (sorry!)
+
+
 ### 🎉 1.0.0 - 2019-04-02
 
 * *Plugin launch. Everything's new!*

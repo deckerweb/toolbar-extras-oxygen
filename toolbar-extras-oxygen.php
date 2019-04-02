@@ -12,7 +12,7 @@
  * Plugin Name:       Toolbar Extras for Oxygen Builder
  * Plugin URI:        https://toolbarextras.com/
  * Description:       A Toolbar Extras Add-On to enhance your workflow with the amazing Oxygen Builder and the WordPress Toolbar (Admin Bar). Also comes with some very useful and smart Oxygen tweaks.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            David Decker - DECKERWEB
  * Author URI:        https://toolbarextras.com/
  * License:           GPL-2.0-or-later
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'TBEXOB_PLUGIN_VERSION', '1.0.0' );
+define( 'TBEXOB_PLUGIN_VERSION', '1.0.1' );
 
 /** Plugin directory */
 define( 'TBEXOB_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -214,7 +214,7 @@ function ddw_tbexob_activation_style_tweaks() {
 function ddw_tbexob_activation_missing_toolbar_extras() {
 
 	/** Bail early if in Network Admin in Multisite */
-	if ( is_network_admin() ) {
+	if ( is_network_admin() || ! is_admin() ) {
 		return;
 	}
 
@@ -294,7 +294,7 @@ function ddw_tbexob_activation_missing_toolbar_extras() {
 function ddw_tbexob_activation_needs_update_toolbar_extras() {
 
 	/** Bail early if current user cannot update plugins */
-	if ( ! current_user_can( 'update_plugins' ) ) {
+	if ( ! current_user_can( 'update_plugins' ) || ! is_admin() ) {
 		return;
 	}
 
@@ -433,7 +433,8 @@ function ddw_tbexob_network_new_site_run_addon_activation( $blog_id, $user_id, $
 }  // end function
 
 
-add_action( 'plugins_loaded', 'ddw_tbexob_setup_plugin', 50 );
+//add_action( 'plugins_loaded', 'ddw_tbexob_setup_plugin', 50 );
+add_action( 'init', 'ddw_tbexob_setup_plugin', 1 );
 /**
  * Finally setup the plugin for the main tasks.
  *   Note: The setup fires after all activation checks and routines.
@@ -470,19 +471,26 @@ function ddw_tbexob_setup_plugin() {
 	/** Include items for Oxygen Builder plugin support */
 	if ( ddw_tbexob_is_oxygen_active() ) {
 
-		/** Include basic/core stuff for free Elementor plugin */
-		if ( ! defined( 'SHOW_CT_BUILDER' ) ) {
-			require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-official/oxygen-resources.php';
-			require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-official/items-oxygen-core.php';
-		}
+		/** Oxygen tweaks */
 		require_once TBEXOB_PLUGIN_DIR . 'includes/tweaks.php';
 
-	}  // end if
+		/**
+		 * Include the stuff for Oxygen Builder plugin.
+		 * Only, if not in Builder context, and only, if Toolbar items wanted.
+		 */
+		if ( ! defined( 'SHOW_CT_BUILDER' ) && ddw_tbex_show_toolbar_items() ) {
 
-	/** Conditionally load items for Oxygen-specific Add-On plugins */
-	if ( ddw_tbex_display_items_addons() && ddw_tbexob_is_oxygen_active() ) {
-		require_once TBEXOB_PLUGIN_DIR . 'includes/items-plugins-oxygen-addons.php';
-	}
+			require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-official/oxygen-resources.php';
+			require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-official/items-oxygen-core.php';
+
+			/** Conditionally load items for Oxygen-specific Add-On plugins */
+			if ( ddw_tbex_display_items_addons() ) {
+				require_once TBEXOB_PLUGIN_DIR . 'includes/items-plugins-oxygen-addons.php';
+			}
+
+		}  // end if
+
+	}  // end if
 
 	/** Add links to Settings and Menu pages to Plugins page */
 	if ( ( is_admin() || is_network_admin() )

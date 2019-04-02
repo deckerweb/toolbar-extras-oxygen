@@ -5,7 +5,7 @@
 **Requires at least:** 4.7  
 **Tested up to:** 5.1  
 **Requires PHP:** 5.6  
-**Stable tag:** 1.0.0  
+**Stable tag:** 1.0.1  
 **License:** GPL-2.0-or-later  
 **License URI:** https://opensource.org/licenses/GPL-2.0  
 
@@ -275,6 +275,13 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 ([For the full changelog of this plugin visit its website at ToolbarExtras.com](https://toolbarextras.com/changelog/))
 
 
+### ⚡ 1.0.1 - 2019-04-02
+* New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=jmvFqH9pqrA)
+* Tweak: Further performance optimization to load as minimal stuff as possible
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* Fix: Fixed fatal error on activation (sorry!)
+
+
 ### 🎉 1.0.0 - 2019-04-02 
 * *Plugin launch. Everything's new!*
 * New: Including support for 2 Oxygen-specific Add-On plugins
@@ -295,6 +302,10 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 
 
 ## Upgrade Notice 
+
+
+### 1.0.1
+Plugin launch. Everything's new! - Further fixes and optimizations. - **Update highly recommended!** :-)
 
 
 ### 1.0.0 
