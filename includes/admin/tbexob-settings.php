@@ -579,7 +579,7 @@ function ddw_tbexob_add_submenu_for_oxygen() {
 
 add_filter( 'tbex_filter_color_items', 'ddw_tbexob_add_color_item_wordpress', 100 );
 /**
- * Add additional MainWP color item to the color palette of "Local Development
+ * Add additional color items to the color palette of "Local Development
  *   environment".
  *
  * @since 1.0.0

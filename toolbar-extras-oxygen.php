@@ -12,7 +12,7 @@
  * Plugin Name:       Toolbar Extras for Oxygen Builder
  * Plugin URI:        https://toolbarextras.com/
  * Description:       A Toolbar Extras Add-On to enhance your workflow with the amazing Oxygen Builder and the WordPress Toolbar (Admin Bar). Also comes with some very useful and smart Oxygen tweaks.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            David Decker - DECKERWEB
  * Author URI:        https://toolbarextras.com/
  * License:           GPL-2.0-or-later
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'TBEXOB_PLUGIN_VERSION', '1.0.1' );
+define( 'TBEXOB_PLUGIN_VERSION', '1.0.2' );
 
 /** Plugin directory */
 define( 'TBEXOB_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -433,13 +433,40 @@ function ddw_tbexob_network_new_site_run_addon_activation( $blog_id, $user_id, $
 }  // end function
 
 
-//add_action( 'plugins_loaded', 'ddw_tbexob_setup_plugin', 50 );
+add_action( 'plugins_loaded', 'ddw_tbexob_setup_plugin_manager', 50 );
+/**
+ * Setup Plugin Manager of Toolbar Extras v1.4.2 or higher for suggested plugins
+ *   for this Add-On to be used within the required/ recommended environment.
+ *
+ * @since 1.0.0
+ * @since 1.0.2 Moved into own function.
+ *
+ * @uses ddw_tbexob_is_toolbar_extras_active()
+ */
+function ddw_tbexob_setup_plugin_manager() {
+
+	/** Include admin helper functions */
+	if ( is_admin() ) {
+
+		if ( ddw_tbexob_is_toolbar_extras_active()
+			&& version_compare( TBEX_PLUGIN_VERSION, '1.4.2', '>=' )
+		) {
+			require_once TBEXOB_PLUGIN_DIR . 'includes/plugin-manager.php';
+		}
+
+	}  // end if
+
+}  // end function
+
+
 add_action( 'init', 'ddw_tbexob_setup_plugin', 1 );
 /**
  * Finally setup the plugin for the main tasks.
  *   Note: The setup fires after all activation checks and routines.
  *
  * @since 1.0.0
+ * @since 1.0.2 Moved Plugin Manager setup into own function because of loading
+ *              priorities.
  *
  * @uses ddw_tbexob_is_toolbar_extras_active()
  * @uses ddw_tbexob_is_oxygen_active()
@@ -453,12 +480,6 @@ function ddw_tbexob_setup_plugin() {
 
 	/** Include admin helper functions */
 	if ( is_admin() ) {
-
-		if ( ddw_tbexob_is_toolbar_extras_active()
-			&& version_compare( TBEX_PLUGIN_VERSION, '1.4.2', '>=' )
-		) {
-			require_once TBEXOB_PLUGIN_DIR . 'includes/plugin-manager.php';
-		}
 
 		require_once TBEXOB_PLUGIN_DIR . 'includes/admin/admin-help.php';
 		require_once TBEXOB_PLUGIN_DIR . 'includes/admin/admin-extras.php';

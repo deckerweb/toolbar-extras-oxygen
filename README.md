@@ -132,6 +132,9 @@ You can also contribute code-wise via our [Toolbar Extras for Oxygen Builder Git
 
 ### Installation 
 
+[![Video of how to Install & Activate this Add-On and set the first important setting - Live Walkthrough](https://img.youtube.com/vi/NrYj72Lpdww/0.jpg)](https://www.youtube.com/watch?v=NrYj72Lpdww)
+[**original video link**](https://www.youtube.com/watch?v=NrYj72Lpdww) *by plugin developer David Decker*
+
 1. Install using the WordPress built-in Plugin installer (via **Plugins > Add New** - search for `toolbar extras oxygen`), or extract the ZIP file and drop the contents in the `wp-content/plugins/` directory of your WordPress installation.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Optional: if Toolbar Extras base plugin isn't installed/activated yet, just follow the info and install/activate button in the admin notice that will appear
@@ -275,8 +278,19 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 ([For the full changelog of this plugin visit its website at ToolbarExtras.com](https://toolbarextras.com/changelog/))
 
 
+### ⚡ 1.0.2 - 2019-04-18
+* Tweak: Setup Plugin Manager to load earlier to actually appear again
+* Tweak: Small improvement to User Group link title attribute
+* Tweak: Internal improvements and optimizations
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* Tweak: Enhanced and improved Readme.txt file here - also added new FAQ entry
+* Fix: Proper Editor URL query params for templates to make all editable again - thanks to user feedback in [Oxygen FB Group](https://www.facebook.com/groups/1626639680763454/)
+* Fix: Correct admin URL on Plugins page listing
+
+
 ### ⚡ 1.0.1 - 2019-04-02
 * New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=jmvFqH9pqrA)
+* New: [Video of Add-On installation & activation, plus setting the first important setting](https://www.youtube.com/watch?v=NrYj72Lpdww)
 * Tweak: Further performance optimization to load as minimal stuff as possible
 * Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
 * Fix: Fixed fatal error on activation (sorry!)
@@ -302,6 +316,10 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 
 
 ## Upgrade Notice 
+
+
+### 1.0.2
+Important maintenance release with internal fixes and optimizations. - **Update highly recommended!** :-)
 
 
 ### 1.0.1

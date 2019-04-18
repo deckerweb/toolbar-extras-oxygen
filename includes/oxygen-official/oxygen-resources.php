@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /**
- * Collection of external resource links for Elementor (Pro).
+ * Collection of external resource links for Oxygen Builder.
  *   Note: This is the central place where to set/ change these links. They are
  *   then managed for displaying and using via ddw_tbex_get_resource_url().
  *

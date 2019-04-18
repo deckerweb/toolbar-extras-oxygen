@@ -39,7 +39,7 @@ function ddw_tbexob_custom_settings_links( $tbexob_links ) {
 
 			$tbexob_settings_link = sprintf(
 				'<a href="%s" title="%s"><span class="dashicons-before dashicons-admin-plugins"></span> %s</a>',
-				esc_url( admin_url( 'plugins.php?page=toolbar-extras-oxygen-suggested-plugins' ) ),
+				esc_url( admin_url( 'plugins.php?page=toolbar-extras-suggested-plugins' ) ),
 				esc_html__( 'First Step: Setup Environment to use the plugin', 'toolbar-extras-oxygen' ),
 				esc_attr__( 'First Step: Setup Environment', 'toolbar-extras-oxygen' )
 			);

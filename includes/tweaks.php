@@ -179,15 +179,35 @@ function ddw_tbexob_add_row_action_oxygen_types( $actions, $post ) {
 		return $actions;
 	}
 
+	/** Set post types */
 	$post_types = array( 'ct_template', 'oxy_user_library' );
 
+	/** Check for Oxygen Shortcodes */
+	$shortcodes = get_post_meta( $post->ID, 'ct_builder_shortcodes', TRUE );
+
+	if ( $shortcodes ) {
+		$contains_inner_content = ( strpos( $shortcodes, '[ct_inner_content' ) !== FALSE );
+	}
+
+	/** Set query arg params */
+	$query_params = array(
+		'ct_builder' => 'true',
+	);
+
+	if ( $contains_inner_content ) {
+
+		$query_params = array(
+			'ct_builder' => 'true',
+			'ct_inner'   => 'true',
+		);
+
+	}  // end if
+
+	/** Build the proper URL with the correct query params */
 	if ( in_array( $post->post_type, $post_types ) ) {
 
 		$edit_url = add_query_arg(
-			array(
-				'ct_builder' => 'true',
-				'ct_inner'   => 'true',
-			),
+			$query_params,
 			get_permalink( $post->ID )
 		);
 
@@ -201,6 +221,7 @@ function ddw_tbexob_add_row_action_oxygen_types( $actions, $post ) {
 
 	}  // end if
 
+	/** Finally, return the modified actions for row */
 	return $actions;
 
 }  // end function
@@ -257,11 +278,29 @@ function ddw_tbexob_add_row_action_post_types( $actions, $post ) {
 		/** Only add row action if we have a Oxygen-enabled item */
 		if ( ddw_tbexob_is_builder( $post->ID ) ) {
 
-			$edit_url = add_query_arg(
-				array(
+			/** Check for Oxygen Shortcodes */
+			$shortcodes = get_post_meta( $post->ID, 'ct_builder_shortcodes', TRUE );
+
+			if ( $shortcodes ) {
+				$contains_inner_content = ( strpos( $shortcodes, '[ct_inner_content' ) !== FALSE );
+			}
+
+			/** Set query arg params */
+			$query_params = array(
+				'ct_builder' => 'true',
+			);
+
+			if ( $contains_inner_content ) {
+
+				$query_params = array(
 					'ct_builder' => 'true',
 					'ct_inner'   => 'true',
-				),
+				);
+				
+			}  // end if
+	
+			$edit_url = add_query_arg(
+				$query_params,
 				get_permalink( $post->ID )
 			);
 

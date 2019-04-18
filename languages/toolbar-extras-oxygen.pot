@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Toolbar Extras for Oxygen Builder\n"
-"POT-Creation-Date: 2019-04-02 10:03+0200\n"
+"POT-Creation-Date: 2019-04-18 00:24+0200\n"
 "PO-Revision-Date: 2019-03-18 17:14+0100\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
@@ -35,8 +35,7 @@ msgid "Oxygen Builder"
 msgstr ""
 
 #: includes/admin/admin-extras.php:56
-#: includes/admin/views/settings-tab-oxygen.php:93
-#: includes/string-switcher.php:26 includes/tweaks.php:331
+#: includes/admin/views/settings-tab-oxygen.php:93 includes/tweaks.php:370
 msgid "Oxygen"
 msgstr ""
 
@@ -577,219 +576,219 @@ msgstr ""
 msgid "Swiss Knife"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:138
-#: includes/oxygen-official/items-oxygen-core.php:142
+#: includes/oxygen-official/items-oxygen-core.php:135
+#: includes/oxygen-official/items-oxygen-core.php:139
 msgid "All Templates"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:151
-#: includes/oxygen-official/items-oxygen-core.php:155
+#: includes/oxygen-official/items-oxygen-core.php:148
+#: includes/oxygen-official/items-oxygen-core.php:152
 msgid "New Template"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:183
-#: includes/oxygen-official/items-oxygen-core.php:187
+#: includes/oxygen-official/items-oxygen-core.php:180
+#: includes/oxygen-official/items-oxygen-core.php:184
 msgid "All Reusable Parts"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:196
-#: includes/oxygen-official/items-oxygen-core.php:200
+#: includes/oxygen-official/items-oxygen-core.php:193
+#: includes/oxygen-official/items-oxygen-core.php:197
 msgid "New Reusable Part"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:230 includes/tweaks.php:48
+#: includes/oxygen-official/items-oxygen-core.php:227 includes/tweaks.php:48
 msgid "All Elements"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:234
+#: includes/oxygen-official/items-oxygen-core.php:231
 msgid "All Library Elements"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:243 includes/tweaks.php:53
+#: includes/oxygen-official/items-oxygen-core.php:240 includes/tweaks.php:53
 msgid "New Element"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:247
+#: includes/oxygen-official/items-oxygen-core.php:244
 msgid "New Library Element"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:293
-#: includes/oxygen-official/items-oxygen-core.php:297
+#: includes/oxygen-official/items-oxygen-core.php:290
+#: includes/oxygen-official/items-oxygen-core.php:294
 msgid "General"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:306
-#: includes/oxygen-official/items-oxygen-core.php:310
-#: includes/oxygen-official/items-oxygen-core.php:553
+#: includes/oxygen-official/items-oxygen-core.php:303
+#: includes/oxygen-official/items-oxygen-core.php:307
+#: includes/oxygen-official/items-oxygen-core.php:550
 msgid "Role Manager"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:319
-#: includes/oxygen-official/items-oxygen-core.php:323
+#: includes/oxygen-official/items-oxygen-core.php:316
+#: includes/oxygen-official/items-oxygen-core.php:320
 msgid "Post Type Manager"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:332
-#: includes/oxygen-official/items-oxygen-core.php:336
+#: includes/oxygen-official/items-oxygen-core.php:329
+#: includes/oxygen-official/items-oxygen-core.php:333
 msgid "Security"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:345
-#: includes/oxygen-official/items-oxygen-core.php:349
+#: includes/oxygen-official/items-oxygen-core.php:342
+#: includes/oxygen-official/items-oxygen-core.php:346
 msgid "SVG Sets"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:358
-#: includes/oxygen-official/items-oxygen-core.php:362
+#: includes/oxygen-official/items-oxygen-core.php:355
+#: includes/oxygen-official/items-oxygen-core.php:359
 msgid "Typekit Fonts"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:371
-#: includes/oxygen-official/items-oxygen-core.php:375
+#: includes/oxygen-official/items-oxygen-core.php:368
+#: includes/oxygen-official/items-oxygen-core.php:372
 msgid "CSS Cache"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:384
-#: includes/oxygen-official/items-oxygen-core.php:388
+#: includes/oxygen-official/items-oxygen-core.php:381
+#: includes/oxygen-official/items-oxygen-core.php:385
 msgid "Bloat Eliminator"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:400 includes/tweaks.php:692
+#: includes/oxygen-official/items-oxygen-core.php:397 includes/tweaks.php:731
 msgid "Elements Library"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:404
+#: includes/oxygen-official/items-oxygen-core.php:401
 msgid "User Library of Builder Elements &amp; Blocks"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:415
-#: includes/oxygen-official/items-oxygen-core.php:419
+#: includes/oxygen-official/items-oxygen-core.php:412
+#: includes/oxygen-official/items-oxygen-core.php:416
 msgid "Export &amp; Import"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:428
-#: includes/oxygen-official/items-oxygen-core.php:432
+#: includes/oxygen-official/items-oxygen-core.php:425
+#: includes/oxygen-official/items-oxygen-core.php:429
 msgid "License"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:471
-#: includes/oxygen-official/items-oxygen-core.php:475
+#: includes/oxygen-official/items-oxygen-core.php:468
+#: includes/oxygen-official/items-oxygen-core.php:472
 msgid "Settings Customizer"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:484
-#: includes/oxygen-official/items-oxygen-core.php:488
+#: includes/oxygen-official/items-oxygen-core.php:481
+#: includes/oxygen-official/items-oxygen-core.php:485
 msgid "Settings &amp; Design"
 msgstr ""
 
 #. translators: Autofocus section in the Customizer
-#: includes/oxygen-official/items-oxygen-core.php:498
-#: includes/oxygen-official/items-oxygen-core.php:502
+#: includes/oxygen-official/items-oxygen-core.php:495
+#: includes/oxygen-official/items-oxygen-core.php:499
 msgid "Site Identity"
 msgstr ""
 
 #. translators: Autofocus section in the Customizer
-#: includes/oxygen-official/items-oxygen-core.php:512
-#: includes/oxygen-official/items-oxygen-core.php:516
+#: includes/oxygen-official/items-oxygen-core.php:509
+#: includes/oxygen-official/items-oxygen-core.php:513
 msgid "Custom CSS"
 msgstr ""
 
-#. translators: Elementor "Role Manager" displayed in "my-account" Toolbar submenu - it's only a small area please use a short translation term!
-#: includes/oxygen-official/items-oxygen-core.php:548
+#. translators: Oxygen "Role Manager" displayed in "my-account" Toolbar submenu - it's only a small area please use a short translation term!
+#: includes/oxygen-official/items-oxygen-core.php:545
 msgctxt "Oxygen Role Manager"
 msgid "Role Manager"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:584
-#: includes/oxygen-official/items-oxygen-core.php:601
+#: includes/oxygen-official/items-oxygen-core.php:581
+#: includes/oxygen-official/items-oxygen-core.php:598
 #, php-format
 msgid "%s Template"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:591
+#: includes/oxygen-official/items-oxygen-core.php:588
 #, php-format
 msgid "%s Reusable Part"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:614
+#: includes/oxygen-official/items-oxygen-core.php:611
 msgid "Template"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:626
+#: includes/oxygen-official/items-oxygen-core.php:623
 msgid "Reusable Part"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:639
+#: includes/oxygen-official/items-oxygen-core.php:636
 #, php-format
 msgid "%s User Library Element"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:649
+#: includes/oxygen-official/items-oxygen-core.php:646
 #, php-format
 msgid "%s Library Element"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:716
+#: includes/oxygen-official/items-oxygen-core.php:713
 #, php-format
 msgid "Getting Started - Learn %s Tutorials"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:746
+#: includes/oxygen-official/items-oxygen-core.php:743
 msgid "Bug Reports &amp; Feature Requests"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:751
+#: includes/oxygen-official/items-oxygen-core.php:748
 msgid "Bug Reports &amp; Feature Requests via GitHub Issues"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:792
+#: includes/oxygen-official/items-oxygen-core.php:789
 msgid "Slack Chat - Official Community Channel"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:799
+#: includes/oxygen-official/items-oxygen-core.php:796
 msgid "Community Resources - Trello Board"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:804
+#: includes/oxygen-official/items-oxygen-core.php:801
 msgid "Collected Community Resources - Trello Board"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:813
+#: includes/oxygen-official/items-oxygen-core.php:810
 msgid "Tutorials on Oxygen &amp; WP"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:818
+#: includes/oxygen-official/items-oxygen-core.php:815
 msgid "Tutorials on Oxygen and WordPress - Community Blog"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:827
+#: includes/oxygen-official/items-oxygen-core.php:824
 msgid "Tutorials &amp; Tips"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:832
+#: includes/oxygen-official/items-oxygen-core.php:829
 msgid "Tutorials &amp; Tips - Community Blog"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:875
+#: includes/oxygen-official/items-oxygen-core.php:872
 msgid "Install Website"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:884
+#: includes/oxygen-official/items-oxygen-core.php:881
 #, php-format
 msgid "%s Design Library - Install a Different Website"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:898
+#: includes/oxygen-official/items-oxygen-core.php:895
 msgid "Add Design Sets"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:903
+#: includes/oxygen-official/items-oxygen-core.php:900
 msgid "Oxygen: Add Third-Party Design Set (Import)"
 msgstr ""
 
@@ -830,43 +829,43 @@ msgid ""
 msgstr ""
 
 #. translators: %s - Word Oxygen
-#: includes/string-switcher.php:54
+#: includes/string-switcher.php:57
 #, php-format
 msgid "%s Templates"
 msgstr ""
 
 #. translators: %s - Word Oxygen
-#: includes/string-switcher.php:80
+#: includes/string-switcher.php:83
 #, php-format
 msgid "%s Elements Library"
 msgstr ""
 
 #. translators: %s - Word Oxygen
-#: includes/string-switcher.php:105
+#: includes/string-switcher.php:108
 #, php-format
 msgid "%s Settings"
 msgstr ""
 
 #. translators: %s - Word Oxygen
-#: includes/string-switcher.php:130
+#: includes/string-switcher.php:133
 #, php-format
 msgid "%s Resources"
 msgstr ""
 
 #. translators: %s - Word Oxygen
-#: includes/string-switcher.php:155
+#: includes/string-switcher.php:158
 #, php-format
 msgid "%s Community"
 msgstr ""
 
 #. translators: %s - Word Oxygen
-#: includes/string-switcher.php:180
+#: includes/string-switcher.php:183
 #, php-format
 msgctxt "Label for Row Action"
 msgid "Edit with %s"
 msgstr ""
 
-#: includes/string-switcher.php:198
+#: includes/string-switcher.php:201
 msgid "Back to WP"
 msgstr ""
 
@@ -930,33 +929,33 @@ msgid "Reusable Parts"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
-#: includes/tweaks.php:533
+#: includes/tweaks.php:572
 #, php-format
 msgid "Current %s Builder Templates in use"
 msgstr ""
 
-#: includes/tweaks.php:601 includes/tweaks.php:602
+#: includes/tweaks.php:640 includes/tweaks.php:641
 msgid "Templates"
 msgstr ""
 
-#: includes/tweaks.php:669
+#: includes/tweaks.php:708
 msgctxt "Label in Oxygen Toolbar"
 msgid "Templates"
 msgstr ""
 
-#: includes/tweaks.php:673
+#: includes/tweaks.php:712
 msgid "Pages"
 msgstr ""
 
-#: includes/tweaks.php:682
+#: includes/tweaks.php:721
 msgid "Products"
 msgstr ""
 
-#: includes/tweaks.php:779
+#: includes/tweaks.php:818
 msgid "Opens in new tab/ window"
 msgstr ""
 
-#: includes/tweaks.php:779
+#: includes/tweaks.php:818
 msgid "Opens in same tab/ window"
 msgstr ""
 

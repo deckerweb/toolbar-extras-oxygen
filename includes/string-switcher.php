@@ -16,19 +16,22 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Allow for string switching of the "Oxygen" label.
  *
  * @since 1.0.0
+ * @since 1.0.2 Make it independent from Toolbar Extras base plugin.
  *
- * @uses ddw_tbex_get_option()
+ * @uses get_option()	//ddw_tbex_get_option()
  *
  * @return string String of Oxygen label, filterable.
  */
 function ddw_tbexob_string_oxygen() {
 
-	$label = function_exists( 'ddw_tbex_get_option' ) ? ddw_tbex_get_option( 'oxygen', 'oxygen_name' ) : __( 'Oxygen', 'toolbar-extras-oxygen' );
-	
+	//$label = function_exists( 'ddw_tbex_get_option' ) ? ddw_tbex_get_option( 'oxygen', 'oxygen_name' ) : __( 'Oxygen', 'toolbar-extras-oxygen' );
+
+	//$test = get_option( 'tbex-options-oxygen' )[ 'oxygen_name' ];
+
 	return esc_attr(
 		apply_filters(
 			'tbexob/filter/string/oxygen',
-			$label
+			get_option( 'tbex-options-oxygen' )[ 'oxygen_name' ]
 		)
 	);
 

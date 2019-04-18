@@ -5,7 +5,7 @@ Tags: toolbar, adminbar, admin bar, oxygen, page builder, website, site builder,
 Requires at least: 4.7
 Tested up to: 5.1
 Requires PHP: 5.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -114,10 +114,12 @@ You can also contribute code-wise via our [Toolbar Extras for Oxygen Builder Git
 
 = Installation =
 
+https://www.youtube.com/watch?v=NrYj72Lpdww
+
 1. Install using the WordPress built-in Plugin installer (via **Plugins > Add New** - search for `toolbar extras oxygen`), or extract the ZIP file and drop the contents in the `wp-content/plugins/` directory of your WordPress installation.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Optional: if Toolbar Extras base plugin isn't installed/activated yet, just follow the info and install/activate button in the admin notice that will appear
-4. Go to **Settings > Toolbar Extras > General** to set "Oxygen Builder" as your **default** Page Builder
+4. Go to **Settings > Toolbar Extras > tab "General"** to set "Oxygen Builder" as your **default** Page Builder
 5. Now enjoy building your site with Oxygen Builder - and let the Toolbar work for you ;-)
 
 For documentation and tutorials visit our [Knowledge Base](https://toolbarextras.com/docs/).
@@ -143,6 +145,12 @@ Example: The Oxygen Builder settings page requires the capability `manage_option
 So, to see anything added to the Toolbar, it is required the user must have the capabilities of `manage_options` and `edit_theme_options`. As long as these are in place, Toolbar Extras is the perfect companion! :-)
 
 (Note: Implementing other roles/ capabilities is not planned, and it makes no sense, really. It would require the codebase to be bloated with all those additional permission conditions and would give only very very few (if any at all!) additional links for roles like "Editor" or lower. Again, offering all items only for Admins follows the supported integrations, prevents bloat and big footprint while also avoiding very high maintenance costs.)
+
+
+= Why has the base plugin "Toolbar Extras" the word "Elementor" in its title? =
+That is only in the plugin's readme and therefore appears on the plugin page on wordpress.org. The reason is simple: the "Elementor Add-On" is de-facto built-in in the base plugin and not an extra Add-On (like this one here for Oxygen). But don't worry: you won't see any Elementor stuff ever. Those integrations are only ever loaded at all if Elementor is installed and active.
+
+So don't get confused :-) On your "Plugins" page in your WordPress install the base plugin is listed normally as just "Toolbar Extras" and that is also the official name and it is referenced everywhere as that only.
 
 
 = Does the Plugin work with the new Block Editor (Gutenberg)? =
@@ -216,8 +224,19 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 ([For the full changelog of this plugin visit its website at ToolbarExtras.com](https://toolbarextras.com/changelog/))
 
 
+= ⚡ 1.0.2 - 2019-04-18 =
+* Tweak: Setup Plugin Manager to load earlier to actually appear again
+* Tweak: Small improvement to User Group link title attribute
+* Tweak: Internal improvements and optimizations
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* Tweak: Enhanced and improved Readme.txt file here - also added new FAQ entry
+* Fix: Proper Editor URL query params for templates to make all editable again - thanks to user feedback in [Oxygen FB Group](https://www.facebook.com/groups/1626639680763454/)
+* Fix: Correct admin URL on Plugins page listing
+
+
 = ⚡ 1.0.1 - 2019-04-02 =
 * New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=jmvFqH9pqrA)
+* New: [Video of Add-On installation & activation, plus setting the first important setting](https://www.youtube.com/watch?v=NrYj72Lpdww)
 * Tweak: Further performance optimization to load as minimal stuff as possible
 * Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
 * Fix: Fixed fatal error on activation (sorry!)
@@ -240,6 +259,9 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 
 
 == Upgrade Notice =
+
+= 1.0.2 =
+Important maintenance release with internal fixes and optimizations. - **Update highly recommended!** :-)
 
 = 1.0.1 =
 Plugin launch. Everything's new! - Further fixes and optimizations. - **Update highly recommended!** :-)

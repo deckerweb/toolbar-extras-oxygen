@@ -94,12 +94,9 @@ add_action( 'admin_bar_menu', 'ddw_tbexob_items_oxygen_core', 99 );
  * @since 1.0.0
  *
  * @uses ddw_tbex_get_default_pagebuilder()
- * @uses ddw_tbex_is_elementor_version()
- * @uses ddw_tbex_string_elementor()
- * @uses ddw_tbex_get_elementor_template_add_new_url()
- * @uses ddw_tbex_string_elementor_template_with_builder()
- * @uses ddw_tbex_string_elementor_template_create_with_builder()
- * @uses ddw_tbex_string_elementor_categories_via()
+ * @uses ddw_tbex_string_oxygen()
+ * @uses ddw_tbexob_string_oxygen_templates()
+ * @uses ddw_tbexob_string_oxygen_settings()
  * @uses ddw_tbex_is_btcplugin_active()
  * @uses ddw_btc_string_template()
  * @uses ddw_tbexob_is_oxygen_user_library_active()
@@ -109,7 +106,7 @@ add_action( 'admin_bar_menu', 'ddw_tbexob_items_oxygen_core', 99 );
  */
 function ddw_tbexob_items_oxygen_core( $admin_bar ) {
 
-	/** Bail early if Elementor is not set as default page builder */
+	/** Bail early if Oxygen is not set as default page builder */
 	if ( 'oxygen' !== ddw_tbex_get_default_pagebuilder() ) {
 		return;
 	}
@@ -528,8 +525,8 @@ add_action( 'admin_bar_menu', 'ddw_tbexob_user_items_oxygen_core_roles', 99 );
  * @since 1.0.0
  *
  * @uses ddw_tbex_display_items_users()
- * @uses ddw_tbex_is_elementor_version()
  * @uses ddw_tbex_item_title_with_icon()
+ * @uses ddw_tbexob_string_oxygen()
  *
  * @param object $admin_bar Object of Toolbar nodes.
  */
@@ -544,13 +541,13 @@ function ddw_tbexob_user_items_oxygen_core_roles( $admin_bar ) {
 		array(
 			'id'     => 'oxygen-role-manager',
 			'parent' => 'group-user-roles',
-			/* translators: Elementor "Role Manager" displayed in "my-account" Toolbar submenu - it's only a small area please use a short translation term! */
+			/* translators: Oxygen "Role Manager" displayed in "my-account" Toolbar submenu - it's only a small area please use a short translation term! */
 			'title'  => ddw_tbex_item_title_with_icon( esc_attr_x( 'Role Manager', 'Oxygen Role Manager', 'toolbar-extras-oxygen' ) ),
 			'href'   => esc_url( admin_url( 'admin.php?page=oxygen_vsb_settings&tab=role_manager' ) ),
 			'meta'   => array(
 				'class'  => 'tbex-users',
 				'target' => '',
-				'title'  => 'Oxygen' . ': ' . esc_attr__( 'Role Manager', 'toolbar-extras-oxygen' ),
+				'title'  => ddw_tbexob_string_oxygen() . ': ' . esc_attr__( 'Role Manager', 'toolbar-extras-oxygen' ),
 			)
 		)
 	);
@@ -560,7 +557,7 @@ function ddw_tbexob_user_items_oxygen_core_roles( $admin_bar ) {
 
 add_filter( 'admin_bar_menu', 'ddw_tbexob_aoitems_new_content_oxygen_core_main', 80 );
 /**
- * Items for "New Content" section: New Elementor Template
+ * Items for "New Content" section: New Oxygen Template
  *   Note: Filter the existing Toolbar node to make a few tweaks with the
  *         existing item.
  *
@@ -676,7 +673,7 @@ add_action( 'admin_bar_menu', 'ddw_tbexob_items_oxygen_core_resources', 99 );
 function ddw_tbexob_items_oxygen_core_resources( $admin_bar ) {
 
 	/**
-	 * Bail early if resources display is disabled or Elementor is not the
+	 * Bail early if resources display is disabled or Oxygen is not the
 	 *   default Page Builder.
 	 */
 	if ( ! ddw_tbex_display_items_resources()

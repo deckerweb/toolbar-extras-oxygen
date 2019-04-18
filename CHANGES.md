@@ -13,9 +13,21 @@
 
 ## Changelog of the Plugin
 
+### ⚡ 1.0.2 - 2019-04-18
+
+* Tweak: Setup Plugin Manager to load earlier to actually appear again
+* Tweak: Small improvement to User Group link title attribute
+* Tweak: Internal improvements and optimizations
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* Tweak: Enhanced and improved Readme.txt file here - also added new FAQ entry
+* Fix: Proper Editor URL query params for templates to make all editable again - thanks to user feedback in [Oxygen FB Group](https://www.facebook.com/groups/1626639680763454/)
+* Fix: Correct admin URL on Plugins page listing
+
+
 ### ⚡ 1.0.1 - 2019-04-02
 
 * New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=jmvFqH9pqrA)
+* New: [Video of Add-On installation & activation, plus setting the first important setting](https://www.youtube.com/watch?v=NrYj72Lpdww)
 * Tweak: Further performance optimization to load as minimal stuff as possible
 * Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
 * Fix: Fixed fatal error on activation (sorry!)
