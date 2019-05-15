@@ -60,6 +60,7 @@ This smart WordPress plugin just adds some missed and **very useful Oxygen-speci
 * [Oxygens Swiss Knife (free, by Marko Krstic)](https://github.com/krstivoja/Oxygens-Swiss-Knife)
 * [Oxygen Theme Enabler (free, by Sridhar Katakam)](https://github.com/srikat/oxygenthemeenabler) -- **Note:** The settings of this Add-On will be considered for Toolbar items! ;-)
 * [Builder Template Categories (free, by David Decker - DECKERWEB)](https://wordpress.org/plugins/builder-template-categories/)
+* [My Custom Functionality (free, by Sridhar Katakam)](https://github.com/srikat/my-custom-functionality)
 
 
 ### 👉 A Typical Workflow / Usage 
