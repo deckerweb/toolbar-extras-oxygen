@@ -224,11 +224,11 @@ function ddw_tbexob_items_oxygen_core( $admin_bar ) {
 				array(
 					'id'     => 'oxygen-elements-library-all',
 					'parent' => 'oxygen-elements-library',
-					'title'  => esc_attr__( 'All Elements', 'toolbar-extras-oxygen' ),
+					'title'  => esc_attr__( 'All Library Blocks', 'toolbar-extras-oxygen' ),
 					'href'   => esc_url( admin_url( 'edit.php?post_type=' . $type_library ) ),
 					'meta'   => array(
 						'target' => '',
-						'title'  => esc_attr__( 'All Library Elements', 'toolbar-extras-oxygen' ),
+						'title'  => esc_attr__( 'All Library Blocks', 'toolbar-extras-oxygen' ),
 					)
 				)
 			);
@@ -237,11 +237,11 @@ function ddw_tbexob_items_oxygen_core( $admin_bar ) {
 				array(
 					'id'     => 'oxygen-elements-library-new',
 					'parent' => 'oxygen-elements-library',
-					'title'  => esc_attr__( 'New Element', 'toolbar-extras-oxygen' ),
+					'title'  => esc_attr__( 'New Library Block', 'toolbar-extras-oxygen' ),
 					'href'   => esc_url( admin_url( 'post-new.php?post_type=' . $type_library ) ),
 					'meta'   => array(
 						'target' => '',
-						'title'  => esc_attr__( 'New Library Element', 'toolbar-extras-oxygen' ),
+						'title'  => esc_attr__( 'New Library Block', 'toolbar-extras-oxygen' ),
 					)
 				)
 			);
@@ -394,7 +394,7 @@ function ddw_tbexob_items_oxygen_core( $admin_bar ) {
 				array(
 					'id'     => 'oxygen-builder-settings-library',
 					'parent' => 'oxygen-builder-settings',
-					'title'  => esc_attr__( 'Elements Library', 'toolbar-extras-oxygen' ),
+					'title'  => esc_attr__( 'Block Library', 'toolbar-extras-oxygen' ),
 					'href'   => esc_url( admin_url( 'admin.php?page=oxygen_vsb_settings&tab=library_manager' ) ),
 					'meta'   => array(
 						'target' => '',
@@ -633,7 +633,7 @@ function ddw_tbexob_aoitems_new_content_oxygen_core_main( $admin_bar ) {
 
 		$library_title_attr = sprintf(
 			/* translators: %s - Word "Oxygen" */
-			__( '%s User Library Element', 'toolbar-extras-oxygen' ),
+			__( '%s User Library Block/ Element', 'toolbar-extras-oxygen' ),
 			ddw_tbexob_string_oxygen()
 		);
 
@@ -643,7 +643,7 @@ function ddw_tbexob_aoitems_new_content_oxygen_core_main( $admin_bar ) {
 				'parent' => 'new-content',
 				'title'  => sprintf(
 					/* translators: %s - Word "Oxygen" */
-					esc_attr__( '%s Library Element', 'toolbar-extras-oxygen' ),
+					esc_attr__( '%s Library Block', 'toolbar-extras-oxygen' ),
 					ddw_tbexob_string_oxygen()
 				),
 				'meta'   => array(

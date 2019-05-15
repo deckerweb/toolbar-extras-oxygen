@@ -18,6 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * -----------------------------------------------------------------------------
  */
 
+/**
+ * Add-On: My Custom Functionality (free, by Sridhar Katakam)
+ * @since 1.1.0
+ */
+if ( function_exists( 'custom_enqueue_files' ) ) {
+	require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-addons/items-my-custom-functionality.php';
+}
+
 
 
 /**

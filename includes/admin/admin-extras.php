@@ -218,6 +218,84 @@ function ddw_tbexob_admin_footer_tweak( $footer_text ) {
 }  // end function
 
 
+add_filter( 'debug_information', 'ddw_tbexob_site_health_add_debug_info', 6 );
+/**
+ * Add additional plugin related info to the Site Health Debug Info section.
+ *   (Only relevant for WordPress 5.2 or higher)
+ *
+ * @link https://make.wordpress.org/core/2019/04/25/site-health-check-in-5-2/
+ *
+ * @since 1.1.0
+ *
+ * @uses ddw_tbex_string_debug_diagnostic()
+ * @uses ddw_tbex_string_yes()
+ * @uses ddw_tbex_string_uninstalled()
+ * @uses ddw_tbexob_is_oxygen_user_library_active()
+ *
+ * @param array $debug_info Array holding all Debug Info items.
+ * @return array Modified array of Debug Info.
+ */
+function ddw_tbexob_site_health_add_debug_info( $debug_info ) {
+	
+	/** Add our Debug info */
+	$debug_info[ 'toolbar-extras-oxygen' ] = array(
+		'label'       => esc_html__( 'Toolbar Extras for Oxygen Builder', 'toolbar-extras-oxygen' ) . ' (' . esc_html__( 'Add-On Plugin', 'toolbar-extras-oxygen' ) . ')',
+		'description' => ddw_tbex_string_debug_diagnostic( 'oxygen' ),
+		'fields'      => array(
+
+			/** Add-On values etc. */
+			'tbexob_plugin_version' => array(
+				'label' => __( 'Add-On Plugin version', 'toolbar-extras-oxygen' ),
+				'value' => TBEXOB_PLUGIN_VERSION,
+			),
+			'tbexob_required_base_plugin_version' => array(
+				'label' => __( 'Required Base Plugin version', 'toolbar-extras-oxygen' ),
+				'value' => TBEXOB_REQUIRED_BASE_PLUGIN_VERSION,
+			),
+			'tbexob_oxygen_display_customizer' => array(
+				'label' => __( 'Display Settings Customizer', 'toolbar-extras' ),
+				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_display_customizer' ],
+			),
+			'tbexob_oxygen_tl_priority' => array(
+				'label' => __( 'Oxygen item priority', 'toolbar-extras' ),
+				'value' => get_option( 'tbex-options-oxygen', '1000' )[ 'oxygen_tl_priority' ],
+			),
+			'tbexob_oxygen_row_actions' => array(
+				'label' => __( 'Use Row Action', 'toolbar-extras' ),
+				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_row_actions' ],
+			),
+			'tbexob_oxygen_post_state' => array(
+				'label' => __( 'Use Post State', 'toolbar-extras' ),
+				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_post_state' ],
+			),
+			'tbexob_oxygen_btwp_links' => array(
+				'label' => __( 'Additional links Back to WP section', 'toolbar-extras' ),
+				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_btwp_links' ],
+			),
+			'tbexob_oxygen_btwp_links_blank' => array(
+				'label' => __( 'Open additional links in new tab', 'toolbar-extras' ),
+				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_btwp_links_blank' ],
+			),
+
+			/** Oxygen specific */
+			'CT_VERSION' => array(
+				'label' => 'Oxygen Builder: CT_VERSION',
+				'value' => ( ! defined( 'CT_VERSION' ) ? ddw_tbex_string_uninstalled() : CT_VERSION ),
+			),
+			'tbexob_user_library_active' => array(
+				'label' => __( 'User Library active', 'toolbar-extras-oxygen' ),
+				'value' => ( ddw_tbexob_is_oxygen_user_library_active() ? ddw_tbex_string_yes( 'return' ) : ddw_tbex_string_no( 'return' ) ),
+			),
+
+		),  // end array
+	);
+
+	/** Return modified Debug Info array */
+	return $debug_info;
+
+}  // end function
+
+
 /**
  * Inline CSS fix for Plugins page update messages.
  *

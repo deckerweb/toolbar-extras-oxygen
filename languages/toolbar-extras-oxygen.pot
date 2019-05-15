@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Toolbar Extras for Oxygen Builder\n"
-"POT-Creation-Date: 2019-04-18 00:24+0200\n"
+"POT-Creation-Date: 2019-05-15 23:08+0200\n"
 "PO-Revision-Date: 2019-03-18 17:14+0100\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
@@ -35,7 +35,7 @@ msgid "Oxygen Builder"
 msgstr ""
 
 #: includes/admin/admin-extras.php:56
-#: includes/admin/views/settings-tab-oxygen.php:93 includes/tweaks.php:370
+#: includes/admin/views/settings-tab-oxygen.php:93 includes/tweaks.php:360
 msgid "Oxygen"
 msgstr ""
 
@@ -86,9 +86,50 @@ msgid ""
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: includes/admin/admin-extras.php:209 includes/admin/tbexob-settings.php:484
+#: includes/admin/admin-extras.php:209 includes/admin/admin-extras.php:242
+#: includes/admin/tbexob-settings.php:484
 #: includes/admin/views/help-content-addon.php:81
 msgid "Toolbar Extras for Oxygen Builder"
+msgstr ""
+
+#: includes/admin/admin-extras.php:242
+msgid "Add-On Plugin"
+msgstr ""
+
+#: includes/admin/admin-extras.php:248
+msgid "Add-On Plugin version"
+msgstr ""
+
+#: includes/admin/admin-extras.php:252
+msgid "Required Base Plugin version"
+msgstr ""
+
+#: includes/admin/admin-extras.php:256
+msgid "Display Settings Customizer"
+msgstr ""
+
+#: includes/admin/admin-extras.php:260
+msgid "Oxygen item priority"
+msgstr ""
+
+#: includes/admin/admin-extras.php:264
+msgid "Use Row Action"
+msgstr ""
+
+#: includes/admin/admin-extras.php:268
+msgid "Use Post State"
+msgstr ""
+
+#: includes/admin/admin-extras.php:272
+msgid "Additional links Back to WP section"
+msgstr ""
+
+#: includes/admin/admin-extras.php:276
+msgid "Open additional links in new tab"
+msgstr ""
+
+#: includes/admin/admin-extras.php:286
+msgid "User Library active"
 msgstr ""
 
 #: includes/admin/admin-help.php:86
@@ -237,10 +278,6 @@ msgstr ""
 #: includes/admin/tbexob-settings.php:567
 msgctxt "Admin menu title"
 msgid "Oxygen Toolbar"
-msgstr ""
-
-#: includes/admin/tbexob-settings.php:594
-msgid "WordPress Black"
 msgstr ""
 
 #: includes/admin/views/help-content-addon.php:31 uninstall.php:42
@@ -559,6 +596,16 @@ msgstr ""
 msgid "Oxygen Blue"
 msgstr ""
 
+#: includes/oxygen-addons/items-my-custom-functionality.php:39
+#: includes/oxygen-addons/items-my-custom-functionality.php:43
+msgid "My Custom Functionality"
+msgstr ""
+
+#: includes/oxygen-addons/items-my-custom-functionality.php:52
+#: includes/oxygen-addons/items-my-custom-functionality.php:56
+msgid "Main Plugin File"
+msgstr ""
+
 #: includes/oxygen-addons/items-oxygen-theme-enabler.php:36
 #: includes/oxygen-addons/items-oxygen-theme-enabler.php:40
 msgid "Theme Enabler"
@@ -596,20 +643,14 @@ msgstr ""
 msgid "New Reusable Part"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:227 includes/tweaks.php:48
-msgid "All Elements"
-msgstr ""
-
+#: includes/oxygen-official/items-oxygen-core.php:227
 #: includes/oxygen-official/items-oxygen-core.php:231
-msgid "All Library Elements"
+msgid "All Library Blocks"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:240 includes/tweaks.php:53
-msgid "New Element"
-msgstr ""
-
+#: includes/oxygen-official/items-oxygen-core.php:240
 #: includes/oxygen-official/items-oxygen-core.php:244
-msgid "New Library Element"
+msgid "New Library Block"
 msgstr ""
 
 #: includes/oxygen-official/items-oxygen-core.php:290
@@ -653,8 +694,8 @@ msgstr ""
 msgid "Bloat Eliminator"
 msgstr ""
 
-#: includes/oxygen-official/items-oxygen-core.php:397 includes/tweaks.php:731
-msgid "Elements Library"
+#: includes/oxygen-official/items-oxygen-core.php:397
+msgid "Block Library"
 msgstr ""
 
 #: includes/oxygen-official/items-oxygen-core.php:401
@@ -723,13 +764,13 @@ msgstr ""
 #. translators: %s - Word "Oxygen"
 #: includes/oxygen-official/items-oxygen-core.php:636
 #, php-format
-msgid "%s User Library Element"
+msgid "%s User Library Block/ Element"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
 #: includes/oxygen-official/items-oxygen-core.php:646
 #, php-format
-msgid "%s Library Element"
+msgid "%s Library Block"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
@@ -837,7 +878,7 @@ msgstr ""
 #. translators: %s - Word Oxygen
 #: includes/string-switcher.php:83
 #, php-format
-msgid "%s Elements Library"
+msgid "%s Block Library"
 msgstr ""
 
 #. translators: %s - Word Oxygen
@@ -873,93 +914,42 @@ msgstr ""
 msgid "View Templates"
 msgstr ""
 
-#: includes/tweaks.php:45
-msgctxt "Post type general name"
-msgid "Elements"
-msgstr ""
-
-#: includes/tweaks.php:46
-msgctxt "Post type singular name"
-msgid "Element"
-msgstr ""
-
-#: includes/tweaks.php:47
-msgctxt "Admin menu name"
-msgid "Oxy User Library"
-msgstr ""
-
-#: includes/tweaks.php:49
-msgid "Add New"
-msgstr ""
-
-#: includes/tweaks.php:50
-msgid "Add New Element"
-msgstr ""
-
-#: includes/tweaks.php:51
-msgid "Edit Element"
-msgstr ""
-
-#: includes/tweaks.php:52
-msgid "View Element"
-msgstr ""
-
-#: includes/tweaks.php:54
-msgid "Search Elements"
-msgstr ""
-
-#: includes/tweaks.php:55
-msgid "Parent Elements:"
-msgstr ""
-
-#: includes/tweaks.php:56
-msgid "No Elements found."
-msgstr ""
-
-#: includes/tweaks.php:57
-msgid "No Elements found in Trash."
-msgstr ""
-
-#: includes/tweaks.php:58
-msgid "Element"
-msgstr ""
-
-#: includes/tweaks.php:149
+#: includes/tweaks.php:133
 msgid "Reusable Parts"
 msgstr ""
 
 #. translators: %s - Word "Oxygen"
-#: includes/tweaks.php:572
+#: includes/tweaks.php:562
 #, php-format
 msgid "Current %s Builder Templates in use"
 msgstr ""
 
-#: includes/tweaks.php:640 includes/tweaks.php:641
-msgid "Templates"
-msgstr ""
-
-#: includes/tweaks.php:708
+#: includes/tweaks.php:668
 msgctxt "Label in Oxygen Toolbar"
 msgid "Templates"
 msgstr ""
 
-#: includes/tweaks.php:712
+#: includes/tweaks.php:672
 msgid "Pages"
 msgstr ""
 
-#: includes/tweaks.php:721
+#: includes/tweaks.php:681
 msgid "Products"
 msgstr ""
 
-#: includes/tweaks.php:818
+#: includes/tweaks.php:691
+msgid "Elements Library"
+msgstr ""
+
+#: includes/tweaks.php:778
 msgid "Opens in new tab/ window"
 msgstr ""
 
-#: includes/tweaks.php:818
+#: includes/tweaks.php:778
 msgid "Opens in same tab/ window"
 msgstr ""
 
-#: toolbar-extras-oxygen.php:244
+#: toolbar-extras-oxygen.php:247
 #, php-format
 msgid ""
 "The needed base plugin %s is already installed but not activated. (Toolbar "
@@ -967,34 +957,35 @@ msgid ""
 "Extras.)"
 msgstr ""
 
-#: toolbar-extras-oxygen.php:245 toolbar-extras-oxygen.php:263
-#: toolbar-extras-oxygen.php:308
+#: toolbar-extras-oxygen.php:248 toolbar-extras-oxygen.php:267
+#: toolbar-extras-oxygen.php:313
 msgid "Toolbar Extras"
 msgstr ""
 
-#: toolbar-extras-oxygen.php:250
+#: toolbar-extras-oxygen.php:253
 msgid "Activate Toolbar Extras Now"
 msgstr ""
 
-#: toolbar-extras-oxygen.php:262
+#. translators: %1$s - name of the base plugin "Toolbar Extras" / %2$s - required version of base plugin, for example: 1.4.3
+#: toolbar-extras-oxygen.php:266
 #, php-format
 msgid ""
 "Toolbar Extras for Oxygen Builder is an Add-On plugin which DEPENDS on the "
-"(free) %s plugin in version 1.4.2 or higher to be installed and activated."
+"(free) %1$s plugin in version %2$s or higher to be installed and activated."
 msgstr ""
 
-#: toolbar-extras-oxygen.php:268
+#: toolbar-extras-oxygen.php:273
 msgid "Install Toolbar Extras Now"
 msgstr ""
 
-#: toolbar-extras-oxygen.php:307
+#: toolbar-extras-oxygen.php:312
 #, php-format
 msgid ""
 "Toolbar Extras for Oxygen Builder is not working yet because you are using "
 "an old version of the base plugin %s."
 msgstr ""
 
-#: toolbar-extras-oxygen.php:313
+#: toolbar-extras-oxygen.php:318
 msgid "Update Toolbar Extras Now"
 msgstr ""
 

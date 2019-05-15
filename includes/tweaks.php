@@ -17,6 +17,7 @@ add_filter( 'register_post_type_args', 'ddw_tbexob_post_type_args_oxygen', 10, 2
  * Tweak labels of Oxygen post types.
  *
  * @since 1.0.0
+ * @since 1.1.0 Tweak 'show_in_menu' argument, needed for parent/submenu tweaks.
  *
  * @param array  $args Array of post type arguments.
  * @param string $post_type ID of the post type.
@@ -32,33 +33,16 @@ function ddw_tbexob_post_type_args_oxygen( $args, $post_type ) {
 	/** Oxygen Templates */
 	if ( 'ct_template' === $post_type ) {
 
-		$args[ 'labels' ] = array(
-			'view_items'    => __( 'View Templates', 'toolbar-extras-oxygen' ),
-		);
+		$args[ 'labels' ][ 'view_items' ] = __( 'View Templates', 'toolbar-extras-oxygen' );
+
+		$args[ 'show_in_menu' ] = FALSE;
 
 	}  // end if
 
 	/** Oxygen User Elements Library */
 	if ( 'oxy_user_library' === $post_type ) {
-
-		$args[ 'labels' ] = array(
-			'name'               => _x( 'Elements', 'Post type general name', 'toolbar-extras-oxygen' ),
-			'singular_name'      => _x( 'Element', 'Post type singular name', 'toolbar-extras-oxygen' ),
-			'menu_name'          => _x( 'Oxy User Library', 'Admin menu name', 'toolbar-extras-oxygen' ),
-			'all_items'          => __( 'All Elements', 'toolbar-extras-oxygen' ),
-			'add_new'            => __( 'Add New', 'toolbar-extras-oxygen' ),
-			'add_new_item'       => __( 'Add New Element', 'toolbar-extras-oxygen' ),
-			'edit_item'          => __( 'Edit Element', 'toolbar-extras-oxygen' ),
-			'view_item'          => __( 'View Element', 'toolbar-extras-oxygen' ),
-			'new_item'           => __( 'New Element', 'toolbar-extras-oxygen' ),
-			'search_items'       => __( 'Search Elements', 'toolbar-extras-oxygen' ),
-			'parent_item_colon'  => __( 'Parent Elements:', 'toolbar-extras-oxygen' ),
-			'not_found'          => __( 'No Elements found.', 'toolbar-extras-oxygen' ),
-			'not_found_in_trash' => __( 'No Elements found in Trash.', 'toolbar-extras-oxygen' ),
-			'name_admin_bar'     => __( 'Element', 'toolbar-extras-oxygen' ),
-		);
-
-	}  // end if
+		$args[ 'show_in_menu' ] = FALSE;
+	}
 
 	/** Return tweaked post type arguments */
 	return $args;
@@ -162,6 +146,7 @@ add_filter( 'post_row_actions', 'ddw_tbexob_add_row_action_oxygen_types', 100, 2
  *   "Edit with Oxygen".
  *
  * @since 1.0.0
+ * @since 1.0.2 Tweaks for proper 'ct_inner' check.
  *
  * @uses ddw_tbexob_display_row_actions()
  * @uses ddw_tbexob_string_edit_with_oxygen()
@@ -184,6 +169,8 @@ function ddw_tbexob_add_row_action_oxygen_types( $actions, $post ) {
 
 	/** Check for Oxygen Shortcodes */
 	$shortcodes = get_post_meta( $post->ID, 'ct_builder_shortcodes', TRUE );
+
+	$contains_inner_content = FALSE;
 
 	if ( $shortcodes ) {
 		$contains_inner_content = ( strpos( $shortcodes, '[ct_inner_content' ) !== FALSE );
@@ -238,6 +225,7 @@ add_filter( 'page_row_actions', 'ddw_tbexob_add_row_action_post_types', 100, 2 )
  *       (i.e. Posts) post types.
  *
  * @since 1.0.0
+ * @since 1.0.2 Tweaks for proper 'ct_inner' check.
  *
  * @uses ddw_tbexob_display_row_actions()
  * @uses ddw_tbexob_is_builder()
@@ -281,6 +269,8 @@ function ddw_tbexob_add_row_action_post_types( $actions, $post ) {
 			/** Check for Oxygen Shortcodes */
 			$shortcodes = get_post_meta( $post->ID, 'ct_builder_shortcodes', TRUE );
 
+			$contains_inner_content = FALSE;
+
 			if ( $shortcodes ) {
 				$contains_inner_content = ( strpos( $shortcodes, '[ct_inner_content' ) !== FALSE );
 			}
@@ -298,7 +288,7 @@ function ddw_tbexob_add_row_action_post_types( $actions, $post ) {
 				);
 				
 			}  // end if
-	
+
 			$edit_url = add_query_arg(
 				$query_params,
 				get_permalink( $post->ID )
@@ -615,58 +605,13 @@ function ddw_tbexob_tweak_unload_textdomain_oxygen_builder( $textdomains ) {
 }  // end function
 
 
-add_action( 'admin_menu', 'ddw_tbexob_submenu_tweaks_oxygen', 999 );
-/**
- * Necessary tweaks to set the Oxygen Templates submenu (post type) to the
- *   proper parent file which is Oxygen Dashboard page
- *   (hook: 'ct_dashboard_page' ).
- *
- * @since 1.0.0
- *
- * @uses remove_submenu_page()
- * @uses add_submenu_page()
- * @uses ddw_tbexob_is_oxygen_theme_enabler_active()
- *
- * @global string $GLOBALS[ 'submenu' ]
- */
-function ddw_tbexob_submenu_tweaks_oxygen() {
-
-	/** Firstly, remove from "wrong" hook place */	
-	remove_submenu_page( 'ct_templates', 'edit.php?post_type=ct_template' );
-
-	/** Secondly, add to the "right" hook place/ parent file */
-	add_submenu_page(
-		'ct_dashboard_page',
-		esc_attr__( 'Templates', 'toolbar-extras-oxygen' ),
-		esc_attr__( 'Templates', 'toolbar-extras-oxygen' ),
-		'read',		// same as original!
-		esc_url( admin_url( 'edit.php?post_type=ct_template' ) )
-	);
-
-	/** Thirdly, unset another "mystery occurrence" of Templates */
-	if ( ! ddw_tbexob_is_oxygen_theme_enabler_active() ) {
-
-		if ( isset( $GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][6] ) ) {
-			$GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][6] = null;
-		}
-
-	} elseif ( ddw_tbexob_is_oxygen_theme_enabler_active() ) {
-
-		if ( isset( $GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][7] ) ) {
-			$GLOBALS[ 'submenu' ][ 'ct_dashboard_page' ][7] = null;
-		}
-
-	}  // end if
-
-}  // end function
-
-
 add_filter( 'parent_file', 'ddw_tbexob_parent_submenu_tweaks' );
 /**
  * When editing an Oxygen template within the Admin, properly highlight it as
  *   the 'submenu' of Oxygen.
  *
  * @since 1.0.0
+ * @since 1.1.0 Simplified and tweaked for Oxygen 2.3 or higher.
  *
  * @uses get_current_screen()
  *
@@ -676,7 +621,22 @@ add_filter( 'parent_file', 'ddw_tbexob_parent_submenu_tweaks' );
 function ddw_tbexob_parent_submenu_tweaks( $parent_file ) {
 
 	if ( 'ct_template' === get_current_screen()->id
+		|| 'edit-ct_template' === get_current_screen()->id
 		|| 'ct_template' === get_current_screen()->post_type
+		|| 'ct_template' === get_current_screen()->parent_base
+		|| 'ct_template' === $parent_file
+	) {
+
+		$parent_file = 'ct_dashboard_page';
+
+	}  // end if
+
+	/** For Oxygen 2.3+ */
+	if ( 'oxy_user_library' === get_current_screen()->id
+		|| 'edit-oxy_user_library' === get_current_screen()->id
+		|| 'oxy_user_library' === get_current_screen()->post_type
+		|| 'some_arbitrary' === get_current_screen()->parent_base
+		|| 'some_arbitrary' === $parent_file
 	) {
 
 		$parent_file = 'ct_dashboard_page';

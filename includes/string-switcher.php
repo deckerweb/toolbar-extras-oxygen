@@ -64,13 +64,13 @@ function ddw_tbexob_string_oxygen_templates() {
 
 
 /**
- * Build "Oxygen" Elements Library string.
+ * Build "Oxygen" Block Library string.
  *
  * @since 1.0.0
  *
  * @uses ddw_tbexob_string_oxygen()
  *
- * @return string Filterable and translateable string for "Oxygen" Elements
+ * @return string Filterable and translateable string for "Oxygen" Block
  *                Library.
  */
 function ddw_tbexob_string_oxygen_library() {
@@ -80,7 +80,7 @@ function ddw_tbexob_string_oxygen_library() {
 			'tbexob/filter/string/oxygen_library',
 			sprintf(
 				/* translators: %s - Word Oxygen */
-				__( '%s Elements Library', 'toolbar-extras-oxygen' ),
+				__( '%s Block Library', 'toolbar-extras-oxygen' ),
 				ddw_tbexob_string_oxygen()
 			)
 		)

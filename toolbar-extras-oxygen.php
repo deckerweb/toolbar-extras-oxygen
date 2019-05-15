@@ -12,7 +12,7 @@
  * Plugin Name:       Toolbar Extras for Oxygen Builder
  * Plugin URI:        https://toolbarextras.com/
  * Description:       A Toolbar Extras Add-On to enhance your workflow with the amazing Oxygen Builder and the WordPress Toolbar (Admin Bar). Also comes with some very useful and smart Oxygen tweaks.
- * Version:           1.0.2
+ * Version:           1.1.0
  * Author:            David Decker - DECKERWEB
  * Author URI:        https://toolbarextras.com/
  * License:           GPL-2.0-or-later
@@ -39,7 +39,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'TBEXOB_PLUGIN_VERSION', '1.0.2' );
+define( 'TBEXOB_PLUGIN_VERSION', '1.1.0' );
+
+/** Plugin version */
+define( 'TBEXOB_REQUIRED_BASE_PLUGIN_VERSION', '1.4.3' );
 
 /** Plugin directory */
 define( 'TBEXOB_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -160,9 +163,9 @@ function ddw_tbexob_check_plugin_enviroment() {
 	}  // end if
 
 	/** 2nd case: Plugin is installed & active but needs an update */
-	$tbex_version_required = '1.4.2';
+	//$tbex_version_required = '1.4.2';
 
-	if ( version_compare( TBEX_PLUGIN_VERSION, $tbex_version_required, '<' ) ) {
+	if ( version_compare( TBEX_PLUGIN_VERSION, TBEXOB_REQUIRED_BASE_PLUGIN_VERSION, '<' ) ) {
 
 		add_action( 'admin_notices', 'ddw_tbexob_activation_needs_update_toolbar_extras' );
 		return;
@@ -259,8 +262,10 @@ function ddw_tbexob_activation_missing_toolbar_extras() {
 		$install_link = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=toolbar-extras' ), 'install-plugin_toolbar-extras' );
 
 		$message = sprintf(
-			'<p class="dashicons-before dashicons-info">' . __( 'Toolbar Extras for Oxygen Builder is an Add-On plugin which DEPENDS on the (free) %s plugin in version 1.4.2 or higher to be installed and activated.', 'toolbar-extras-oxygen' ) . '</p>',
-			'<strong>' . esc_html__( 'Toolbar Extras', 'toolbar-extras-oxygen' ) . '</strong>'
+			/* translators: %1$s - name of the base plugin "Toolbar Extras" / %2$s - required version of base plugin, for example: 1.4.3 */
+			'<p class="dashicons-before dashicons-info">' . __( 'Toolbar Extras for Oxygen Builder is an Add-On plugin which DEPENDS on the (free) %1$s plugin in version %2$s or higher to be installed and activated.', 'toolbar-extras-oxygen' ) . '</p>',
+			'<strong>' . esc_html__( 'Toolbar Extras', 'toolbar-extras-oxygen' ) . '</strong>',
+			TBEXOB_REQUIRED_BASE_PLUGIN_VERSION
 		);
 		$message .= sprintf(
 			'<p class="tbex-notice-button"><a href="%s" class="button-primary">&rarr; %s</a></p>',
@@ -285,7 +290,7 @@ function ddw_tbexob_activation_missing_toolbar_extras() {
 
 /**
  * Activation Logic: Show an admin (error) notice if the Toolbar Extras plugin
- *   is active but still on an older version (below v1.4.2).
+ *   is active but still on an older version (below v1.4.3).
  *
  * @since 1.0.0
  *
@@ -435,7 +440,7 @@ function ddw_tbexob_network_new_site_run_addon_activation( $blog_id, $user_id, $
 
 add_action( 'plugins_loaded', 'ddw_tbexob_setup_plugin_manager', 50 );
 /**
- * Setup Plugin Manager of Toolbar Extras v1.4.2 or higher for suggested plugins
+ * Setup Plugin Manager of Toolbar Extras v1.4.3 or higher for suggested plugins
  *   for this Add-On to be used within the required/ recommended environment.
  *
  * @since 1.0.0
@@ -449,7 +454,7 @@ function ddw_tbexob_setup_plugin_manager() {
 	if ( is_admin() ) {
 
 		if ( ddw_tbexob_is_toolbar_extras_active()
-			&& version_compare( TBEX_PLUGIN_VERSION, '1.4.2', '>=' )
+			&& version_compare( TBEX_PLUGIN_VERSION, TBEXOB_REQUIRED_BASE_PLUGIN_VERSION, '>=' )
 		) {
 			require_once TBEXOB_PLUGIN_DIR . 'includes/plugin-manager.php';
 		}

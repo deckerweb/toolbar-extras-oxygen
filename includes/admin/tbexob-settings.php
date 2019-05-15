@@ -575,25 +575,3 @@ function ddw_tbexob_add_submenu_for_oxygen() {
 	);
 
 }  // end function
-
-
-add_filter( 'tbex_filter_color_items', 'ddw_tbexob_add_color_item_wordpress', 100 );
-/**
- * Add additional color items to the color palette of "Local Development
- *   environment".
- *
- * @since 1.0.0
- *
- * @param array $color_items Array holding all color items.
- * @return array Modified array of color items.
- */
-function ddw_tbexob_add_color_item_wordpress( $color_items ) {
-
-	$color_items[ 'wp-black' ] = array(
-		'color' => '#555',
-		'name'  => __( 'WordPress Black', 'toolbar-extras-oxygen' ),
-	);
-
-	return $color_items;
-
-}  // end function

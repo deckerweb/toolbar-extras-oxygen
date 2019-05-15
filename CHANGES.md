@@ -13,6 +13,20 @@
 
 ## Changelog of the Plugin
 
+### 🎉 1.1.0 - 2019-05-16
+
+* *New: Successfully tested with Oxygen Builder 2.3*
+* *New: Successfully tested with WordPress 5.2*
+* New: Added plugin support for ["My Custom Functionality" (free, by Sridhar Katakam)](https://github.com/srikat/my-custom-functionality)
+* New: Integrated with WordPress 5.2+ new Site Health feature: Toolbar Extras for Oxygen Builder now has an extra section on the Debug Info tab - this is especially helpful for support requests
+* Tweak: Greatly improved the smart tweak for proper highlighting of parent file/ submenu for Oxygen Templates and User Elements Library (Block Library) as well
+* Tweak: Improved all tweaks regarding Oxygen Templates post type labels
+* Tweak: Plugin Manager admin notices are now properly dismissed - switched to notice library of Toolbar Extras base plugin :) 
+* Tweak: Minor compatibility tweaks for Oxygen 2.3 beta/RC/final releases
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* **Note:** The Add-On version 1.1.0 requires [base plugin Toolbar Extras v1.4.3+](https://wordpress.org/plugins/toolbar-extras/)
+
+
 ### ⚡ 1.0.2 - 2019-04-18
 
 * Tweak: Setup Plugin Manager to load earlier to actually appear again

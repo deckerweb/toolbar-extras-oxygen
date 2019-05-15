@@ -3,9 +3,9 @@
 **Donate link:** https://www.paypal.me/deckerweb  
 **Tags:** toolbar, adminbar, admin bar, oxygen, page builder, website, site builder, deckerweb, ddwtoolbar  
 **Requires at least:** 4.7  
-**Tested up to:** 5.1  
+**Tested up to:** 5.2  
 **Requires PHP:** 5.6  
-**Stable tag:** 1.0.1  
+**Stable tag:** 1.1.0  
 **License:** GPL-2.0-or-later  
 **License URI:** https://opensource.org/licenses/GPL-2.0  
 
@@ -171,11 +171,6 @@ So, to see anything added to the Toolbar, it is required the user must have the 
 
 
 
-### Does the Plugin work with the new Block Editor (Gutenberg)? 
-Yes, absolutely. Since the Toolbar has no direct connection to the editor anyways, it is fully compatible by default. Oxygen Builder and the Block Editor (Gutenberg) work totally fine together. And Toolbar Extras, the base plugin, also has special integration features for the Block Editor.
-
-
-
 ### Will this Plugin slow down my site? 
 **Absolutely not.** The plugin will only do its stuff for logged-in Administrator users. It does nothing for visitors of your site. And, the plugin loads its stuff only when needed and if supported third-party plugins are active. Plugin was built to be as lightweight as possible.
 
@@ -190,6 +185,11 @@ Settings > Toolbar Extras > Tab: "General" > Section: "Links Behavior"
 
 ### Where are more settings? 
 A lot more settings are available via the base plugin, Toolbar Extras. This opens up a lot of customization options and tweaks for you.
+
+
+
+### Does the Plugin work with the new Block Editor (Gutenberg)? 
+Yes, absolutely. Since the Toolbar has no direct connection to the editor anyways, it is fully compatible by default. Oxygen Builder and the Block Editor (Gutenberg) work totally fine together. And Toolbar Extras, the base plugin, also has special integration features for the Block Editor.
 
 
 
@@ -272,10 +272,27 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 ![Integrated Plugin Manager to easily install/activate all required, recommended and useful plugins](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-15.png)
 
 
+### 16. Site Health Debug Info screen with additional info (WP 5.2+)
+![Site Health Debug Info screen with additional info (WP 5.2+)](https://ps.w.org/toolbar-extras-oxygen/assets/screenshot-16.png)
+
+
 
 ## Changelog 
 
 ([For the full changelog of this plugin visit its website at ToolbarExtras.com](https://toolbarextras.com/changelog/))
+
+
+### 🎉 1.1.0 - 2019-05-16
+* *New: Successfully tested with Oxygen Builder 2.3*
+* *New: Successfully tested with WordPress 5.2*
+* New: Added plugin support for ["My Custom Functionality" (free, by Sridhar Katakam)](https://github.com/srikat/my-custom-functionality)
+* New: Integrated with WordPress 5.2+ new Site Health feature: Toolbar Extras for Oxygen Builder now has an extra section on the Debug Info tab - this is especially helpful for support requests
+* Tweak: Greatly improved the smart tweak for proper highlighting of parent file/ submenu for Oxygen Templates and User Elements Library (Block Library) as well
+* Tweak: Improved all tweaks regarding Oxygen Templates post type labels
+* Tweak: Plugin Manager admin notices are now properly dismissed - switched to notice library of Toolbar Extras base plugin :) 
+* Tweak: Minor compatibility tweaks for Oxygen 2.3 beta/RC/final releases
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* **Note:** The Add-On version 1.1.0 requires [base plugin Toolbar Extras v1.4.3+](https://wordpress.org/plugins/toolbar-extras/)
 
 
 ### ⚡ 1.0.2 - 2019-04-18
@@ -316,6 +333,10 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 
 
 ## Upgrade Notice 
+
+
+### 1.1.0
+One more community extension supported. Plus great internal enhancements, fixes and optimizations. - **Update highly recommended!** :-)
 
 
 ### 1.0.2
