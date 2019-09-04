@@ -12,7 +12,7 @@
  * Plugin Name:       Toolbar Extras for Oxygen Builder
  * Plugin URI:        https://toolbarextras.com/
  * Description:       A Toolbar Extras Add-On to enhance your workflow with the amazing Oxygen Builder and the WordPress Toolbar (Admin Bar). Also comes with some very useful and smart Oxygen tweaks.
- * Version:           1.1.0
+ * Version:           1.2.0
  * Author:            David Decker - DECKERWEB
  * Author URI:        https://toolbarextras.com/
  * License:           GPL-2.0-or-later
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'TBEXOB_PLUGIN_VERSION', '1.1.0' );
+define( 'TBEXOB_PLUGIN_VERSION', '1.2.0' );
 
 /** Required base plugin version */
 define( 'TBEXOB_REQUIRED_BASE_PLUGIN_VERSION', '1.4.6' );
