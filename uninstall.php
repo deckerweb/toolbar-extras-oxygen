@@ -60,18 +60,15 @@ if ( ! current_user_can( 'install_plugins' ) ) {
  * Delete all options and transients from the 'options' table in DB.
  *
  * @since 1.0.0
+ * @since 1.2.0 Adjusting for current options.
  *
  * @uses delete_option()
- * @uses delete_site_transient()
  */
 function ddw_tbexob_delete_options_transients() {
 
 	/** Delete all options */
 	delete_option( 'tbex-options-oxygen' );
-	delete_option( 'tbexob-plugin-version' );
-
-	/** Delete all transients */
-	delete_site_transient( 'tbexob-notice-welcome' );
+	delete_option( 'tbexob-addon-version' );
 
 }  // end function
 

@@ -5,7 +5,7 @@ Tags: toolbar, adminbar, admin bar, oxygen, page builder, website, site builder,
 Requires at least: 4.7
 Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -13,13 +13,13 @@ Building websites with Oxygen? Your work will get easier & faster with this Tool
 
 == Description ==
 
-🚀 Quick Access to Your Oxygen Site Building Resources - Big Time Saver. Perfect for Non-Techies and Non-Coder Designers.  
+🚀 Quick Access to Your Oxygen Site Building Resources - Big Time Saver. Perfect for Non-Techies and Non-Coder Designers.
 This smart WordPress plugin just adds some missed and **very useful Oxygen-specific admin links** to your Toolbar / Admin Bar. Save scrolling travel and time. Access settings and content pages faster from one central area in the Admin Dashboard AND when on the frontend of your site. Plus few optimizations for Oxygen's own Toolbar within the Builder :-).
 
 https://www.youtube.com/watch?v=jmvFqH9pqrA
 
-ℹ️ **Essential:** Toolbar Extras for Oxygen Builder is an **Add-On** plugin, it **requires** the base plugin "Toolbar Extras".  
-ℹ️ **Important:** "Oxygen Builder" is a **premium** plugin for WordPress by Soflyy.  
+ℹ️ **Essential:** Toolbar Extras for Oxygen Builder is an **Add-On** plugin, it **requires** the base plugin "Toolbar Extras".
+ℹ️ **Important:** "Oxygen Builder" is a **premium** plugin for WordPress by Soflyy.
 ℹ️ **Disclaimer:** Toolbar Extras for Oxygen Builder is an **independent** free plugin by David Decker from DECKERWEB. It does **not** represent Soflyy/ Oxygen.
 
 = ♥️ Features - What the Plugin Does =
@@ -29,6 +29,8 @@ https://www.youtube.com/watch?v=jmvFqH9pqrA
 * Useful **Post State "Oxygen"** appended to all post type items edited with Oxygen - for example for Pages
 * Registers Oxygen Builder - **set as default Builder** for the "Build" Group
 * Adds Oxygen Templates **links to the "Build" Group** in the Toolbar, including Reusable Parts and User Elements Library (2.3+)
+* Optionally adds list of Oxygen Templates to the Toolbar as extra group
+* Optionally adds list of Oxygen-edited Pages to the Toolbar as extra group
 * Label tweaks and additions for Oxygen Templates in the "New Content" Group
 * Adds Website install wizard/ Importer to the Toolbar "Build" Group as well - for faster access
 * Adds all Oxygen settings and settings tabs links to the Toolbar
@@ -50,10 +52,15 @@ https://www.youtube.com/watch?v=jmvFqH9pqrA
 * Fully internationalized and translateable - also tested/optimized for RTL languages
 
 = 🔌 Oxygen Add-On Support/ Integration =
-* [Oxygens Swiss Knife (free, by Marko Krstic)](https://github.com/krstivoja/Oxygens-Swiss-Knife)
-* [Oxygen Theme Enabler (free, by Sridhar Katakam)](https://github.com/srikat/oxygenthemeenabler) -- **Note:** The settings of this Add-On will be considered for Toolbar items! ;-)
-* [Builder Template Categories (free, by David Decker - DECKERWEB)](https://wordpress.org/plugins/builder-template-categories/)
-* [My Custom Functionality (free, by Sridhar Katakam)](https://github.com/srikat/my-custom-functionality)
+* *Official:* **Oxygen Gutenberg Integration** (Premium, by Soflyy) -- For the Block Editor
+* *Official:* **Oxygen Elements for WooCommerce** (Premium, by Soflyy)
+* [**Oxygens Swiss Knife** (free, by Marko Krstic)](https://github.com/krstivoja/Oxygens-Swiss-Knife)
+* [**Oxygen Theme Enabler** (free, by Sridhar Katakam)](https://github.com/srikat/oxygenthemeenabler) -- **Note:** The settings of this Add-On will be considered for Toolbar items! ;-)
+* [**Builder Template Categories** (free, by David Decker - DECKERWEB)](https://wordpress.org/plugins/builder-template-categories/)
+* [**My Custom Functionality** (free, by Sridhar Katakam)](https://github.com/srikat/my-custom-functionality)
+* [**Oxygen Block Lab Support** (free, by David Browne)](https://github.com/wplit/oxygen-block-lab-support)
+* [**Oxygen EDD Support** (free, by David Browne)](https://github.com/wplit/Oxygen-EDD-Support)
+* [**Oxygen RCP Support** (free, by David Browne)](https://github.com/wplit/Oxygen-RCP-Support)
 
 = 👉 A Typical Workflow / Usage =
 * Install Oxygen Builder, Toolbar Extras, plus the Toolbar Extras Oxygen Add-On - in that order
@@ -69,9 +76,9 @@ https://www.youtube.com/watch?v=jmvFqH9pqrA
 * Recommended: Plugin's settings are enabled to show the wanted links (or any filter/ constant in code)
 
 = 🌎 Translations =
-* English (United States) - `en_US` = default, always included
-* [German (informal, default)](https://translate.wordpress.org/locale/de/default/wp-plugins/toolbar-extras-oxygen) - `de_DE`
-* [German (formal)](https://translate.wordpress.org/locale/de/formal/wp-plugins/toolbar-extras-oxygen) - `de_DE_formal`
+* 🇺🇸 English (United States) - `en_US` = default, always included
+* 🇩🇪 [German (informal, default)](https://translate.wordpress.org/locale/de/default/wp-plugins/toolbar-extras-oxygen) - `de_DE`
+* 🇩🇪 [German (formal)](https://translate.wordpress.org/locale/de/formal/wp-plugins/toolbar-extras-oxygen) - `de_DE_formal`
 * `.pot` file (`toolbar-extras-oxygen.pot`) for translators is always included in the plugin's 'languages' folder :)
 
 = 😎 Be a Contributor =
@@ -102,16 +109,17 @@ You can also contribute code-wise via our [Toolbar Extras for Oxygen Builder Git
 
 = Minimum Requirements =
 
-* **Base plugin:** [Toolbar Extras](https://wordpress.org/plugins/toolbar-extras/), version 1.4.2 or higher
+* **Base plugin:** [Toolbar Extras](https://wordpress.org/plugins/toolbar-extras/), version 1.4.6 or higher
 * WordPress version 4.7 or higher
-* PHP version 5.6 or higher
+* PHP version 5.6.20 or higher
 * MySQL version 5.0 or higher
 * Administrator user with capabilities `manage_options` and `edit_theme_options` who is logged-in and has the Toolbar (Admin Bar) enabled (user profile)
 
 = We Recommend Your Host Supports at least: =
 
 * PHP version 7.2 or higher
-* MySQL version 5.6 or higher / or MariaDB 10 or higher
+* MySQL version 5.6 or higher / OR MariaDB 10.1 or higher
+* HTTPS support
 
 = Installation =
 
@@ -152,6 +160,11 @@ So, to see anything added to the Toolbar, it is required the user must have the 
 That is only in the plugin's readme and therefore appears on the plugin page on wordpress.org. The reason is simple: the "Elementor Add-On" is de-facto built-in in the base plugin and not an extra Add-On (like this one here for Oxygen). But don't worry: you won't see any Elementor stuff ever. Those integrations are only ever loaded at all if Elementor is installed and active.
 
 So don't get confused :-) On your "Plugins" page in your WordPress install the base plugin is listed normally as just "Toolbar Extras" and that is also the official name and it is referenced everywhere as that only.
+
+For more background info on this topic have look on our website:
+
+* *Blog post:* [Can Toolbar Extras be Used Without Elementor? (or Plugin/ Theme Xyz?)](https://toolbarextras.com/use-toolbar-extras-without-elementor/)
+* *Documentation article:* [Why is Toolbar Extras required and why no standalone plugin?](https://toolbarextras.com/docs/addons-why-toolbar-extras-required/)
 
 
 = Will this Plugin slow down my site? =
@@ -221,10 +234,43 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 
 16. Site Health Debug Info screen with additional info (WP 5.2+)
 
+17. Optional: List Oxygen Templates in the Toolbar
+
+18. Settings & Customization for Templates Listing in Toolbar
+
+19. Optional: List Oxygen-edited Pages in the Toolbar
+
+20. Settings & Customization for Pages Listing in Toolbar
+
+21. Oxygen WooCommerce Integration
+
+22. Oxygen Gutenberg Block Editor Integration
+
+23. Examples for supported Add-Ons - there are more, of course ;-)
+
 
 == Changelog ==
 
 ([For the full changelog of this plugin visit its website at ToolbarExtras.com](https://toolbarextras.com/changelog/))
+
+
+= 🎉 1.2.0 - 2019-09-04 =
+* *New: Successfully tested with Oxygen Builder 3.0, including WooCommerce & Gutenberg Integrations*
+* *New: Successfully tested with Oxygen Builder 2.4.1*
+* New: For Oxygen Template post type, added new optional **Template Group** as a top-level item, or as sub item in the *Build Group* - has lots of options for customizing
+* New: For Oxygen-edited Pages, added new optional **Pages Group** as a top-level item, or as sub item in the *Build Group* - has lots of options for customizing
+* New: Added plugin support for [Oxygen Block Lab Support (free, by David Browne)](https://github.com/wplit/oxygen-block-lab-support) - for *Block Lab* block templates
+* New: Added plugin support for [Oxygen EDD Support (free, by David Browne)](https://github.com/wplit/Oxygen-EDD-Support) - for *Easy Digital Downloads (EDD)* product & archive templates
+* New: Added plugin support for [Oxygen RCP Support (free, by David Browne)](https://github.com/wplit/Oxygen-RCP-Support) - for *Restrict Content Pro* content templates
+* New: Added internal logic for settings updater between major versions of this Add-On
+* Tweak: Added sub item for optional "Gutenberg" settings
+* Tweak: For "My Custom Functionality" plugin support, added dynamic folder path detection to better handle GitHub specific scenarios
+* Tweak: For some existing tweaks made sure they are not executed in the Oxygen Builder context to avoid any errors, warnings and notices
+* Tweak: Added [new screenshots (for the above new features)](https://toolbarextras.com/addons/oxygen-builder/#tab-screenshots)
+* Tweak: Some under the hood improvements on code base
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* Fix: Fixed PHP notice if Oxygen Builder is still set as default page builder in settings but the plugin was deactivated meanwhile
+* **Note:** The Add-On version 1.2.0 requires [base plugin Toolbar Extras v1.4.6+](https://wordpress.org/plugins/toolbar-extras/)
 
 
 = 🎉 1.1.0 - 2019-05-16 =
@@ -234,7 +280,7 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 * New: Integrated with WordPress 5.2+ new Site Health feature: Toolbar Extras for Oxygen Builder now has an extra section on the Debug Info tab - this is especially helpful for support requests
 * Tweak: Greatly improved the smart tweak for proper highlighting of parent file/ submenu for Oxygen Templates and User Elements Library (Block Library) as well
 * Tweak: Improved all tweaks regarding Oxygen Templates post type labels
-* Tweak: Plugin Manager admin notices are now properly dismissed - switched to notice library of Toolbar Extras base plugin :) 
+* Tweak: Plugin Manager admin notices are now properly dismissed - switched to notice library of Toolbar Extras base plugin :)
 * Tweak: Minor compatibility tweaks for Oxygen 2.3 beta/RC/final releases
 * Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
 * **Note:** The Add-On version 1.1.0 requires [base plugin Toolbar Extras v1.4.3+](https://wordpress.org/plugins/toolbar-extras/)
@@ -268,13 +314,18 @@ Yes, it works fine in Multisite, you could even activate it Network-wide. Howeve
 * New: 12 great Oxygen resources links integrated into the Toolbar
 * *Note: the Add-On integrates with current Oxygen Builder v2.2.1 as well as the upcoming v2.3.x release (tested with 2.3 alpha 1)*
 
+
 = ⚡ 0.9.0 - 2019-03-27 =
 * New: Private beta release on GitHub
+
 
 ([For the full changelog of this plugin visit its website at ToolbarExtras.com](https://toolbarextras.com/changelog/))
 
 
 == Upgrade Notice =
+
+= 1.2.0 =
+Oxygen 3.0+ compat! New Toolbar items for Oxygen Templates and Pages. Plus, 5 new Add-Ons supported. Bugs fixed, and more improvements, of course. - **Update highly recommended!** :-)
 
 = 1.1.0 =
 One more community extension supported. Plus great internal enhancements, fixes and optimizations. - **Update highly recommended!** :-)
@@ -313,7 +364,9 @@ Credit where credit is due. The following items were used, or used for inspirati
 
 
 == 🔆 My Other Plugins ==
-* [**Toolbar Extras for Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
+* [**Toolbar Extras for Elementor & More - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
+* [**Toolbar Extras for MainWP Dashboard - Add-On plugin**](https://wordpress.org/plugins/toolbar-extras-mainwp/)
+* [**Toolbar Extras for Give Donations (GiveWP) - Add-On plugin**](https://wordpress.org/plugins/toolbar-extras-givewp/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
 * [**Simple Download Manager for WP Document Revisions**](https://wordpress.org/plugins/wpdr-simple-downloads/)

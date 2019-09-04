@@ -20,8 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  *
- * @uses ddw_tbexob_string_websites_with_counter()
- *
  * @return array strings Parsed args of default options.
  */
 function ddw_tbexob_default_options_oxygen() {
@@ -34,13 +32,31 @@ function ddw_tbexob_default_options_oxygen() {
 			/** Oxygen Builder in WP-Admin/ Toolbar items */
 			'oxygen_name'               => esc_attr_x( 'Oxygen', 'Toolbar item label', 'toolbar-extras-oxygen' ),	// "Oxygen"
 			'oxygen_display_customizer' => 'yes',
+			'oxygen_row_actions'        => 'yes',
+			'oxygen_post_state'         => 'yes',
+			'oxygen_post_state_color'   => '#7046db',	// defaults to Oxygen blue
+
+			'oxygen_tl_note'            => '',			// Only for user note/guidance, just a "virtual setting"
 			'oxygen_tl_use_icon'        => 'oxygen',
 			'oxygen_tl_icon'            => 'dashicons-welcome-widgets-menus',
 			'oxygen_tl_priority'        => 1000,		// Same as in Oxygen itself
 			'oxygen_tl_parent'          => '',			// Same as in Oxygen itself, means "top-level"!
-			'oxygen_row_actions'        => 'yes',
-			'oxygen_post_state'         => 'yes',
-			'oxygen_post_state_color'   => '#7046db',	// defaults to Oxygen blue
+
+			'display_tpl_toolbar'       => 'no',		// no templates by default
+			'display_tpl_name'          => esc_attr_x( 'Templates', 'Toolbar top-level item title', 'toolbar-extras-oxygen' ),	// "Pages"
+			'display_tpl_count'         => 10,			// show 10 templates
+			'display_tpl_use_icon'      => 'oxygen',
+			'display_tpl_icon'          => 'dashicons-welcome-widgets-menus',
+			'display_tpl_priority'      => 1000,
+			'display_tpl_parent'        => '',			// empty - top-level!
+
+			'display_pages_toolbar'     => 'no',		// no pages by default
+			'display_pages_name'        => esc_attr_x( 'Pages', 'Toolbar top-level item title', 'toolbar-extras-oxygen' ),	// "Pages"
+			'display_pages_count'       => 10,			// show 10 pages
+			'display_pages_use_icon'    => 'oxygen',
+			'display_pages_icon'        => 'dashicons-admin-page',
+			'display_pages_priority'    => 1000,
+			'display_pages_parent'      => '',			// empty - top-level!
 
 			/** Oxygen Builder "Back to WP" section */
 			'oxygen_btwp_links'         => 'yes',		// yes, add additional links
@@ -131,42 +147,6 @@ function ddw_tbexob_register_settings_oxygen() {
 				array( 'class' => 'tbexob-setting-oxygen-display-customizer tbex-setting-conditional' . $status_oxygen_theme_enabler )
 			);
 
-			add_settings_field(
-				'oxygen_tl_use_icon',
-				__( 'Which icon to use for the original Oxygen item?', 'toolbar-extras-oxygen' ),
-				'ddw_tbexob_settings_cb_oxygen_tl_use_icon',
-				'tbexob_group_oxygen',
-				'tbexob-section-oxygen',
-				array( 'class' => 'tbexob-setting-oxygen-tl-use-icon' )
-			);
-
-			add_settings_field(
-				'oxygen_tl_icon',
-				__( 'Pick a Dashicon Icon for the original Oxygen item', 'toolbar-extras-oxygen' ),
-				'ddw_tbexob_settings_cb_oxygen_tl_icon',
-				'tbexob_group_oxygen',
-				'tbexob-section-oxygen',
-				array( 'class' => 'tbexob-setting-oxygen-tl-icon' )
-			);
-
-			add_settings_field(
-				'oxygen_tl_priority',
-				__( 'Priority of original Oxygen top-level item', 'toolbar-extras-oxygen' ),
-				'ddw_tbexob_settings_cb_oxygen_tl_priority',
-				'tbexob_group_oxygen',
-				'tbexob-section-oxygen',
-				array( 'class' => 'tbexob-setting-oxygen-tl-priority' )
-			);
-
-			add_settings_field(
-				'oxygen_tl_parent',
-				__( 'Parent hook place of original Oxygen top-level item', 'toolbar-extras-oxygen' ),
-				'ddw_tbexob_settings_cb_oxygen_tl_parent',
-				'tbexob_group_oxygen',
-				'tbexob-section-oxygen',
-				array( 'class' => 'tbexob-setting-oxygen-tl-parent' )
-			);
-
 			$settings_title_row_action = sprintf(
 				__( 'Add post type Row Action %s?', 'toolbar-extras-oxygen' ),
 				'<em>' . ddw_tbexob_string_edit_with_oxygen() . '</em>'
@@ -200,7 +180,190 @@ function ddw_tbexob_register_settings_oxygen() {
 			);
 
 
-		/** Oxygen: 2nd section (Oxygen Builder interface) */
+		/** Oxygen: 2nd section (Toolbar special items/groups) */
+		add_settings_section(
+			'tbexob-section-toolbar',
+			'<h3 class="tbex-settings-section">' . __( 'Special Oxygen Toolbar Items', 'toolbar-extras-oxygen' ) . '</h3>',
+			'ddw_tbexob_settings_section_info_oxygen_toolbar_items',
+			'tbexob_group_oxygen'
+		);
+
+			/** Original Oxygen item (frontend only) */
+			add_settings_field(
+				'oxygen_tl_note',
+				__( 'Original Oxygen item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_oxygen_tl_note',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-setting-oxygen-tl-note' )
+			);
+
+			add_settings_field(
+				'oxygen_tl_use_icon',
+				__( 'Which icon to use for the original Oxygen item?', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_oxygen_tl_use_icon',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-oxytl-group tbex-sub-setting tbexob-setting-oxygen-tl-use-icon' )
+			);
+
+			add_settings_field(
+				'oxygen_tl_icon',
+				__( 'Pick a Dashicon Icon for the original Oxygen item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_oxygen_tl_icon',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-oxytl-group tbex-sub-setting tbexob-setting-oxygen-tl-icon' )
+			);
+
+			add_settings_field(
+				'oxygen_tl_priority',
+				__( 'Priority of original Oxygen top-level item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_oxygen_tl_priority',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-oxytl-group tbex-sub-setting tbexob-setting-oxygen-tl-priority' )
+			);
+
+			add_settings_field(
+				'oxygen_tl_parent',
+				__( 'Parent hook place of original Oxygen top-level item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_oxygen_tl_parent',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-oxytl-group tbex-sub-setting tbexob-setting-oxygen-tl-parent' )
+			);
+
+			/** Templates Group (optional - admin+frontend) */
+			add_settings_field(
+				'display_tpl_toolbar',
+				__( 'Show Oxygen Templates as Toolbar Group?', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_tpl_toolbar',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbex-settingsfields-block tbexob-setting-display-tpl-toolbar' )
+			);
+
+			add_settings_field(
+				'display_tpl_parent',
+				__( 'Parent hook place of Templates Group item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_tpl_parent',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-template-group tbex-sub-setting tbexob-setting-display-tpl-parent' )
+			);
+
+			add_settings_field(
+				'display_tpl_name',
+				__( 'Name of Templates Group top-level item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_tpl_name',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-template-group tbex-sub-setting tbexob-setting-display-tpl-name tpl_group_lb' )
+			);
+
+			add_settings_field(
+				'display_tpl_count',
+				__( 'Number of Templates to Show', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_tpl_count',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-template-group tbex-sub-setting tbexob-setting-display-tpl-count' )
+			);
+
+			add_settings_field(
+				'display_tpl_use_icon',
+				__( 'Which icon to use for the Templates Group item?', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_tpl_use_icon',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-template-group tbex-sub-setting tbexob-setting-display-tpl-use-icon tpl_group_ui' )
+			);
+
+			add_settings_field(
+				'display_tpl_icon',
+				__( 'Pick a Dashicon Icon for the Templates Group item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_tpl_icon',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-template-group tbex-sub-setting tbexob-setting-display-tpl-icon tpl_icon_ds' )
+			);
+
+			add_settings_field(
+				'display_tpl_priority',
+				__( 'Priority of Templates Group item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_tpl_priority',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-template-group tbex-sub-setting tbexob-setting-display-tpl-priority' )
+			);
+
+			/** Pages Group (optional - admin+frontend) */
+			add_settings_field(
+				'display_pages_toolbar',
+				__( 'Show Oxygen-edited Pages as Toolbar Group?', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_pages_toolbar',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbex-settingsfields-block tbexob-setting-display-pages-toolbar' )
+			);
+
+			add_settings_field(
+				'display_pages_parent',
+				__( 'Parent hook place of Pages Group item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_pages_parent',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-pages-group tbex-sub-setting tbexob-setting-display-pages-parent' )
+			);
+
+			add_settings_field(
+				'display_pages_name',
+				__( 'Name of Pages Group top-level item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_pages_name',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-pages-group tbex-sub-setting tbexob-setting-display-pages-name' )
+			);
+
+			add_settings_field(
+				'display_pages_count',
+				__( 'Number of Pages to Show', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_pages_count',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-pages-group tbex-sub-setting tbexob-setting-display-pages-count' )
+			);
+
+			add_settings_field(
+				'display_pages_use_icon',
+				__( 'Which icon to use for the Pages Group item?', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_pages_use_icon',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-pages-group tbex-sub-setting tbexob-setting-display-pages-use-icon pages_group_ui' )
+			);
+
+			add_settings_field(
+				'display_pages_icon',
+				__( 'Pick a Dashicon Icon for the Pages Group item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_pages_icon',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-pages-group tbex-sub-setting tbexob-setting-display-pages-icon' )
+			);
+
+			add_settings_field(
+				'display_pages_priority',
+				__( 'Priority of Pages Group item', 'toolbar-extras-oxygen' ),
+				'ddw_tbexob_settings_cb_display_pages_priority',
+				'tbexob_group_oxygen',
+				'tbexob-section-toolbar',
+				array( 'class' => 'tbexob-pages-group tbex-sub-setting tbexob-setting-display-pages-priority' )
+			);
+
+
+		/** Oxygen: 3rd section (Oxygen Builder interface) */
 		add_settings_section(
 			'tbexob-section-builder',
 			'<h3 class="tbex-settings-section">' . __( 'Oxygen Builder Interface', 'toolbar-extras-oxygen' ) . '</h3>',
@@ -229,8 +392,7 @@ function ddw_tbexob_register_settings_oxygen() {
 			);
 
 
-
-		/** Oxygen: 3rd section (various tweaks) */
+		/** Oxygen: 4th section (various tweaks) */
 		add_settings_section(
 			'tbexob-section-tweaks',
 			'<h3 class="tbex-settings-section">' . __( 'Various Tweaks', 'toolbar-extras-oxygen' ) . '</h3>',
@@ -314,6 +476,8 @@ function ddw_tbexob_validate_settings_oxygen( $input ) {
 	/** Save empty text fields with default options */
 	$textfields = array(
 		'oxygen_name',
+		'display_tpl_name',
+		'display_pages_name',
 	);
 
 	foreach( $textfields as $textfield ) {
@@ -339,10 +503,14 @@ function ddw_tbexob_validate_settings_oxygen( $input ) {
 	/** Save integer fields */
 	$integer_fields = array(
 		'oxygen_tl_priority',
+		'display_tpl_count',
+		'display_tpl_priority',
+		'display_pages_count',
+		'display_pages_priority',
 	);
 
 	foreach ( $integer_fields as $integer ) {
-		$parsed[ $integer ] = absint( $input[ $integer ] );
+		$parsed[ $integer ] = intval( $input[ $integer ] );
 	}
 
 	/** Save HEX color fields */
@@ -357,11 +525,20 @@ function ddw_tbexob_validate_settings_oxygen( $input ) {
 	/** Save select & key fields */
 	$select_fields = array(
 		'oxygen_display_customizer',
+		'oxygen_tl_note',
 		'oxygen_tl_use_icon',
 		'oxygen_tl_icon',
 		'oxygen_tl_parent',
 		'oxygen_row_actions',
 		'oxygen_post_state',
+		'display_tpl_toolbar',
+		'display_tpl_use_icon',
+		'display_tpl_icon',
+		'display_tpl_parent',
+		'display_pages_toolbar',
+		'display_pages_use_icon',
+		'display_pages_icon',
+		'display_pages_parent',
 		'oxygen_btwp_links',
 		'oxygen_btwp_links_blank',
 		'note_for_coloring',
@@ -388,6 +565,7 @@ add_filter( 'tbex_filter_settings_toggles', 'ddw_tbexob_pass_toggable_settings_o
  *   which from our settings are toggable (to reveal more sub settings).
  *
  * @since 1.0.0
+ * @since 1.2.0 Added logic for Template and Pages Groups.
  *
  * @param array $toggles Array that holds all current registered toggles.
  * @return array Modified array of toggles.
@@ -398,11 +576,39 @@ function ddw_tbexob_pass_toggable_settings_oxygen( array $toggles ) {
 	$toggles = array_merge(
 		(array) $toggles,
 		array(
+			'oxygen_post_state' => array( '#tbex-options-oxygen-oxygen_post_state', '.tbexob-setting-oxygen-post-state-color', 'yes' ),
+
+			/** Oxygen Original Toolbar Item */
 			'oxygen_icon' => array( '#tbex-options-oxygen-oxygen_tl_use_icon', '.tbexob-setting-oxygen-tl-icon', 'dashicon' ),
 
-			//'builder_target' => array( '#tbex-options-oxygen-oxygen_btwp_links', '.tbexob-setting-oxygen-btwp-links-blank', 'yes' ),
+			/** Template Group */
+			'tpl_group'     => array( '#tbex-options-oxygen-display_tpl_toolbar', '.tbexob-template-group', 'yes' ),
 
-			'oxygen_post_state' => array( '#tbex-options-oxygen-oxygen_post_state', '.tbexob-setting-oxygen-post-state-color', 'yes' ),
+			'tpl_use_icon'  => array( '#tbex-options-oxygen-display_tpl_parent', '.tbexob-setting-display-tpl-use-icon', 'top-level' ),
+			'tpl_icon_info' => array( '#tbex-options-oxygen-display_tpl_parent', '.tbexob-tpl-icon-info', 'build-group' ),
+//
+			'tpl_label'     => array( '#tbex-options-oxygen-display_tpl_parent', '.tbexob-setting-display-tpl-name', 'top-level' ),
+			'tpl_prio_tl'   => array( '#tbex-options-oxygen-display_tpl_parent', '.tbexob-tpl-priority-tl', 'top-level' ),
+			'tpl_prio_bg'   => array( '#tbex-options-oxygen-display_tpl_parent', '.tbexob-tpl-priority-bg', 'build-group' ),
+
+			/** Special cases: needed at last to have it working */
+			'tpl_group_lb'  => array( '#tbex-options-oxygen-display_tpl_toolbar', '.tpl_group_lb', 'yes' ),
+			'tpl_group_ui'  => array( '#tbex-options-oxygen-display_tpl_toolbar', '.tpl_group_ui', 'yes' ),
+			'tpl_icon_ds'   => array( '#tbex-options-oxygen-display_tpl_use_icon', '.tpl_icon_ds', 'dashicon' ),
+
+
+			/** Pages Group */
+			'pages_group'     => array( '#tbex-options-oxygen-display_pages_toolbar', '.tbexob-pages-group', 'yes' ),
+
+
+			'pages_use_icon'  => array( '#tbex-options-oxygen-display_pages_parent', '.tbexob-setting-display-pages-use-icon', 'top-level' ),
+			'pages_icon_info' => array( '#tbex-options-oxygen-display_pages_parent', '.tbexob-pages-icon-info', 'build-group' ),
+			'pages_icon'      => array( '#tbex-options-oxygen-display_pages_use_icon', '.tbexob-setting-display-pages-icon', 'dashicon' ),
+			'pages_prio_tl'   => array( '#tbex-options-oxygen-display_pages_parent', '.tbexob-pages-priority-tl', 'top-level' ),
+			'pages_prio_bg'   => array( '#tbex-options-oxygen-display_pages_parent', '.tbexob-pages-priority-bg', 'build-group' ),
+
+			/** Special case: needed at last to have it working */
+			'pages_group_ui'  => array( '#tbex-options-oxygen-display_pages_toolbar', '.pages_group_ui', 'yes' ),
 		)
 	);
 
@@ -527,12 +733,13 @@ function ddw_tbexob_add_settings_tab_item_oxygen() {
 
 add_filter( 'tbex_filter_user_profile_buttons', 'ddw_tbexob_user_profile_button_oxygen' );
 /**
- * Add own "Oxygen" button to the Toolbar Extras section on the user profile page.
+ * Add own "Oxygen" button to the Toolbar Extras section on the user profile
+ *   page.
  *
  * @since 1.0.0
  *
  * @param array $settings_buttons Array of settings buttons.
- * @return array Modified array of settings buttons. 
+ * @return array Modified array of settings buttons.
  */
 function ddw_tbexob_user_profile_button_oxygen( $settings_buttons ) {
 
@@ -573,5 +780,34 @@ function ddw_tbexob_add_submenu_for_oxygen() {
 		'manage_options',
 		esc_url( admin_url( 'options-general.php?page=toolbar-extras&tab=oxygen' ) )
 	);
+
+}  // end function
+
+
+add_filter( 'tbex_filter_set_builder_is_active', 'ddw_tbexob_builder_logic_for_oxygen' );
+/**
+ * This logic is needed for our Main Item: it checks if the default Builder set
+ *   in our settings is really active. This avoids any notices, and can also
+ *   properly trigger the fallback mode for the Main Item.
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_get_default_pagebuilder()
+ * @uses ddw_tbexob_is_oxygen_active()
+ *
+ * @param bool $is_active
+ * @return bool TRUE if the set builder is active, FALSE otherwise.
+ */
+function ddw_tbexob_builder_logic_for_oxygen( bool $is_active ) {
+
+	$default_builder = ddw_tbex_get_default_pagebuilder();
+
+	/** Check for Oxygen Builder */
+	if ( 'oxygen' === $default_builder && ! ddw_tbexob_is_oxygen_active() ) {
+		return FALSE;
+	}
+
+	/** Default: return TRUE */
+	return TRUE;
 
 }  // end function

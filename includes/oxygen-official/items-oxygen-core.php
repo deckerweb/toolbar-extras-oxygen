@@ -12,9 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-//
-
-
 /**
  * For the case that no theme access is wanted, disable loading of Theme support
  *   in Toolbar Extras via filter.
@@ -108,7 +105,7 @@ function ddw_tbexob_items_oxygen_core( $admin_bar ) {
 
 	/** Bail early if Oxygen is not set as default page builder */
 	if ( 'oxygen' !== ddw_tbex_get_default_pagebuilder() ) {
-		return;
+		return $admin_bar;
 	}
 
 	$type = 'ct_template';
@@ -387,7 +384,7 @@ function ddw_tbexob_items_oxygen_core( $admin_bar ) {
 			)
 		);
 
-		/** Optional User Library Elements */
+		/** Optional: User Library Elements */
 		if ( ddw_tbexob_is_oxygen_user_library_prepared() ) {
 
 			$admin_bar->add_node(
@@ -399,6 +396,24 @@ function ddw_tbexob_items_oxygen_core( $admin_bar ) {
 					'meta'   => array(
 						'target' => '',
 						'title'  => esc_attr__( 'User Library of Builder Elements &amp; Blocks', 'toolbar-extras-oxygen' ),
+					)
+				)
+			);
+
+		}  // end if
+
+		/** Optional: Official Oxygen Gutenberg Integration */
+		if ( ddw_tbexob_is_oxygen_gutenberg_active() ) {
+
+			$admin_bar->add_node(
+				array(
+					'id'     => 'oxygen-builder-settings-gutenberg',
+					'parent' => 'oxygen-builder-settings',
+					'title'  => esc_attr__( 'Gutenberg Integration', 'toolbar-extras-oxygen' ),
+					'href'   => esc_url( admin_url( 'admin.php?page=oxygen_vsb_settings&tab=gutenberg' ) ),
+					'meta'   => array(
+						'target' => '',
+						'title'  => esc_attr__( 'Gutenberg Integration - for Block Editor', 'toolbar-extras-oxygen' ),
 					)
 				)
 			);
@@ -534,7 +549,7 @@ function ddw_tbexob_user_items_oxygen_core_roles( $admin_bar ) {
 
 	/** Oxygen Role Manager */
 	if ( ! ddw_tbex_display_items_users() ) {
-		return;
+		return $admin_bar;
 	}
 
 	$admin_bar->add_node(
@@ -566,7 +581,7 @@ add_filter( 'admin_bar_menu', 'ddw_tbexob_aoitems_new_content_oxygen_core_main',
  * @uses ddw_tbex_display_items_new_content()
  * @uses ddw_tbexob_is_oxygen_user_library_active()
  *
- * @param object $wp_admin_bar Holds all nodes of the Toolbar.
+ * @param object $admin_bar Holds all nodes of the Toolbar.
  */
 function ddw_tbexob_aoitems_new_content_oxygen_core_main( $admin_bar ) {
 
@@ -668,7 +683,7 @@ add_action( 'admin_bar_menu', 'ddw_tbexob_items_oxygen_core_resources', 99 );
  * @uses ddw_tbex_resource_item()
  * @uses ddw_tbex_get_resource_url()
  *
- * @param object $wp_admin_bar Holds all nodes of the Toolbar.
+ * @param object $admin_bar Holds all nodes of the Toolbar.
  */
 function ddw_tbexob_items_oxygen_core_resources( $admin_bar ) {
 
@@ -679,7 +694,7 @@ function ddw_tbexob_items_oxygen_core_resources( $admin_bar ) {
 	if ( ! ddw_tbex_display_items_resources()
 		|| 'oxygen' !== ddw_tbex_get_default_pagebuilder()
 	) {
-		return;
+		return $admin_bar;
 	}
 
 	$admin_bar->add_node(
@@ -848,13 +863,13 @@ add_action( 'admin_bar_menu', 'ddw_tbexob_design_items_oxygen_sites_library', 10
  * @uses ddw_tbex_meta_target()
  * @uses ddw_tbexob_is_oxygen_design_set_import()
  *
- * @param object $wp_admin_bar Holds all nodes of the Toolbar.
+ * @param object $admin_bar Holds all nodes of the Toolbar.
  */
 function ddw_tbexob_design_items_oxygen_sites_library( $admin_bar ) {
 
 	/** Bail early if no display of Demo Import items */
 	if ( ! ddw_tbex_display_items_demo_import() ) {
-		return;
+		return $admin_bar;
 	}
 
 	$browse_library = add_query_arg(
@@ -905,3 +920,23 @@ function ddw_tbexob_design_items_oxygen_sites_library( $admin_bar ) {
 	}  // end if
 
 }  // end function
+
+
+/**
+ * Display optional Oxygen Templates Group.
+ * @since 1.2.0
+ * @uses ddw_tbexob_display_template_group()
+ */
+if ( ddw_tbexob_display_template_group() ) :
+	require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-official/items-oxygen-templates.php';
+endif;
+
+
+/**
+ * Display optional Oxygen Pages Group.
+ * @since 1.2.0
+ * @uses ddw_tbexob_display_pages_group()
+ */
+if ( ddw_tbexob_display_pages_group() ) :
+	require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-official/items-oxygen-pages.php';
+endif;

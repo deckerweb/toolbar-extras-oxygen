@@ -27,6 +27,33 @@ if ( function_exists( 'custom_enqueue_files' ) ) {
 }
 
 
+/**
+ * Add-On: Oxygen Block Lab Support (free, by David Browne)
+ * @since 1.2.0
+ */
+if ( function_exists( 'block_lab' ) && function_exists( 'lit_new_block_template_path' ) ) {
+	require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-addons/items-oxygen-blocklab-support.php';
+}
+
+
+/**
+ * Add-On: Oxygen EDD Support (free, by David Browne)
+ * @since 1.2.0
+ */
+if ( class_exists( 'Easy_Digital_Downloads' ) && function_exists( 'lit_oxygen_edd_template_dir' ) ) {
+	require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-addons/items-oxygen-edd-support.php';
+}
+
+
+/**
+ * Add-On: Oxygen RCP Support (free, by David Browne)
+ * @since 1.2.0
+ */
+if ( class_exists( 'RCP_Requirements_Check' ) && function_exists( 'lit_oxygen_rcp_template_location' ) ) {
+	require_once TBEXOB_PLUGIN_DIR . 'includes/oxygen-addons/items-oxygen-rcp-support.php';
+}
+
+
 
 /**
  * 2nd GROUP: Settings, Extras, Elements etc.

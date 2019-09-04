@@ -51,7 +51,7 @@ function ddw_tbexob_plugin_manager_oxygen( $plugins ) {
 		array(
 			'name'    => _x( 'Oxygen Builder', 'Plugin Name', 'toolbar-extras-oxygen' ),
 			'slug'    => 'oxygen',
-			'version' => '2.2.1+',
+			'version' => '2.4.1+',
 			'url'     => 'https://oxygenbuilder.com/',
 			'notice'  => array(
 				'message' => ddw_tbex_pm_badge( 'required' ) .

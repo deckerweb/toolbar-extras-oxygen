@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Toolbar Extras for Oxygen Builder\n"
-"POT-Creation-Date: 2019-05-15 22:58+0200\n"
-"PO-Revision-Date: 2019-05-15 23:03+0200\n"
+"POT-Creation-Date: 2019-09-04 12:55+0200\n"
+"PO-Revision-Date: 2019-09-04 13:13+0200\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language: de_DE@formal\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -21,65 +21,67 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/admin/admin-extras.php:43
+#: includes/admin/admin-extras.php:48
 msgid "First Step: Setup Environment to use the plugin"
 msgstr "Erster Schritt: Umgebung zur Verwendung des Plugins einrichten"
 
-#: includes/admin/admin-extras.php:44
+#: includes/admin/admin-extras.php:49
 msgid "First Step: Setup Environment"
 msgstr "Erster Schritt: Umgebung einrichten"
 
-#: includes/admin/admin-extras.php:55 includes/admin/tbexob-settings.php:490
+#: includes/admin/admin-extras.php:60 includes/admin/tbexob-settings.php:696
 #: includes/admin/views/help-content-addon.php:83
+#: includes/oxygen-official/items-oxygen-pages.php:223
+#: includes/oxygen-official/items-oxygen-templates.php:212
 msgid "Oxygen Builder"
 msgstr "Oxygen Builder"
 
-#: includes/admin/admin-extras.php:56
-#: includes/admin/views/settings-tab-oxygen.php:93 includes/tweaks.php:360
+#: includes/admin/admin-extras.php:61
+#: includes/admin/views/settings-tab-oxygen.php:109 includes/tweaks.php:375
 msgid "Oxygen"
 msgstr "Oxygen"
 
-#: includes/admin/admin-extras.php:62
+#: includes/admin/admin-extras.php:67
 msgid "Toolbar Settings for Oxygen Builder"
 msgstr "Toolbar Einstellungen für Oxygen Builder"
 
-#: includes/admin/admin-extras.php:63
+#: includes/admin/admin-extras.php:68
 msgid "Toolbar Settings"
 msgstr "Toolbar Einstellungen"
 
-#: includes/admin/admin-extras.php:128
+#: includes/admin/admin-extras.php:121
 msgctxt "Plugins page listing"
 msgid "Support"
 msgstr "Support"
 
-#: includes/admin/admin-extras.php:136
+#: includes/admin/admin-extras.php:129
 msgctxt "Plugins page listing"
 msgid "Facebook Group"
 msgstr "Facebook Gruppe"
 
-#: includes/admin/admin-extras.php:143
+#: includes/admin/admin-extras.php:136
 msgctxt "Plugins page listing"
 msgid "Translations"
 msgstr "Übersetzungen"
 
-#: includes/admin/admin-extras.php:151
+#: includes/admin/admin-extras.php:144
 msgctxt "Plugins page listing"
 msgid "Donate"
 msgstr "Spenden"
 
-#: includes/admin/admin-extras.php:158
+#: includes/admin/admin-extras.php:151
 msgctxt "Plugins page listing"
 msgid "Join our Newsletter"
 msgstr "Newsletter jetzt!"
 
 #. translators: %s - 5 stars icons
-#: includes/admin/admin-extras.php:202
+#: includes/admin/admin-extras.php:195
 #, php-format
 msgid "%s rating"
 msgstr "%s Bewertung"
 
 #. translators: 1 - Toolbar Extras for Oxygen Builder / 2 - label "5 star rating"
-#: includes/admin/admin-extras.php:208
+#: includes/admin/admin-extras.php:201
 #, php-format
 msgid ""
 "Enjoyed %1$s? Please leave us a %2$s. We really appreciate your support!"
@@ -88,49 +90,49 @@ msgstr ""
 "Unterstützung!"
 
 #. Plugin Name of the plugin/theme
-#: includes/admin/admin-extras.php:209 includes/admin/admin-extras.php:242
-#: includes/admin/tbexob-settings.php:484
+#: includes/admin/admin-extras.php:202 includes/admin/admin-extras.php:237
+#: includes/admin/tbexob-settings.php:690
 #: includes/admin/views/help-content-addon.php:81
 msgid "Toolbar Extras for Oxygen Builder"
 msgstr "Toolbar Extras für Oxygen Builder"
 
-#: includes/admin/admin-extras.php:242
+#: includes/admin/admin-extras.php:237
 msgid "Add-On Plugin"
 msgstr "Add-On-Plugin"
 
-#: includes/admin/admin-extras.php:248
+#: includes/admin/admin-extras.php:243
 msgid "Add-On Plugin version"
 msgstr "Add-On Plugin-Version"
 
-#: includes/admin/admin-extras.php:252
+#: includes/admin/admin-extras.php:247
 msgid "Required Base Plugin version"
 msgstr "Erforderliche Version des Basis-Plugins"
 
-#: includes/admin/admin-extras.php:256
+#: includes/admin/admin-extras.php:251
 msgid "Display Settings Customizer"
 msgstr "Einstellungen-Customizer anzeigen"
 
-#: includes/admin/admin-extras.php:260
+#: includes/admin/admin-extras.php:255
 msgid "Oxygen item priority"
 msgstr "Oxygen-Element Priorität"
 
-#: includes/admin/admin-extras.php:264
+#: includes/admin/admin-extras.php:259
 msgid "Use Row Action"
 msgstr "Zeilen-Aktion verwenden"
 
-#: includes/admin/admin-extras.php:268
+#: includes/admin/admin-extras.php:263
 msgid "Use Post State"
 msgstr "Beitrags-Status verwenden"
 
-#: includes/admin/admin-extras.php:272
+#: includes/admin/admin-extras.php:267
 msgid "Additional links Back to WP section"
 msgstr "Zusätzliche Links „Zurück zu WP“-Bereich"
 
-#: includes/admin/admin-extras.php:276
+#: includes/admin/admin-extras.php:271
 msgid "Open additional links in new tab"
 msgstr "Zusätzliche Links in neuem Tab öffnen?"
 
-#: includes/admin/admin-extras.php:286
+#: includes/admin/admin-extras.php:281
 msgid "User Library active"
 msgstr "Benutzer-Bibliothek aktiv"
 
@@ -138,93 +140,171 @@ msgstr "Benutzer-Bibliothek aktiv"
 msgid "Add-On: Oxygen"
 msgstr "Add-On: Oxygen"
 
-#: includes/admin/tbexob-settings.php:35
+#: includes/admin/tbexob-settings.php:33
 msgctxt "Toolbar item label"
 msgid "Oxygen"
 msgstr "Oxygen"
 
-#: includes/admin/tbexob-settings.php:110
+#: includes/admin/tbexob-settings.php:46
+#: includes/oxygen-official/items-oxygen-templates.php:75
+#: includes/tbexob-update-settings.php:42
+msgctxt "Toolbar top-level item title"
+msgid "Templates"
+msgstr "Templates"
+
+#: includes/admin/tbexob-settings.php:54
+#: includes/oxygen-official/items-oxygen-pages.php:78
+#: includes/tbexob-update-settings.php:49
+msgctxt "Toolbar top-level item title"
+msgid "Pages"
+msgstr "Seiten"
+
+#: includes/admin/tbexob-settings.php:126
 msgid "For Oxygen Builder"
 msgstr "Für Oxygen Builder"
 
-#: includes/admin/tbexob-settings.php:117
+#: includes/admin/tbexob-settings.php:133
 msgid "Name of Oxygen"
 msgstr "Name von Oxygen"
 
 #. translators: %s - label, "Build Group"
-#: includes/admin/tbexob-settings.php:127
+#: includes/admin/tbexob-settings.php:143
 #, php-format
 msgid "Display Settings Customizer in %s?"
 msgstr "Einstellungen-Customizer in %s anzeigen?"
 
-#: includes/admin/tbexob-settings.php:127
-#: includes/admin/views/settings-tab-oxygen.php:129
+#: includes/admin/tbexob-settings.php:143
+#: includes/admin/views/settings-tab-oxygen.php:145
 msgid "Build Group"
 msgstr "Erschaffen-Gruppe"
 
-#: includes/admin/tbexob-settings.php:136
-msgid "Which icon to use for the original Oxygen item?"
-msgstr "Welches Icon soll für das originale Oxygen-Element verwendet werden?"
-
-#: includes/admin/tbexob-settings.php:145
-msgid "Pick a Dashicon Icon for the original Oxygen item"
-msgstr "Ein Dashicon-Icon für das originale Oxygen-Element auswählen"
-
-#: includes/admin/tbexob-settings.php:154
-msgid "Priority of original Oxygen top-level item"
-msgstr "Priorität des originalen Oxygen-Elements der obersten Ebene"
-
-#: includes/admin/tbexob-settings.php:163
-msgid "Parent hook place of original Oxygen top-level item"
-msgstr ""
-"Eltern-Einhängepunkt für das originale Oxygen-Element der obersten Ebene"
-
-#: includes/admin/tbexob-settings.php:171
+#: includes/admin/tbexob-settings.php:151
 #, php-format
 msgid "Add post type Row Action %s?"
 msgstr "Zeilenbearbeitung-Aktion %s für Inhaltstypen anzeigen?"
 
-#: includes/admin/tbexob-settings.php:186
+#: includes/admin/tbexob-settings.php:166
 msgid "Add post type Post State for Oxygen?"
 msgstr "Inhaltstyp Status für Oxygen anzeigen?"
 
-#: includes/admin/tbexob-settings.php:195
+#: includes/admin/tbexob-settings.php:175
 msgid "Set color for Post State label"
 msgstr "Farbe für Inhaltstyp-Status einstellen"
 
-#: includes/admin/tbexob-settings.php:206
+#: includes/admin/tbexob-settings.php:186
+msgid "Special Oxygen Toolbar Items"
+msgstr "Besondere Oxygen Toolbar-Elemente"
+
+#: includes/admin/tbexob-settings.php:194
+msgid "Original Oxygen item"
+msgstr "Original Oxygen-Element"
+
+#: includes/admin/tbexob-settings.php:203
+msgid "Which icon to use for the original Oxygen item?"
+msgstr "Welches Icon soll für das originale Oxygen-Element verwendet werden?"
+
+#: includes/admin/tbexob-settings.php:212
+msgid "Pick a Dashicon Icon for the original Oxygen item"
+msgstr "Ein Dashicon-Icon für das originale Oxygen-Element auswählen"
+
+#: includes/admin/tbexob-settings.php:221
+msgid "Priority of original Oxygen top-level item"
+msgstr "Priorität des originalen Oxygen-Elements der obersten Ebene"
+
+#: includes/admin/tbexob-settings.php:230
+msgid "Parent hook place of original Oxygen top-level item"
+msgstr ""
+"Eltern-Einhängepunkt für das originale Oxygen-Element der obersten Ebene"
+
+#: includes/admin/tbexob-settings.php:240
+msgid "Show Oxygen Templates as Toolbar Group?"
+msgstr "Oxygen Templates als Toolbar-Gruppe anzeigen?"
+
+#: includes/admin/tbexob-settings.php:249
+msgid "Parent hook place of Templates Group item"
+msgstr "Eltern-Einhängepunkt für die Template-Gruppe"
+
+#: includes/admin/tbexob-settings.php:258
+msgid "Name of Templates Group top-level item"
+msgstr "Name der Template-Gruppe in oberster Ebene"
+
+#: includes/admin/tbexob-settings.php:267
+msgid "Number of Templates to Show"
+msgstr "Anzahl anzuzeigender Templates"
+
+#: includes/admin/tbexob-settings.php:276
+msgid "Which icon to use for the Templates Group item?"
+msgstr "Welches Icon soll für die Template-Gruppe verwendet werden?"
+
+#: includes/admin/tbexob-settings.php:285
+msgid "Pick a Dashicon Icon for the Templates Group item"
+msgstr "Ein Dashicon-Icon für die Template-Gruppe auswählen"
+
+#: includes/admin/tbexob-settings.php:294
+msgid "Priority of Templates Group item"
+msgstr "Priorität des Template-Gruppen-Elements"
+
+#: includes/admin/tbexob-settings.php:304
+msgid "Show Oxygen-edited Pages as Toolbar Group?"
+msgstr "Oxygen-bearbeitete Seiten als Toolbar-Gruppe anzeigen?"
+
+#: includes/admin/tbexob-settings.php:313
+msgid "Parent hook place of Pages Group item"
+msgstr "Eltern-Einhängepunkt für die Seiten-Gruppe"
+
+#: includes/admin/tbexob-settings.php:322
+msgid "Name of Pages Group top-level item"
+msgstr "Name des Seiten-Gruppen-Elements in oberster Ebene"
+
+#: includes/admin/tbexob-settings.php:331
+msgid "Number of Pages to Show"
+msgstr "Anzahl anzuzeigender Seiten"
+
+#: includes/admin/tbexob-settings.php:340
+msgid "Which icon to use for the Pages Group item?"
+msgstr "Welches Icon soll für die Seiten-Gruppe verwendet werden?"
+
+#: includes/admin/tbexob-settings.php:349
+msgid "Pick a Dashicon Icon for the Pages Group item"
+msgstr "Ein Dashicon-Icon für die Seiten-Gruppe auswählen"
+
+#: includes/admin/tbexob-settings.php:358
+msgid "Priority of Pages Group item"
+msgstr "Priorität der Seiten-Gruppe"
+
+#: includes/admin/tbexob-settings.php:369
 msgid "Oxygen Builder Interface"
 msgstr "Oxygen Builder Oberfläche"
 
 #. translators: %s - label, "Back to WP"
-#: includes/admin/tbexob-settings.php:214
+#: includes/admin/tbexob-settings.php:377
 #, php-format
 msgid "Enable additional links for %s section?"
 msgstr "Zusätzliche Links für den Bereich %s aktivieren?"
 
 #. translators: %s - label, "Back to WP"
-#: includes/admin/tbexob-settings.php:224
+#: includes/admin/tbexob-settings.php:387
 #, php-format
 msgid "Open those %s links in a New Tab/ Window?"
 msgstr "Diese %s Links in einem neuen Tab/ Fenster öffnen?"
 
-#: includes/admin/tbexob-settings.php:236
+#: includes/admin/tbexob-settings.php:398
 msgid "Various Tweaks"
 msgstr "Verschiedene Anpassungen"
 
-#: includes/admin/tbexob-settings.php:243
+#: includes/admin/tbexob-settings.php:405
 msgid "Set background color, icon and special text for Toolbar"
 msgstr "Hintergrundfarbe, Icon und speziellen Text für die Toolbar festlegen"
 
-#: includes/admin/tbexob-settings.php:252
+#: includes/admin/tbexob-settings.php:414
 msgid "Remove Themes Submenu from Appearance Admin Menu?"
 msgstr "Themes-Untermenü aus dem Design-Adminmenü entfernen?"
 
-#: includes/admin/tbexob-settings.php:261
+#: includes/admin/tbexob-settings.php:423
 msgid "Remove Customizer Submenu from Appearance Admin Menu?"
 msgstr "Customizer-Untermenü aus dem Design-Adminmenü entfernen?"
 
-#: includes/admin/tbexob-settings.php:270
+#: includes/admin/tbexob-settings.php:432
 msgid ""
 "Remove Theme Editor Submenu from Appearance Admin Menu, plus Disable this "
 "Editor?"
@@ -232,27 +312,27 @@ msgstr ""
 "Theme-Editor Untermenü aus dem Design-Adminmenü entfernen, und diesen Editor "
 "deaktivieren?"
 
-#: includes/admin/tbexob-settings.php:279
+#: includes/admin/tbexob-settings.php:441
 msgid "Unload all Oxygen Translations?"
 msgstr "Übersetzungen für Oxygen Builder nicht laden?"
 
-#: includes/admin/tbexob-settings.php:288
+#: includes/admin/tbexob-settings.php:450
 msgid "Unload Toolbar Extras for Oxygen Add-On Translations?"
 msgstr "Übersetzungen für Toolbar Extras für Oxygen Builder nicht laden?"
 
 #. translators: Settings tab title in WP-Admin
-#: includes/admin/tbexob-settings.php:440
-#: includes/admin/tbexob-settings.php:541
+#: includes/admin/tbexob-settings.php:646
+#: includes/admin/tbexob-settings.php:748
 msgctxt "Plugin settings tab title"
 msgid "Oxygen"
 msgstr "Oxygen"
 
-#: includes/admin/tbexob-settings.php:484
+#: includes/admin/tbexob-settings.php:690
 #: includes/admin/views/help-content-addon.php:31
 msgid "Add-On"
 msgstr "Add-On"
 
-#: includes/admin/tbexob-settings.php:489
+#: includes/admin/tbexob-settings.php:695
 #, php-format
 msgid ""
 "This Add-On brings the settings and items of the %s to your Toolbar, "
@@ -261,7 +341,7 @@ msgstr ""
 "Dieses Add-On bringt die Einstellungen und Elemente des %s in Ihre Toolbar, "
 "einschließlich der derzeit aktiven Oxygen-spezifischen Add-Ons."
 
-#: includes/admin/tbexob-settings.php:492
+#: includes/admin/tbexob-settings.php:698
 msgid ""
 "Below you will find lots of settings to customize your experience for "
 "building websites with Oxygen even faster."
@@ -269,22 +349,22 @@ msgstr ""
 "Nachfolgend finden Sie viele Einstellungen, mit denen Sie Ihr Erlebnis beim "
 "Erstellen von Websites mit Oxygen anpassen können."
 
-#: includes/admin/tbexob-settings.php:515
+#: includes/admin/tbexob-settings.php:721
 msgctxt "For Toolbar Extras Plugin"
 msgid "Oxygen Add-On"
 msgstr "Oxygen Add-On"
 
 #. translators: Title attribute for Toolbar Extras "Oxygen Builder Add-On" settings link
-#: includes/admin/tbexob-settings.php:520
+#: includes/admin/tbexob-settings.php:726
 msgctxt "For Toolbar Extras Plugin"
 msgid "Oxygen Builder Add-On for Toolbar Extras"
 msgstr "Oxygen Builder Add-On für Toolbar Extras"
 
-#: includes/admin/tbexob-settings.php:540
+#: includes/admin/tbexob-settings.php:747
 msgid "Go to the Toolbar Extras Oxygen Add-On settings tab"
 msgstr "Gehen Sie zum Toolbar Extras Einstellungen-Tab „Oxygen Add-On“"
 
-#: includes/admin/tbexob-settings.php:567
+#: includes/admin/tbexob-settings.php:774
 msgctxt "Admin menu title"
 msgid "Oxygen Toolbar"
 msgstr "Oxygen Toolbar"
@@ -429,10 +509,15 @@ msgstr ""
 "Legen Sie einige Dinge fest in Bezug auf den Oxygen Builder und die Toolbar"
 
 #: includes/admin/views/settings-tab-oxygen.php:45
+msgid "Settings for special Oxygen related (top-level) Toolbar items."
+msgstr ""
+"Einstellungen für besondere Oxygen-bezogene Toolbar-Elemente (oberste Ebene)."
+
+#: includes/admin/views/settings-tab-oxygen.php:61
 msgid "Tweak the behavior of the Oxygen Builder Toolbar in the builder itself."
 msgstr "Das Verhalten der Oxygen Builder Toolbar im Builder selbst anpassen."
 
-#: includes/admin/views/settings-tab-oxygen.php:61
+#: includes/admin/views/settings-tab-oxygen.php:77
 msgid ""
 "Determine which menu items should be removed and set other additional tweaks."
 msgstr ""
@@ -440,42 +525,56 @@ msgstr ""
 "weitere zusätzliche Optimierungen ein."
 
 #. translators: %s - a Dashicons CSS class name
-#: includes/admin/views/settings-tab-oxygen.php:92
-#: includes/admin/views/settings-tab-oxygen.php:120
-#: includes/admin/views/settings-tab-oxygen.php:162
-#: includes/admin/views/settings-tab-oxygen.php:200
-#: includes/admin/views/settings-tab-oxygen.php:225
-#: includes/admin/views/settings-tab-oxygen.php:253
+#: includes/admin/views/settings-tab-oxygen.php:108
+#: includes/admin/views/settings-tab-oxygen.php:136
+#: includes/admin/views/settings-tab-oxygen.php:177
+#: includes/admin/views/settings-tab-oxygen.php:209
 #: includes/admin/views/settings-tab-oxygen.php:278
-#: includes/admin/views/settings-tab-oxygen.php:310
-#: includes/admin/views/settings-tab-oxygen.php:365
-#: includes/admin/views/settings-tab-oxygen.php:394
-#: includes/admin/views/settings-tab-oxygen.php:433
-#: includes/admin/views/settings-tab-oxygen.php:461
+#: includes/admin/views/settings-tab-oxygen.php:316
+#: includes/admin/views/settings-tab-oxygen.php:341
+#: includes/admin/views/settings-tab-oxygen.php:366
+#: includes/admin/views/settings-tab-oxygen.php:391
+#: includes/admin/views/settings-tab-oxygen.php:416
+#: includes/admin/views/settings-tab-oxygen.php:437
+#: includes/admin/views/settings-tab-oxygen.php:459
 #: includes/admin/views/settings-tab-oxygen.php:489
-#: includes/admin/views/settings-tab-oxygen.php:517
-#: includes/admin/views/settings-tab-oxygen.php:552
+#: includes/admin/views/settings-tab-oxygen.php:530
+#: includes/admin/views/settings-tab-oxygen.php:555
+#: includes/admin/views/settings-tab-oxygen.php:589
+#: includes/admin/views/settings-tab-oxygen.php:614
+#: includes/admin/views/settings-tab-oxygen.php:635
+#: includes/admin/views/settings-tab-oxygen.php:659
+#: includes/admin/views/settings-tab-oxygen.php:692
+#: includes/admin/views/settings-tab-oxygen.php:733
+#: includes/admin/views/settings-tab-oxygen.php:758
+#: includes/admin/views/settings-tab-oxygen.php:796
+#: includes/admin/views/settings-tab-oxygen.php:825
+#: includes/admin/views/settings-tab-oxygen.php:864
+#: includes/admin/views/settings-tab-oxygen.php:892
+#: includes/admin/views/settings-tab-oxygen.php:920
+#: includes/admin/views/settings-tab-oxygen.php:948
+#: includes/admin/views/settings-tab-oxygen.php:983
 #, php-format
 msgid "Default: %s"
 msgstr "Standard: %s"
 
-#: includes/admin/views/settings-tab-oxygen.php:125
+#: includes/admin/views/settings-tab-oxygen.php:141
 msgid "Note"
 msgstr "Hinweis"
 
 #. translators: %s - label, "Build Group"
-#: includes/admin/views/settings-tab-oxygen.php:128
+#: includes/admin/views/settings-tab-oxygen.php:144
 #, php-format
 msgid "This only effects the Customizer links within the Toolbar's %s."
 msgstr ""
 "Dies wirkt sich nur auf die Customizer-Links innerhalb der %s in der Toolbar "
 "aus."
 
-#: includes/admin/views/settings-tab-oxygen.php:134
+#: includes/admin/views/settings-tab-oxygen.php:150
 msgid "General info"
 msgstr "Allgemeine Information"
 
-#: includes/admin/views/settings-tab-oxygen.php:135
+#: includes/admin/views/settings-tab-oxygen.php:151
 msgid ""
 "There's still no theme active. But keeping the Customizer accessable allows "
 "you to customize settings for Site Identity, Custom CSS and optionally for "
@@ -488,52 +587,10 @@ msgstr ""
 "ihre regulären Einstellungen in die Customizer-Oberfläche auslagern. Dies "
 "kann ebenso für die Plugin-Unterstützung in Toolbar Extras nützlich sein."
 
-#: includes/admin/views/settings-tab-oxygen.php:157
-msgid "None"
-msgstr "Keins"
-
-#: includes/admin/views/settings-tab-oxygen.php:158
-#: includes/admin/views/settings-tab-oxygen.php:162
-msgid "Oxygen Logo Icon"
-msgstr "Oxygen Logo-Icon"
-
-#: includes/admin/views/settings-tab-oxygen.php:159
-msgid "Dashicon Icon"
-msgstr "Dashicon-Icon"
-
-#. translators: %s - a Dashicons CSS class name
-#: includes/admin/views/settings-tab-oxygen.php:194
-#, php-format
-msgid "Current: %s"
-msgstr "Aktuell: %s"
-
-#: includes/admin/views/settings-tab-oxygen.php:228
-msgid ""
-"The default value means display at far right of the left Toolbar section/ "
-"column."
-msgstr ""
-"Der Standardwert bedeutet eine Anzeige ganz rechts innerhalb des linken "
-"Toolbar-Bereichs/ der linken Spalte."
-
-#: includes/admin/views/settings-tab-oxygen.php:228
-msgid ""
-"The smaller the value gets the more on the left the item will be displayed."
-msgstr ""
-"Je kleiner der Wert wird, desto weiter links wird das Element erscheinen."
-
-#: includes/admin/views/settings-tab-oxygen.php:249
-#: includes/admin/views/settings-tab-oxygen.php:253
-msgid "Keep on left side"
-msgstr "Auf der linken Seite halten"
-
-#: includes/admin/views/settings-tab-oxygen.php:250
-msgid "Move to the right side"
-msgstr "Nach rechts bewegen"
-
 #. translators: %s - label, "Action Link"
 #. translators: %s - label, "Post State label"
-#: includes/admin/views/settings-tab-oxygen.php:283
-#: includes/admin/views/settings-tab-oxygen.php:315
+#: includes/admin/views/settings-tab-oxygen.php:182
+#: includes/admin/views/settings-tab-oxygen.php:214
 #, php-format
 msgid ""
 "This %s will be added to any post type item that has Oxygen support and "
@@ -543,15 +600,151 @@ msgstr ""
 "unterstützt wird und bereits mindestens ein Oxygen-Element enthält (d.h. "
 "wurde in Oxygen bearbeitet)."
 
-#: includes/admin/views/settings-tab-oxygen.php:284
+#: includes/admin/views/settings-tab-oxygen.php:183
 msgid "Action Link"
 msgstr "Aktionslink"
 
-#: includes/admin/views/settings-tab-oxygen.php:316
+#: includes/admin/views/settings-tab-oxygen.php:215
 msgid "Post State label"
 msgstr "Inhaltstyp-Status-Beschriftung"
 
-#: includes/admin/views/settings-tab-oxygen.php:368
+#: includes/admin/views/settings-tab-oxygen.php:255
+msgid ""
+"This is the very helpful top-level Toolbar item which appears when viewing "
+"website content on the frontend. The sub items get dynamically added by "
+"Oxygen based on the used Oxygen template for the current viewed page."
+msgstr ""
+"Dies ist das sehr hilfreiche Top-Level-Toolbar-Element, das beim Anzeigen "
+"von Website-Inhalten im Frontend angezeigt wird. Die Unterpunkte werden von "
+"Oxygen dynamisch hinzugefügt, basierend auf dem verwendeten Oxygen-Template "
+"für die aktuell angezeigte Seite."
+
+#: includes/admin/views/settings-tab-oxygen.php:273
+#: includes/admin/views/settings-tab-oxygen.php:484
+#: includes/admin/views/settings-tab-oxygen.php:687
+msgid "None"
+msgstr "Keins"
+
+#: includes/admin/views/settings-tab-oxygen.php:274
+#: includes/admin/views/settings-tab-oxygen.php:278
+#: includes/admin/views/settings-tab-oxygen.php:485
+#: includes/admin/views/settings-tab-oxygen.php:489
+#: includes/admin/views/settings-tab-oxygen.php:688
+#: includes/admin/views/settings-tab-oxygen.php:692
+msgid "Oxygen Logo Icon"
+msgstr "Oxygen Logo-Icon"
+
+#: includes/admin/views/settings-tab-oxygen.php:275
+#: includes/admin/views/settings-tab-oxygen.php:486
+#: includes/admin/views/settings-tab-oxygen.php:689
+msgid "Dashicon Icon"
+msgstr "Dashicon-Icon"
+
+#. translators: %s - a Dashicons CSS class name
+#: includes/admin/views/settings-tab-oxygen.php:310
+#: includes/admin/views/settings-tab-oxygen.php:524
+#: includes/admin/views/settings-tab-oxygen.php:727
+#, php-format
+msgid "Current: %s"
+msgstr "Aktuell: %s"
+
+#: includes/admin/views/settings-tab-oxygen.php:344
+#: includes/admin/views/settings-tab-oxygen.php:558
+#: includes/admin/views/settings-tab-oxygen.php:761
+msgid ""
+"The default value means display at far right of the left Toolbar section/ "
+"column."
+msgstr ""
+"Der Standardwert bedeutet eine Anzeige ganz rechts innerhalb des linken "
+"Toolbar-Bereichs/ der linken Spalte."
+
+#: includes/admin/views/settings-tab-oxygen.php:344
+#: includes/admin/views/settings-tab-oxygen.php:558
+#: includes/admin/views/settings-tab-oxygen.php:761
+msgid ""
+"The smaller the value gets the more on the left the item will be displayed."
+msgstr ""
+"Je kleiner der Wert wird, desto weiter links wird das Element erscheinen."
+
+#: includes/admin/views/settings-tab-oxygen.php:362
+#: includes/admin/views/settings-tab-oxygen.php:366
+msgid "Keep on left side"
+msgstr "Auf der linken Seite halten"
+
+#: includes/admin/views/settings-tab-oxygen.php:363
+msgid "Move to the right side"
+msgstr "Nach rechts bewegen"
+
+#: includes/admin/views/settings-tab-oxygen.php:412
+#: includes/admin/views/settings-tab-oxygen.php:416
+#: includes/admin/views/settings-tab-oxygen.php:610
+#: includes/admin/views/settings-tab-oxygen.php:614
+msgid "Top-level item (no parent)"
+msgstr "Top-Level-Element (oberste Ebene)"
+
+#: includes/admin/views/settings-tab-oxygen.php:413
+#: includes/admin/views/settings-tab-oxygen.php:611
+msgid "In Build Group (as sub items group)"
+msgstr "In Erschaffen-Gruppe (als Untergruppe)"
+
+#: includes/admin/views/settings-tab-oxygen.php:438
+#: includes/admin/views/settings-tab-oxygen.php:465
+msgid "Templates"
+msgstr "Templates"
+
+#. translators: %s - label, "Templates"
+#. translators: %s - label, "Oxygen-Edited Pages"
+#: includes/admin/views/settings-tab-oxygen.php:464
+#: includes/admin/views/settings-tab-oxygen.php:664
+#, php-format
+msgid "This limits the number of %s that will be shown in the listing."
+msgstr ""
+"Dies beschränkt die Anzahl der %s, die in der Auflistung angezeigt werden."
+
+#: includes/admin/views/settings-tab-oxygen.php:492
+#: includes/admin/views/settings-tab-oxygen.php:695
+msgid ""
+"When displaying within the Build Group the use of an icon is not recommended "
+"for styling reasons."
+msgstr ""
+"Bei der Anzeige innerhalb der Erschaffen-Gruppe wird die Verwendung eines "
+"Icons aus Stylinggründen nicht empfohlen."
+
+#: includes/admin/views/settings-tab-oxygen.php:561
+msgid ""
+"With this value you can control where in the Build Group under Oxygen "
+"Templates the Template Group will appear. The higher the value, the lower "
+"the item group (listing) appears."
+msgstr ""
+"Mit diesem Wert können Sie steuern, wo innerhalb der Erschaffen-Gruppe, "
+"unter Oxygen Templates, die Template-Gruppe erscheinen soll. Je höher der "
+"Wert, desto weiter unten erscheint die Gruppe (Auflistung)."
+
+#: includes/admin/views/settings-tab-oxygen.php:562
+#: includes/admin/views/settings-tab-oxygen.php:765
+#, php-format
+msgid "The recommended value is %s."
+msgstr "Der empfohlene Wert ist %s."
+
+#: includes/admin/views/settings-tab-oxygen.php:636 includes/tweaks.php:699
+msgid "Pages"
+msgstr "Seiten"
+
+#: includes/admin/views/settings-tab-oxygen.php:665
+msgid "Oxygen-Edited Pages"
+msgstr "Oxygen-bearbeitete Seiten"
+
+#: includes/admin/views/settings-tab-oxygen.php:764
+msgid ""
+"With this value you can control where in the Build Group the Pages Group "
+"will appear. The higher the value, the lower the item group (listing) "
+"appears."
+msgstr ""
+"Mit diesem Wert können Sie steuern, wo die Seiten-Gruppe innerhalb der "
+"Erschaffen-Gruppe erscheinen soll. Je höher der Wert, desto weiter unten "
+"erscheint die Gruppe (Auflistung)."
+
+#: includes/admin/views/settings-tab-oxygen.php:799
 msgid ""
 "By default this will add quick jump links to Oxygen Templates overview, plus "
 "the regular WordPress pages overview. If WooCommerce is active and/or the "
@@ -563,7 +756,7 @@ msgstr ""
 "dann werden auch diese Links hinzugefügt."
 
 #. translators: %s - label, "Back to WP"
-#: includes/admin/views/settings-tab-oxygen.php:402
+#: includes/admin/views/settings-tab-oxygen.php:833
 #, php-format
 msgid ""
 "This also affects the existing links in the %s section if the above would be "
@@ -572,7 +765,7 @@ msgstr ""
 "Dies betrifft auch die bestehenden Links im Bereich %s, wenn die oben "
 "genannten deaktiviert wären."
 
-#: includes/admin/views/settings-tab-oxygen.php:436
+#: includes/admin/views/settings-tab-oxygen.php:867
 msgid ""
 "As Oxygen Builder replaces the theme completely it is not needed any longer, "
 "therefore the whole submenu for it makes no real sense."
@@ -580,7 +773,7 @@ msgstr ""
 "Da Oxygen Builder das Theme komplett ersetzt, wird es nicht mehr benötigt, "
 "daher ergibt das gesamte Untermenü keinen Sinn."
 
-#: includes/admin/views/settings-tab-oxygen.php:464
+#: includes/admin/views/settings-tab-oxygen.php:895
 msgid ""
 "As Oxygen Builder does not need a theme it also is not dependend on the "
 "Customizer as well. Therefore you are free to remove its submenu item as "
@@ -589,7 +782,7 @@ msgstr ""
 "Da Oxygen Builder kein Theme benötigt, ist es auch nicht vom Customizer "
 "abhängig. Daher steht es Ihnen frei, auch den Untermenüpunkt zu entfernen."
 
-#: includes/admin/views/settings-tab-oxygen.php:492
+#: includes/admin/views/settings-tab-oxygen.php:923
 msgid ""
 "Since Oxygen Builder has no dependency of the theme the Theme Editor "
 "submenu, plus the Editor functionality itself, can optionally be removed as "
@@ -599,7 +792,7 @@ msgstr ""
 "Editor sowie die Editor-Funktionalität selbst optional ebenfalls entfernt "
 "werden."
 
-#: includes/admin/views/settings-tab-oxygen.php:520
+#: includes/admin/views/settings-tab-oxygen.php:951
 msgid ""
 "This tweak unloads the translations for Oxygen Builder. So all strings fall "
 "back to their English default strings."
@@ -608,12 +801,12 @@ msgstr ""
 "Somit werden automatisch die englischsprachigen Original-Strings geladen."
 
 #. translators: %s - text domain strings, for example 'oxygen'
-#: includes/admin/views/settings-tab-oxygen.php:525
+#: includes/admin/views/settings-tab-oxygen.php:956
 #, php-format
 msgid "Effected text domains: %s"
 msgstr "Betroffene Textdomains: %s"
 
-#: includes/admin/views/settings-tab-oxygen.php:555
+#: includes/admin/views/settings-tab-oxygen.php:986
 msgid ""
 "This tweak unloads the translations for Toolbar Extras for Oxygen Builder "
 "Add-On, so it falls back to the English default strings."
@@ -623,7 +816,7 @@ msgstr ""
 "Strings geladen."
 
 #. translators: %s - a text domain string, 'toolbar-extras-oxygen'
-#: includes/admin/views/settings-tab-oxygen.php:560
+#: includes/admin/views/settings-tab-oxygen.php:991
 #, php-format
 msgid "Effected text domain: %s"
 msgstr "Betroffene Textdomain: %s"
@@ -650,15 +843,57 @@ msgstr "Oxygen Builder"
 msgid "Oxygen Blue"
 msgstr "Oxygen Blau"
 
-#: includes/oxygen-addons/items-my-custom-functionality.php:39
-#: includes/oxygen-addons/items-my-custom-functionality.php:43
+#: includes/oxygen-addons/items-my-custom-functionality.php:47
+#: includes/oxygen-addons/items-my-custom-functionality.php:51
 msgid "My Custom Functionality"
 msgstr "Meine eigenen Funktionen"
 
-#: includes/oxygen-addons/items-my-custom-functionality.php:52
-#: includes/oxygen-addons/items-my-custom-functionality.php:56
+#: includes/oxygen-addons/items-my-custom-functionality.php:60
+#: includes/oxygen-addons/items-my-custom-functionality.php:64
 msgid "Main Plugin File"
 msgstr "Haupt-Plugindatei"
+
+#: includes/oxygen-addons/items-oxygen-blocklab-support.php:46
+msgid "Oxygen Block Lab Support"
+msgstr "Oxygen Block Lab Unterstützung"
+
+#: includes/oxygen-addons/items-oxygen-blocklab-support.php:50
+msgid "Oxygen Block Lab Support - Template files"
+msgstr "Oxygen Block Lab Unterstützung - Template-Dateien"
+
+#: includes/oxygen-addons/items-oxygen-blocklab-support.php:59
+#: includes/oxygen-addons/items-oxygen-edd-support.php:67
+#: includes/oxygen-addons/items-oxygen-rcp-support.php:67
+msgid "Template Files"
+msgstr "Template-Dateien"
+
+#: includes/oxygen-addons/items-oxygen-blocklab-support.php:63
+msgid "Block Lab Template Files"
+msgstr "Block Lab Template-Dateien"
+
+#: includes/oxygen-addons/items-oxygen-edd-support.php:54
+msgid "Oxygen EDD Support"
+msgstr "Oxygen EDD-Unterstützung"
+
+#: includes/oxygen-addons/items-oxygen-edd-support.php:58
+msgid "Oxygen EDD Support - Template files"
+msgstr "Oxygen EDD-Unterstützung - Template-Dateien"
+
+#: includes/oxygen-addons/items-oxygen-edd-support.php:71
+msgid "EDD Template Files"
+msgstr "EDD-Template-Dateien"
+
+#: includes/oxygen-addons/items-oxygen-rcp-support.php:54
+msgid "Oxygen RCP Support"
+msgstr "Oxygen RCP-Unterstützung"
+
+#: includes/oxygen-addons/items-oxygen-rcp-support.php:58
+msgid "Oxygen RCP Support - Template files"
+msgstr "Oxygen RCP-Unterstützung - Template-Dateien"
+
+#: includes/oxygen-addons/items-oxygen-rcp-support.php:71
+msgid "RCP Template Files"
+msgstr "RCP-Template-Dateien"
 
 #: includes/oxygen-addons/items-oxygen-theme-enabler.php:36
 #: includes/oxygen-addons/items-oxygen-theme-enabler.php:40
@@ -677,215 +912,264 @@ msgstr "Einstellungen"
 msgid "Swiss Knife"
 msgstr "Schweizer Messer"
 
-#: includes/oxygen-official/items-oxygen-core.php:135
-#: includes/oxygen-official/items-oxygen-core.php:139
+#: includes/oxygen-official/items-oxygen-core.php:132
+#: includes/oxygen-official/items-oxygen-core.php:136
 msgid "All Templates"
 msgstr "Alle Templates"
 
-#: includes/oxygen-official/items-oxygen-core.php:148
-#: includes/oxygen-official/items-oxygen-core.php:152
+#: includes/oxygen-official/items-oxygen-core.php:145
+#: includes/oxygen-official/items-oxygen-core.php:149
 msgid "New Template"
 msgstr "Neues Template"
 
-#: includes/oxygen-official/items-oxygen-core.php:180
-#: includes/oxygen-official/items-oxygen-core.php:184
+#: includes/oxygen-official/items-oxygen-core.php:177
+#: includes/oxygen-official/items-oxygen-core.php:181
 msgid "All Reusable Parts"
 msgstr "Alle wiederverwendbaren Teile"
 
-#: includes/oxygen-official/items-oxygen-core.php:193
-#: includes/oxygen-official/items-oxygen-core.php:197
+#: includes/oxygen-official/items-oxygen-core.php:190
+#: includes/oxygen-official/items-oxygen-core.php:194
 msgid "New Reusable Part"
 msgstr "Neuer wiederverwendbarer Teil"
 
-#: includes/oxygen-official/items-oxygen-core.php:227
-#: includes/oxygen-official/items-oxygen-core.php:231
+#: includes/oxygen-official/items-oxygen-core.php:224
+#: includes/oxygen-official/items-oxygen-core.php:228
 msgid "All Library Blocks"
 msgstr "Alle Bibliotheks-Blöcke"
 
-#: includes/oxygen-official/items-oxygen-core.php:240
-#: includes/oxygen-official/items-oxygen-core.php:244
+#: includes/oxygen-official/items-oxygen-core.php:237
+#: includes/oxygen-official/items-oxygen-core.php:241
 msgid "New Library Block"
 msgstr "Neuer Bibliotheks-Block"
 
-#: includes/oxygen-official/items-oxygen-core.php:290
-#: includes/oxygen-official/items-oxygen-core.php:294
+#: includes/oxygen-official/items-oxygen-core.php:287
+#: includes/oxygen-official/items-oxygen-core.php:291
 msgid "General"
 msgstr "Allgemein"
 
-#: includes/oxygen-official/items-oxygen-core.php:303
-#: includes/oxygen-official/items-oxygen-core.php:307
-#: includes/oxygen-official/items-oxygen-core.php:550
+#: includes/oxygen-official/items-oxygen-core.php:300
+#: includes/oxygen-official/items-oxygen-core.php:304
+#: includes/oxygen-official/items-oxygen-core.php:565
 msgid "Role Manager"
 msgstr "Benutzerrollen verwalten"
 
-#: includes/oxygen-official/items-oxygen-core.php:316
-#: includes/oxygen-official/items-oxygen-core.php:320
+#: includes/oxygen-official/items-oxygen-core.php:313
+#: includes/oxygen-official/items-oxygen-core.php:317
 msgid "Post Type Manager"
 msgstr "Inhaltstypen verwalten"
 
-#: includes/oxygen-official/items-oxygen-core.php:329
-#: includes/oxygen-official/items-oxygen-core.php:333
+#: includes/oxygen-official/items-oxygen-core.php:326
+#: includes/oxygen-official/items-oxygen-core.php:330
 msgid "Security"
 msgstr "Sicherheit"
 
-#: includes/oxygen-official/items-oxygen-core.php:342
-#: includes/oxygen-official/items-oxygen-core.php:346
+#: includes/oxygen-official/items-oxygen-core.php:339
+#: includes/oxygen-official/items-oxygen-core.php:343
 msgid "SVG Sets"
 msgstr "SVG-Sets"
 
-#: includes/oxygen-official/items-oxygen-core.php:355
-#: includes/oxygen-official/items-oxygen-core.php:359
+#: includes/oxygen-official/items-oxygen-core.php:352
+#: includes/oxygen-official/items-oxygen-core.php:356
 msgid "Typekit Fonts"
 msgstr "Typekit Schriften"
 
-#: includes/oxygen-official/items-oxygen-core.php:368
-#: includes/oxygen-official/items-oxygen-core.php:372
+#: includes/oxygen-official/items-oxygen-core.php:365
+#: includes/oxygen-official/items-oxygen-core.php:369
 msgid "CSS Cache"
 msgstr "CSS-Cache"
 
-#: includes/oxygen-official/items-oxygen-core.php:381
-#: includes/oxygen-official/items-oxygen-core.php:385
+#: includes/oxygen-official/items-oxygen-core.php:378
+#: includes/oxygen-official/items-oxygen-core.php:382
 msgid "Bloat Eliminator"
 msgstr "Bloat-Eliminator"
 
-#: includes/oxygen-official/items-oxygen-core.php:397
+#: includes/oxygen-official/items-oxygen-core.php:394
 msgid "Block Library"
 msgstr "Block-Bibliothek"
 
-#: includes/oxygen-official/items-oxygen-core.php:401
+#: includes/oxygen-official/items-oxygen-core.php:398
 msgid "User Library of Builder Elements &amp; Blocks"
 msgstr "Benutzer-Bibliothek von Builder-Elementen &amp; Blöcken"
 
 #: includes/oxygen-official/items-oxygen-core.php:412
+msgid "Gutenberg Integration"
+msgstr "Gutenberg-Integration"
+
 #: includes/oxygen-official/items-oxygen-core.php:416
+msgid "Gutenberg Integration - for Block Editor"
+msgstr "Gutenberg-Integration - für Block-Editor"
+
+#: includes/oxygen-official/items-oxygen-core.php:427
+#: includes/oxygen-official/items-oxygen-core.php:431
 msgid "Export &amp; Import"
 msgstr "Export &amp; Import"
 
-#: includes/oxygen-official/items-oxygen-core.php:425
-#: includes/oxygen-official/items-oxygen-core.php:429
+#: includes/oxygen-official/items-oxygen-core.php:440
+#: includes/oxygen-official/items-oxygen-core.php:444
 msgid "License"
 msgstr "Lizenz"
 
-#: includes/oxygen-official/items-oxygen-core.php:468
-#: includes/oxygen-official/items-oxygen-core.php:472
+#: includes/oxygen-official/items-oxygen-core.php:483
+#: includes/oxygen-official/items-oxygen-core.php:487
 msgid "Settings Customizer"
 msgstr "Einstellungen Customizer"
 
-#: includes/oxygen-official/items-oxygen-core.php:481
-#: includes/oxygen-official/items-oxygen-core.php:485
+#: includes/oxygen-official/items-oxygen-core.php:496
+#: includes/oxygen-official/items-oxygen-core.php:500
 msgid "Settings &amp; Design"
 msgstr "Einstellungen &amp; Design"
 
 #. translators: Autofocus section in the Customizer
-#: includes/oxygen-official/items-oxygen-core.php:495
-#: includes/oxygen-official/items-oxygen-core.php:499
+#: includes/oxygen-official/items-oxygen-core.php:510
+#: includes/oxygen-official/items-oxygen-core.php:514
 msgid "Site Identity"
 msgstr "Website-Identität"
 
 #. translators: Autofocus section in the Customizer
-#: includes/oxygen-official/items-oxygen-core.php:509
-#: includes/oxygen-official/items-oxygen-core.php:513
+#: includes/oxygen-official/items-oxygen-core.php:524
+#: includes/oxygen-official/items-oxygen-core.php:528
 msgid "Custom CSS"
 msgstr "Individuelles CSS"
 
 #. translators: Oxygen "Role Manager" displayed in "my-account" Toolbar submenu - it's only a small area please use a short translation term!
-#: includes/oxygen-official/items-oxygen-core.php:545
+#: includes/oxygen-official/items-oxygen-core.php:560
 msgctxt "Oxygen Role Manager"
 msgid "Role Manager"
 msgstr "Benutzerrollen Verwalten"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:581
-#: includes/oxygen-official/items-oxygen-core.php:598
+#: includes/oxygen-official/items-oxygen-core.php:596
+#: includes/oxygen-official/items-oxygen-core.php:613
 #, php-format
 msgid "%s Template"
 msgstr "%s Template"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:588
+#: includes/oxygen-official/items-oxygen-core.php:603
 #, php-format
 msgid "%s Reusable Part"
 msgstr "%s Wiederverwendbarer Teil"
 
-#: includes/oxygen-official/items-oxygen-core.php:611
+#: includes/oxygen-official/items-oxygen-core.php:626
 msgid "Template"
 msgstr "Template"
 
-#: includes/oxygen-official/items-oxygen-core.php:623
+#: includes/oxygen-official/items-oxygen-core.php:638
 msgid "Reusable Part"
 msgstr "Wiederverwendbarer Teil"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:636
+#: includes/oxygen-official/items-oxygen-core.php:651
 #, php-format
 msgid "%s User Library Block/ Element"
 msgstr "%s Benutzer Bibliotheks-Block/ -Element"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:646
+#: includes/oxygen-official/items-oxygen-core.php:661
 #, php-format
 msgid "%s Library Block"
 msgstr "%s Bibliotheks-Block"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:713
+#: includes/oxygen-official/items-oxygen-core.php:728
 #, php-format
 msgid "Getting Started - Learn %s Tutorials"
 msgstr "Erste Schritte - %s lernen Anleitungen"
 
-#: includes/oxygen-official/items-oxygen-core.php:743
+#: includes/oxygen-official/items-oxygen-core.php:758
 msgid "Bug Reports &amp; Feature Requests"
 msgstr "Fehlerberichte &amp; Feature-Anfragen"
 
-#: includes/oxygen-official/items-oxygen-core.php:748
+#: includes/oxygen-official/items-oxygen-core.php:763
 msgid "Bug Reports &amp; Feature Requests via GitHub Issues"
 msgstr "Fehlerberichte &amp; Feature-Anfragen via GitHub Issues"
 
-#: includes/oxygen-official/items-oxygen-core.php:789
+#: includes/oxygen-official/items-oxygen-core.php:804
 msgid "Slack Chat - Official Community Channel"
 msgstr "Slack-Chat - Offizieller Community-Kanal"
 
-#: includes/oxygen-official/items-oxygen-core.php:796
+#: includes/oxygen-official/items-oxygen-core.php:811
 msgid "Community Resources - Trello Board"
 msgstr "Community-Ressourcen - Trello-Board"
 
-#: includes/oxygen-official/items-oxygen-core.php:801
+#: includes/oxygen-official/items-oxygen-core.php:816
 msgid "Collected Community Resources - Trello Board"
 msgstr "Gesammelte Community-Ressourcen - Trello-Board"
 
-#: includes/oxygen-official/items-oxygen-core.php:810
+#: includes/oxygen-official/items-oxygen-core.php:825
 msgid "Tutorials on Oxygen &amp; WP"
 msgstr "Anleitungen zu Oxygen &amp; WP"
 
-#: includes/oxygen-official/items-oxygen-core.php:815
+#: includes/oxygen-official/items-oxygen-core.php:830
 msgid "Tutorials on Oxygen and WordPress - Community Blog"
 msgstr "Anleitungen zu Oxygen und WordPress - Community-Blog"
 
-#: includes/oxygen-official/items-oxygen-core.php:824
+#: includes/oxygen-official/items-oxygen-core.php:839
 msgid "Tutorials &amp; Tips"
 msgstr "Anleitungen &amp; Tipps"
 
-#: includes/oxygen-official/items-oxygen-core.php:829
+#: includes/oxygen-official/items-oxygen-core.php:844
 msgid "Tutorials &amp; Tips - Community Blog"
 msgstr "Anleitungen &amp; Tipps - Community-Blog"
 
-#: includes/oxygen-official/items-oxygen-core.php:872
+#: includes/oxygen-official/items-oxygen-core.php:887
 msgid "Install Website"
 msgstr "Website installieren"
 
 #. translators: %s - Word "Oxygen"
-#: includes/oxygen-official/items-oxygen-core.php:881
+#: includes/oxygen-official/items-oxygen-core.php:896
 #, php-format
 msgid "%s Design Library - Install a Different Website"
 msgstr "%s Design-Bibliothek - Eine andere Website installieren"
 
-#: includes/oxygen-official/items-oxygen-core.php:895
+#: includes/oxygen-official/items-oxygen-core.php:910
 msgid "Add Design Sets"
 msgstr "Design-Sets hinzufügen"
 
-#: includes/oxygen-official/items-oxygen-core.php:900
+#: includes/oxygen-official/items-oxygen-core.php:915
 msgid "Oxygen: Add Third-Party Design Set (Import)"
 msgstr "Oxygen: Design-Set eines Drittanbieters hinzufügen (Import)"
+
+#: includes/oxygen-official/items-oxygen-pages.php:109
+msgid "List of Oxygen-edited WordPress Pages"
+msgstr "Liste von Oxygen-bearbeiteten WordPress-Seiten"
+
+#: includes/oxygen-official/items-oxygen-pages.php:214
+#: includes/oxygen-official/items-oxygen-pages.php:227
+msgid "Edit Page in Oxygen Builder"
+msgstr "Seite in Oxygen Builder bearbeiten"
+
+#: includes/oxygen-official/items-oxygen-pages.php:236
+#: includes/oxygen-official/items-oxygen-templates.php:225
+msgid "Settings in Admin"
+msgstr "Einstellungen im Admin"
+
+#: includes/oxygen-official/items-oxygen-pages.php:240
+msgid "Page Settings in WP-Admin"
+msgstr "Seiteneinstellungen in WP-Admin"
+
+#: includes/oxygen-official/items-oxygen-pages.php:249
+msgid "View on Frontend"
+msgstr "Ansicht im Frontend"
+
+#: includes/oxygen-official/items-oxygen-pages.php:253
+msgid "Page Live View on Frontend"
+msgstr "Seitenansicht im Frontend"
+
+#. translators: %s - Word "Oxygen"
+#: includes/oxygen-official/items-oxygen-templates.php:98
+#, php-format
+msgid "List of %s Builder Templates (published status only)"
+msgstr "Liste der %s Builder Templates (nur Status veröffentlicht)"
+
+#: includes/oxygen-official/items-oxygen-templates.php:203
+#: includes/oxygen-official/items-oxygen-templates.php:216
+msgid "Edit Template in Oxygen Builder"
+msgstr "Template in Oxygen Builder bearbeiten"
+
+#: includes/oxygen-official/items-oxygen-templates.php:229
+msgid "Template Settings in WP-Admin"
+msgstr "Template-Einstellungen in WP-Admin"
 
 #: includes/plugin-manager.php:48
 msgid "Add-On for Oxygen Builder"
@@ -970,46 +1254,42 @@ msgstr "Bearbeiten mit %s"
 msgid "Back to WP"
 msgstr "Zurück zu WP"
 
-#: includes/tweaks.php:36
+#: includes/tweaks.php:41
 msgid "View Templates"
 msgstr "Templates ansehen"
 
-#: includes/tweaks.php:133
+#: includes/tweaks.php:145
 msgid "Reusable Parts"
 msgstr "Wiederverwendbare Teile"
 
 #. translators: %s - Word "Oxygen"
-#: includes/tweaks.php:562
+#: includes/tweaks.php:589
 #, php-format
 msgid "Current %s Builder Templates in use"
 msgstr "Aktuelle %s Builder Templates in Verwendung"
 
-#: includes/tweaks.php:668
+#: includes/tweaks.php:695
 msgctxt "Label in Oxygen Toolbar"
 msgid "Templates"
 msgstr "Templates"
 
-#: includes/tweaks.php:672
-msgid "Pages"
-msgstr "Seiten"
-
-#: includes/tweaks.php:681
+#: includes/tweaks.php:708
 msgid "Products"
 msgstr "Produkte"
 
-#: includes/tweaks.php:691
+#: includes/tweaks.php:718
 msgid "Elements Library"
 msgstr "Elemente-Bibliothek"
 
-#: includes/tweaks.php:778
+#: includes/tweaks.php:808
 msgid "Opens in new tab/ window"
 msgstr "Öffnet in einem neuen Tab/ Fenster"
 
-#: includes/tweaks.php:778
+#: includes/tweaks.php:808
 msgid "Opens in same tab/ window"
 msgstr "Öffnet im gleichen Tab/ Fenster"
 
-#: toolbar-extras-oxygen.php:247
+#: toolbar-extras-oxygen.php:245
 #, php-format
 msgid ""
 "The needed base plugin %s is already installed but not activated. (Toolbar "
@@ -1020,17 +1300,17 @@ msgstr ""
 "(Toolbar Extras for Oxygen Builder ist ein Add-On-Plugin, das von Toolbar "
 "Extras abhängt.)"
 
-#: toolbar-extras-oxygen.php:248 toolbar-extras-oxygen.php:267
-#: toolbar-extras-oxygen.php:313
+#: toolbar-extras-oxygen.php:246 toolbar-extras-oxygen.php:265
+#: toolbar-extras-oxygen.php:311
 msgid "Toolbar Extras"
 msgstr "Toolbar Extras"
 
-#: toolbar-extras-oxygen.php:253
+#: toolbar-extras-oxygen.php:251
 msgid "Activate Toolbar Extras Now"
 msgstr "Toolbar Extras jetzt aktivieren"
 
 #. translators: %1$s - name of the base plugin "Toolbar Extras" / %2$s - required version of base plugin, for example: 1.4.3
-#: toolbar-extras-oxygen.php:266
+#: toolbar-extras-oxygen.php:264
 #, php-format
 msgid ""
 "Toolbar Extras for Oxygen Builder is an Add-On plugin which DEPENDS on the "
@@ -1040,11 +1320,11 @@ msgstr ""
 "ABHÄNGT dass das (kostenlose) Plugin %1$s in Version %2$s oder höher "
 "installiert und aktiviert worden ist."
 
-#: toolbar-extras-oxygen.php:273
+#: toolbar-extras-oxygen.php:271
 msgid "Install Toolbar Extras Now"
 msgstr "Toolbar Extras jetzt installieren"
 
-#: toolbar-extras-oxygen.php:312
+#: toolbar-extras-oxygen.php:310
 #, php-format
 msgid ""
 "Toolbar Extras for Oxygen Builder is not working yet because you are using "
@@ -1053,7 +1333,7 @@ msgstr ""
 "Toolbar Extras für Oxygen Builder funktioniert noch nicht, da Sie derzeit "
 "eine veraltete Version des Basis-Plugins %s verwenden."
 
-#: toolbar-extras-oxygen.php:318
+#: toolbar-extras-oxygen.php:316
 msgid "Update Toolbar Extras Now"
 msgstr "Toolbar Extras jetzt aktualisieren"
 
@@ -1133,9 +1413,6 @@ msgstr "David Decker - DECKERWEB"
 
 #~ msgid "Element"
 #~ msgstr "Element"
-
-#~ msgid "Templates"
-#~ msgstr "Templates"
 
 #~ msgid "https://github.com/deckerweb/toolbar-extras-oxygen"
 #~ msgstr "https://github.com/deckerweb/toolbar-extras-oxygen"

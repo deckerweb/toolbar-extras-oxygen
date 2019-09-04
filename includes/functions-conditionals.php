@@ -47,6 +47,28 @@ function ddw_tbexob_is_oxygen_active() {
 
 
 /**
+ * Can the current user access Oxygen Builder items?
+ *
+ * @since 1.2.0
+ *
+ * @uses oxygen_vsb_current_user_can_access()
+ *
+ * @return bool TRUE if Oxygen access function returns true, FALSE otherwise.
+ */
+function ddw_tbexob_current_user_can_access_oxygen() {
+
+	/** Bail early if function not exists */
+	if ( ! function_exists( 'oxygen_vsb_current_user_can_access' ) ) {
+		return FALSE;
+	}
+
+	/** Return boolean value of function itself */
+	return oxygen_vsb_current_user_can_access();
+
+}  // end function
+
+
+/**
  * Check if Oxygen User Library Module is available or not, that means Oxygen
  *   must be at least in version 2.3 alpha1 or higher.
  *
@@ -115,6 +137,20 @@ function ddw_tbexob_is_oxygen_design_set_import() {
 function ddw_tbexob_is_oxygen_theme_enabler_active() {
 
 	return class_exists( 'OxygenThemeEnabler' );
+
+}  // end function
+
+
+/**
+ * Is the Oxygen Gutenberg Integration Add-On plugin active or not?
+ *
+ * @since 1.2.0
+ *
+ * @return bool TRUE if Add-On plugin is active, FALSE otherwise.
+ */
+function ddw_tbexob_is_oxygen_gutenberg_active() {
+
+	return class_exists( 'Oxygen_Gutenberg' );
 
 }  // end function
 
@@ -188,6 +224,38 @@ function ddw_tbexob_display_row_actions() {
 function ddw_tbexob_display_post_state() {
 
 	return ( 'yes' === ddw_tbex_get_option( 'oxygen', 'oxygen_post_state' ) );
+
+}  // end function
+
+
+/**
+ * Tweak: Display Template Group for Oxygen Templates?
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_get_option()
+ *
+ * @return bool TRUE if tweak should be used (setting 'yes'), FALSE otherwise.
+ */
+function ddw_tbexob_display_template_group() {
+
+	return ( 'yes' === ddw_tbex_get_option( 'oxygen', 'display_tpl_toolbar' ) );
+
+}  // end function
+
+
+/**
+ * Tweak: Display Pages Group for Oxygen editable Pages?
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_get_option()
+ *
+ * @return bool TRUE if tweak should be used (setting 'yes'), FALSE otherwise.
+ */
+function ddw_tbexob_display_pages_group() {
+
+	return ( 'yes' === ddw_tbex_get_option( 'oxygen', 'display_pages_toolbar' ) );
 
 }  // end function
 

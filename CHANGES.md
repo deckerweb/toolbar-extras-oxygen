@@ -13,6 +13,26 @@
 
 ## Changelog of the Plugin
 
+### 🎉 1.2.0 - 2019-09-04
+
+* *New: Successfully tested with Oxygen Builder 3.0, including WooCommerce & Gutenberg Integrations*
+* *New: Successfully tested with Oxygen Builder 2.4.1*
+* New: For Oxygen Template post type, added new optional **Template Group** as a top-level item, or as sub item in the *Build Group* - has lots of options for customizing
+* New: For Oxygen-edited Pages, added new optional **Pages Group** as a top-level item, or as sub item in the *Build Group* - has lots of options for customizing
+* New: Added plugin support for [Oxygen Block Lab Support (free, by David Browne)](https://github.com/wplit/oxygen-block-lab-support) - for *Block Lab* block templates
+* New: Added plugin support for [Oxygen EDD Support (free, by David Browne)](https://github.com/wplit/Oxygen-EDD-Support) - for *Easy Digital Downloads (EDD)* product & archive templates
+* New: Added plugin support for [Oxygen RCP Support (free, by David Browne)](https://github.com/wplit/Oxygen-RCP-Support) - for *Restrict Content Pro* content templates
+* New: Added internal logic for settings updater between major versions of this Add-On
+* Tweak: Added sub item for optional "Gutenberg" settings (Oxygen Gutenberg Integration)
+* Tweak: For "My Custom Functionality" plugin support, added dynamic folder path detection to better handle GitHub specific scenarios
+* Tweak: For some existing tweaks made sure they are not executed in the Oxygen Builder context to avoid any errors, warnings and notices
+* Tweak: Added [new screenshots (for the above new features)](https://toolbarextras.com/addons/oxygen-builder/#tab-screenshots)
+* Tweak: Some under the hood improvements on code base
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* Fix: Fixed PHP notice if Oxygen Builder is still set as default page builder in settings but the plugin was deactivated meanwhile
+* **Note:** The Add-On version 1.2.0 requires [base plugin Toolbar Extras v1.4.6+](https://wordpress.org/plugins/toolbar-extras/)
+
+
 ### 🎉 1.1.0 - 2019-05-16
 
 * *New: Successfully tested with Oxygen Builder 2.3*

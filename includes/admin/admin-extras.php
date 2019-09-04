@@ -12,32 +12,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
+//
+
+
+//
+
+
 /**
  * Add "Settings" and Custom Menu" links to Plugins page.
  *
  * @since 1.0.0
+ * @since 1.2.0 Overall code improvements.
  *
  * @uses ddw_tbexob_is_toolbar_extras_active()
  * @uses ddw_tbexob_is_oxygen_active()
  *
- * @param array $tbexob_links (Default) Array of plugin action links.
- * @return strings $tbexob_links Settings & Menu Admin links.
+ * @param array $action_links (Default) Array of plugin action links.
+ * @return array Modified array of plugin action links.
  */
-function ddw_tbexob_custom_settings_links( $tbexob_links ) {
+function ddw_tbexob_custom_settings_links( $action_links = [] ) {
 
-	/** Set defaults */
-	$tbexob_settings_link = '';
-	$tbexob_oxygen_link   = '';
+	$tbexob_links = array();
 
 	/** Add settings link only if user can 'manage_options' */
 	if ( current_user_can( 'manage_options' ) ) {
 
 		/** If environment is not ready point to plugin manager */
-		if ( ( ddw_tbexob_is_toolbar_extras_active() && version_compare( 'TBEX_PLUGIN_VERSION', '1.4.1', '>=' ) )
+		if ( ( ddw_tbexob_is_toolbar_extras_active() && version_compare( TBEX_PLUGIN_VERSION, TBEXOB_REQUIRED_BASE_PLUGIN_VERSION, '>=' ) )
 			&& ! ddw_tbexob_is_oxygen_active()
 		) {
 
-			$tbexob_settings_link = sprintf(
+			$tbexob_links[ 'settings' ] = sprintf(
 				'<a href="%s" title="%s"><span class="dashicons-before dashicons-admin-plugins"></span> %s</a>',
 				esc_url( admin_url( 'plugins.php?page=toolbar-extras-suggested-plugins' ) ),
 				esc_html__( 'First Step: Setup Environment to use the plugin', 'toolbar-extras-oxygen' ),
@@ -49,14 +54,14 @@ function ddw_tbexob_custom_settings_links( $tbexob_links ) {
 		/** Oxygen & Settings Page links */
 		if ( ddw_tbexob_is_toolbar_extras_active() && ddw_tbexob_is_oxygen_active() ) {
 
-			$tbexob_oxygen_link = sprintf(
+			$tbexob_links[ 'oxygen' ] = sprintf(
 				'<a href="%s" title="%s"><span class="dashicons-before dashicons-welcome-widgets-menus"></span> %s</a>',
 				esc_url( admin_url( 'admin.php?page=ct_dashboard_page' ) ),
 				esc_html__( 'Oxygen Builder', 'toolbar-extras-oxygen' ),
 				esc_attr__( 'Oxygen', 'toolbar-extras-oxygen' )
 			);
 
-			$tbexob_settings_link = sprintf(
+			$tbexob_links[ 'settings' ] = sprintf(
 				'<a href="%s" title="%s"><span class="dashicons-before dashicons-admin-generic"></span> %s</a>',
 				esc_url( admin_url( 'options-general.php?page=toolbar-extras&tab=oxygen' ) ),
 				esc_html__( 'Toolbar Settings for Oxygen Builder', 'toolbar-extras-oxygen' ),
@@ -67,23 +72,11 @@ function ddw_tbexob_custom_settings_links( $tbexob_links ) {
 
 	}  // end if
 
-	/** Set the order of the links */
-	if ( ! empty( $tbexob_settings_link ) && empty( $tbexob_oxygen_link ) ) {
-
-		array_unshift( $tbexob_links, $tbexob_settings_link );
-
-	} elseif ( ! empty( $tbexob_settings_link ) && !empty( $tbexob_oxygen_link ) ) {
-
-		array_unshift( $tbexob_links, $tbexob_oxygen_link, $tbexob_settings_link );
-
-	}  // end if
-
 	/** Display plugin settings links */
 	return apply_filters(
 		'tbexob/filter/plugins_page/settings_link',
-		$tbexob_links,
-		$tbexob_settings_link,	// additional param
-		$tbexob_oxygen_link		// additional param
+		array_merge( $tbexob_links, $action_links ),
+		$tbexob_links		// additional param
 	);
 
 }  // end function
@@ -226,9 +219,11 @@ add_filter( 'debug_information', 'ddw_tbexob_site_health_add_debug_info', 6 );
  * @link https://make.wordpress.org/core/2019/04/25/site-health-check-in-5-2/
  *
  * @since 1.1.0
+ * @since 1.2.0 Added new options; tweaks & improvements.
  *
  * @uses ddw_tbex_string_debug_diagnostic()
  * @uses ddw_tbex_string_yes()
+ * @uses ddw_tbex_string_no()
  * @uses ddw_tbex_string_uninstalled()
  * @uses ddw_tbexob_is_oxygen_user_library_active()
  *
@@ -236,7 +231,7 @@ add_filter( 'debug_information', 'ddw_tbexob_site_health_add_debug_info', 6 );
  * @return array Modified array of Debug Info.
  */
 function ddw_tbexob_site_health_add_debug_info( $debug_info ) {
-	
+
 	/** Add our Debug info */
 	$debug_info[ 'toolbar-extras-oxygen' ] = array(
 		'label'       => esc_html__( 'Toolbar Extras for Oxygen Builder', 'toolbar-extras-oxygen' ) . ' (' . esc_html__( 'Add-On Plugin', 'toolbar-extras-oxygen' ) . ')',
@@ -253,27 +248,27 @@ function ddw_tbexob_site_health_add_debug_info( $debug_info ) {
 				'value' => TBEXOB_REQUIRED_BASE_PLUGIN_VERSION,
 			),
 			'tbexob_oxygen_display_customizer' => array(
-				'label' => __( 'Display Settings Customizer', 'toolbar-extras' ),
+				'label' => __( 'Display Settings Customizer', 'toolbar-extras-oxygen' ),
 				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_display_customizer' ],
 			),
 			'tbexob_oxygen_tl_priority' => array(
-				'label' => __( 'Oxygen item priority', 'toolbar-extras' ),
+				'label' => __( 'Oxygen item priority', 'toolbar-extras-oxygen' ),
 				'value' => get_option( 'tbex-options-oxygen', '1000' )[ 'oxygen_tl_priority' ],
 			),
 			'tbexob_oxygen_row_actions' => array(
-				'label' => __( 'Use Row Action', 'toolbar-extras' ),
+				'label' => __( 'Use Row Action', 'toolbar-extras-oxygen' ),
 				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_row_actions' ],
 			),
 			'tbexob_oxygen_post_state' => array(
-				'label' => __( 'Use Post State', 'toolbar-extras' ),
+				'label' => __( 'Use Post State', 'toolbar-extras-oxygen' ),
 				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_post_state' ],
 			),
 			'tbexob_oxygen_btwp_links' => array(
-				'label' => __( 'Additional links Back to WP section', 'toolbar-extras' ),
+				'label' => __( 'Additional links Back to WP section', 'toolbar-extras-oxygen' ),
 				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_btwp_links' ],
 			),
 			'tbexob_oxygen_btwp_links_blank' => array(
-				'label' => __( 'Open additional links in new tab', 'toolbar-extras' ),
+				'label' => __( 'Open additional links in new tab', 'toolbar-extras-oxygen' ),
 				'value' => get_option( 'tbex-options-oxygen', ddw_tbex_string_yes( 'return' ) )[ 'oxygen_btwp_links_blank' ],
 			),
 
@@ -407,8 +402,8 @@ function ddw_tbexob_register_extra_plugin_recommendations_oxygen( array $plugins
 		$plugins[ 'toolbar-extras-oxygen' ] = null;
 	}
 
-  	/** Add new keys to recommendations */
-  	$plugins[ 'wp-asset-clean-up' ] = array(
+	/** Add new keys to recommendations */
+	$plugins[ 'wp-asset-clean-up' ] = array(
 		'featured'    => 'yes',
 		'recommended' => 'yes',
 		'popular'     => 'no',

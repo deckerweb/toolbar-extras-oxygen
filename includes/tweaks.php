@@ -25,6 +25,11 @@ add_filter( 'register_post_type_args', 'ddw_tbexob_post_type_args_oxygen', 10, 2
  */
 function ddw_tbexob_post_type_args_oxygen( $args, $post_type ) {
 
+	/** Bail early if in Builder context */
+	if ( defined( 'SHOW_CT_BUILDER' ) ) {
+		return $args;
+	}
+
 	/** Filter allows for custom disabling */
 	if ( apply_filters( 'tbexob/filter/oxygen/tweak/post_type_args', FALSE ) ) {
 		return $args;
@@ -94,10 +99,17 @@ add_filter( 'views_edit-ct_template', 'ddw_tbexob_views_oxygen_reusable_parts', 
  *
  * @since 1.0.0
  *
+ * @ues ddw_tbexob_current_user_can_access_oxygen()
+ *
  * @param array $views Array which holds all views.
  * @return array Modified array of views.
  */
 function ddw_tbexob_views_oxygen_reusable_parts( $views ) {
+
+	/** Bail early if current user has no access */
+	if ( ! ddw_tbexob_current_user_can_access_oxygen() ) {
+		return $views;
+	}
 
 	/** Set custom query arguments */
 	$args = array(
@@ -149,6 +161,7 @@ add_filter( 'post_row_actions', 'ddw_tbexob_add_row_action_oxygen_types', 100, 2
  * @since 1.0.2 Tweaks for proper 'ct_inner' check.
  *
  * @uses ddw_tbexob_display_row_actions()
+ * @uses ddw_tbexob_current_user_can_access_oxygen()
  * @uses ddw_tbexob_string_edit_with_oxygen()
  * @uses ddw_tbex_meta_target()
  * @uses ddw_tbex_meta_rel()
@@ -160,7 +173,7 @@ add_filter( 'post_row_actions', 'ddw_tbexob_add_row_action_oxygen_types', 100, 2
 function ddw_tbexob_add_row_action_oxygen_types( $actions, $post ) {
 
 	/** Bail early if now Row Actions wanted */
-	if ( ! ddw_tbexob_display_row_actions() ) {
+	if ( ! ddw_tbexob_display_row_actions() || ! ddw_tbexob_current_user_can_access_oxygen() ) {
 		return $actions;
 	}
 
@@ -228,6 +241,7 @@ add_filter( 'page_row_actions', 'ddw_tbexob_add_row_action_post_types', 100, 2 )
  * @since 1.0.2 Tweaks for proper 'ct_inner' check.
  *
  * @uses ddw_tbexob_display_row_actions()
+ * @uses ddw_tbexob_current_user_can_access_oxygen()
  * @uses ddw_tbexob_is_builder()
  * @uses ddw_tbexob_string_edit_with_oxygen()
  * @uses ddw_tbex_meta_target()
@@ -242,7 +256,7 @@ add_filter( 'page_row_actions', 'ddw_tbexob_add_row_action_post_types', 100, 2 )
 function ddw_tbexob_add_row_action_post_types( $actions, $post ) {
 
 	/** Bail early if now Row Actions wanted */
-	if ( ! ddw_tbexob_display_row_actions() ) {
+	if ( ! ddw_tbexob_display_row_actions() || ! ddw_tbexob_current_user_can_access_oxygen() ) {
 		return $actions;
 	}
 
@@ -321,6 +335,7 @@ add_filter( 'display_post_states', 'ddw_tbexob_add_post_state_oxygen', 10, 2 );
  * @since 1.0.0
  *
  * @uses ddw_tbexob_display_post_state()
+ * @uses ddw_tbexob_current_user_can_access_oxygen()
  * @uses ddw_tbexob_is_builder()
  * @uses ddw_tbex_get_option()
  *
@@ -330,8 +345,8 @@ add_filter( 'display_post_states', 'ddw_tbexob_add_post_state_oxygen', 10, 2 );
  */
 function ddw_tbexob_add_post_state_oxygen( $post_states, $post ) {
 
-	/** Bail early if now Post State wanted */
-	if ( ! ddw_tbexob_display_post_state() ) {
+	/** Bail early if no Post State wanted */
+	if ( ! ddw_tbexob_display_post_state() || ! ddw_tbexob_current_user_can_access_oxygen() ) {
 		return $post_states;
 	}
 
@@ -346,13 +361,13 @@ function ddw_tbexob_add_post_state_oxygen( $post_states, $post ) {
 		$post_types = array_diff( $post_types, $ct_ignore_post_types );
 	}
 
-	/** Conditionally add row action where wanted */
+	/** Conditionally add post state where wanted */
 	if ( in_array( $post->post_type, $post_types )
 		&& 'ct_template' !== $post->post_type
 		&& 'oxy_user_library' !== $post->post_type
 	) {
 
-		/** Only add row action if we have a Oxygen-enabled item */
+		/** Only add post state if we have a Oxygen-enabled item */
 		if ( ddw_tbexob_is_builder( $post->ID ) ) {
 
 			$post_states[ 'edited_with_oxygen' ] = sprintf(
@@ -464,9 +479,16 @@ add_action( 'wp_head', 'ddw_tbexob_styles_oxygen_logo', 100 );
  */
 function ddw_tbexob_styles_oxygen_logo() {
 
+	/** Bail early if in Builder context */
+	if ( defined( 'SHOW_CT_BUILDER' ) ) {
+		return;
+	}
+
 	?>
 		<style type="text/css">
-			#wp-admin-bar-oxygen_admin_bar_menu .tbexob-oxygen-logo-svg {
+			#wp-admin-bar-oxygen_admin_bar_menu .tbexob-oxygen-logo-svg,
+			#wp-admin-bar-tbexob-oxygen-templates .tbexob-oxygen-logo-svg,
+			#wp-admin-bar-tbexob-oxygen-pages .tbexob-oxygen-logo-svg {
 				width: 15px;
 				height: 15px;
 			}
@@ -523,9 +545,14 @@ add_filter( 'admin_bar_menu', 'ddw_tbexob_maybe_tweak_oxygen_toolbar_item', ddw_
  */
 function ddw_tbexob_maybe_tweak_oxygen_toolbar_item( $wp_admin_bar ) {
 
+	/** Bail early if in Builder context */
+	if ( defined( 'SHOW_CT_BUILDER' ) ) {
+		return $wp_admin_bar;
+	}
+
 	/** Bail early if not on the frontend! */
 	if ( is_admin() ) {
-		return;
+		return $wp_admin_bar;
 	}
 
 	$parent_side = sanitize_key( ddw_tbex_get_option( 'oxygen', 'oxygen_tl_parent' ) );
@@ -716,7 +743,7 @@ function ddw_tbexob_oxygen_builder_backtowp_additions() {
 }  // end function
 
 
-add_action( 'oxygen_enqueue_ui_scripts', 'ddw_tbexob_oxygen_builder_toolbar_additions' );
+add_action( 'oxygen_enqueue_ui_scripts', 'ddw_tbexob_oxygen_builder_toolbar_additions', 100 );
 /**
  * Register and enqueue the jQuery-based JavaScript to add/tweak the "Back to
  *   WP" links section.
@@ -748,6 +775,9 @@ function ddw_tbexob_oxygen_builder_toolbar_additions() {
 		TBEXOB_PLUGIN_VERSION,
 		TRUE
 	);
+
+	/** Finally, enqueue the script */
+	wp_enqueue_script( 'tbexob-toolbar-additions' );
 
 	/** Optionally add additional links */
 	if ( ddw_tbexob_add_more_btwp_links() ) {
@@ -784,7 +814,84 @@ function ddw_tbexob_oxygen_builder_toolbar_additions() {
 		$oxytitleattr
 	);
 
-	/** Finally, enqueue the script */
-	wp_enqueue_script( 'tbexob-toolbar-additions' );
+}  // end function
+
+
+add_action( 'wp_enqueue_scripts', 'ddw_tbexob_styling_additions_oxygen_frontend' );
+add_action( 'admin_enqueue_scripts', 'ddw_tbexob_styling_additions_oxygen_frontend' );
+/**
+ * Add color styling from theme
+ *
+ * @since 1.2.0
+ *
+ * @uses wp_add_inline_style()
+ */
+function ddw_tbexob_styling_additions_oxygen_frontend() {
+
+    /**
+     * For WordPress Admin Bar
+     *   Style handle: 'admin-bar' (WordPress Core)
+     */
+    $oxygen_adminbar_css = "
+        #wpadminbar .menupop .menupop.oxygen-cptlist-item > .ab-item {
+			display: flex;
+			width: 200px;
+		}
+
+		.ab-submenu.oxygen-cptlist-group .oxygen-cptlist-item .oxygen-cptlist-title,
+		#wp-admin-bar-group-oxygen-edit-templates .oxygen-cptlist-item .oxygen-cptlist-title,
+		#wp-admin-bar-group-oxygen-edit-pages .oxygen-cptlist-item .oxygen-cptlist-title {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 100%;
+		}
+
+		.ab-submenu.oxygen-cptlist-group .oxygen-cptlist-item .oxygen-cptlist-status,
+		#wp-admin-bar-group-oxygen-edit-templates .oxygen-cptlist-item .oxygen-cptlist-status,
+		#wp-admin-bar-group-oxygen-edit-pages .oxygen-cptlist-item .oxygen-cptlist-status {
+			background: #55595c;
+			font-size: 11px;
+			line-height: 9px;
+			margin-top: 6px;
+			padding: 4px 8px;
+			border-radius: 3px;
+		}";
+
+    wp_add_inline_style( 'admin-bar', $oxygen_adminbar_css );
+
+}  // end function
+
+
+add_action( 'admin_enqueue_scripts', 'ddw_tbexob_styling_additions_oxygen_admin' );
+/**
+ * Add color styling from theme
+ *
+ * @since 1.2.0
+ *
+ * @uses wp_add_inline_style()
+ */
+function ddw_tbexob_styling_additions_oxygen_admin() {
+
+    /**
+     * For TBEX Settings page
+     *   Style handle: 'tbex-settings-page'
+     */
+	if ( version_compare( TBEX_PLUGIN_VERSION, '1.4.5', '<=' ) ) {
+
+		$oxygen_tbex_settings_css = "
+			.tbex-sub-setting th {
+				margin-left: 30px;
+				display: inline-block;
+			}
+			.tbex-settingsfields-block {
+				border-top: 1px dotted #999;
+			}
+			.dark-mode .tbex-settingsfields-block {
+				border-top: 1px dotted #666;
+			}";
+
+		wp_add_inline_style( 'tbex-settings-page', $oxygen_tbex_settings_css );
+
+	}  // end if
 
 }  // end function

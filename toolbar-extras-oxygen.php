@@ -41,8 +41,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** Plugin version */
 define( 'TBEXOB_PLUGIN_VERSION', '1.1.0' );
 
-/** Plugin version */
-define( 'TBEXOB_REQUIRED_BASE_PLUGIN_VERSION', '1.4.3' );
+/** Required base plugin version */
+define( 'TBEXOB_REQUIRED_BASE_PLUGIN_VERSION', '1.4.6' );
 
 /** Plugin directory */
 define( 'TBEXOB_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -140,7 +140,7 @@ function ddw_tbexob_is_plugin_installed( $plugin = '' ) {
 }  // end function
 
 
-add_action( 'plugins_loaded', 'ddw_tbexob_check_plugin_enviroment' );
+add_action( 'plugins_loaded', 'ddw_tbexob_check_plugin_environment' );
 /**
  * Check the environment for required base plugin Toolbar Extras (available for
  *   free on the official plugin directory at WordPress.org).
@@ -149,7 +149,7 @@ add_action( 'plugins_loaded', 'ddw_tbexob_check_plugin_enviroment' );
  *
  * @uses ddw_tbexob_load_translations()
  */
-function ddw_tbexob_check_plugin_enviroment() {
+function ddw_tbexob_check_plugin_environment() {
 
 	/** Load translations first. Just to be sure. */
 	ddw_tbexob_load_translations();
@@ -163,8 +163,6 @@ function ddw_tbexob_check_plugin_enviroment() {
 	}  // end if
 
 	/** 2nd case: Plugin is installed & active but needs an update */
-	//$tbex_version_required = '1.4.2';
-
 	if ( version_compare( TBEX_PLUGIN_VERSION, TBEXOB_REQUIRED_BASE_PLUGIN_VERSION, '<' ) ) {
 
 		add_action( 'admin_notices', 'ddw_tbexob_activation_needs_update_toolbar_extras' );
@@ -339,6 +337,10 @@ require_once TBEXOB_PLUGIN_DIR . 'includes/functions-conditionals.php';
 
 /** Include string functions */
 require_once TBEXOB_PLUGIN_DIR . 'includes/string-switcher.php';
+
+
+/** Include function for settings updates on version changes functions */
+require_once TBEXOB_PLUGIN_DIR . 'includes/tbexob-update-settings.php';
 
 
 /**

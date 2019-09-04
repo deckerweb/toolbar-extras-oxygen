@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function ddw_tbexob_help_tab_content() {
 
-	$tbex_info   = (array) ddw_tbex_info_values();
+	$tbex_info = (array) ddw_tbex_info_values();
 
 	$tbexob_space_helper = '<div style="height: 10px;"></div>';
 

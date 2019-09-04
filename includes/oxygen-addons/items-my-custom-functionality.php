@@ -17,6 +17,7 @@ add_action( 'admin_bar_menu', 'ddw_tbexob_aoitems_my_custom_functionality', 100 
  * Items for Add-On: My Custom Functionality (free, by Sridhar Katakam)
  *
  * @since 1.1.0
+ * @since 1.2.0 Optimized file path detection.
  *
  * @uses ddw_tbex_string_free_addon_title_attr()
  * @uses ddw_tbex_resource_item()
@@ -27,15 +28,21 @@ function ddw_tbexob_aoitems_my_custom_functionality( $admin_bar ) {
 
 	/** Bail early if Theme Editor is disabled */
 	if ( defined( 'DISALLOW_FILE_EDIT' ) && DISALLOW_FILE_EDIT ) {
-		return;
+		return $admin_bar;
 	}
 
-	$main_file = esc_url( admin_url( 'plugin-editor.php?plugin=my-custom-functionality-master%2Fplugin.php' ) );
+	$suffix = '';
+
+	if ( file_exists( trailingslashit( WP_PLUGIN_DIR ) . 'my-custom-functionality-master' ) ) {
+		$suffix = '-master';
+	}
+
+	$main_file = esc_url( admin_url( 'plugin-editor.php?plugin=my-custom-functionality' . $suffix . '%2Fplugin.php' ) );
 
 	/** Plugin's Settings */
 	$admin_bar->add_node(
 		array(
-			'id'     => 'ao-oxytheme-enabler',
+			'id'     => 'ao-srikatmcf',
 			'parent' => 'group-active-theme',
 			'title'  => esc_attr__( 'My Custom Functionality', 'toolbar-extras-oxygen' ),
 			'href'   => $main_file,
@@ -48,8 +55,8 @@ function ddw_tbexob_aoitems_my_custom_functionality( $admin_bar ) {
 
 		$admin_bar->add_node(
 			array(
-				'id'     => 'ao-oxytheme-enabler-settings',
-				'parent' => 'ao-oxytheme-enabler',
+				'id'     => 'ao-srikatmcf-file',
+				'parent' => 'ao-srikatmcf',
 				'title'  => esc_attr__( 'Main Plugin File', 'toolbar-extras-oxygen' ),
 				'href'   => $main_file,
 				'meta'   => array(
@@ -64,23 +71,23 @@ function ddw_tbexob_aoitems_my_custom_functionality( $admin_bar ) {
 
 			$admin_bar->add_group(
 				array(
-					'id'     => 'group-obthemeenabler-resources',
-					'parent' => 'ao-oxytheme-enabler',
+					'id'     => 'group-srikatmcf-resources',
+					'parent' => 'ao-srikatmcf',
 					'meta'   => array( 'class' => 'ab-sub-secondary' ),
 				)
 			);
 
 			ddw_tbex_resource_item(
 				'documentation',
-				'obthemeenabler-docs',
-				'group-obthemeenabler-resources',
+				'srikatmcf-docs',
+				'group-srikatmcf-resources',
 				'https://wpdevdesign.com/a-basic-wordpress-custom-functionality-plugin/'
 			);
 
 			ddw_tbex_resource_item(
 				'github',
-				'obthemeenabler-github',
-				'group-obthemeenabler-resources',
+				'srikatmcf-github',
+				'group-srikatmcf-resources',
 				'https://github.com/srikat/my-custom-functionality'
 			);
 

@@ -36,6 +36,22 @@ function ddw_tbexob_settings_section_info_oxygen() {
 /**
  * Tab Oxygen - 2nd settings section: Description.
  *
+ * @since 1.2.0
+ */
+function ddw_tbexob_settings_section_info_oxygen_toolbar_items() {
+
+	?>
+		<p>
+			<?php _e( 'Settings for special Oxygen related (top-level) Toolbar items.', 'toolbar-extras-oxygen' ); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Tab Oxygen - 3rd settings section: Description.
+ *
  * @since 1.0.0
  */
 function ddw_tbexob_settings_section_info_oxygen_builder_interface() {
@@ -50,7 +66,7 @@ function ddw_tbexob_settings_section_info_oxygen_builder_interface() {
 
 
 /**
- * Tab Oxygen - 3rd settings section: Description.
+ * Tab Oxygen - 4th settings section: Description.
  *
  * @since 1.0.0
  */
@@ -141,12 +157,112 @@ function ddw_tbexob_settings_cb_oxygen_display_customizer() {
 
 
 /**
- * Setting (Select): Which icon to use for the original Oxygen Item
+ * Setting (Select): Display row actions?
  *
  * @since 1.0.0
  *
  * @uses ddw_tbex_string_yes()
  * @uses ddw_tbex_string_no()
+ */
+function ddw_tbexob_settings_cb_oxygen_row_actions() {
+
+	$tbexob_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<select name="tbex-options-oxygen[oxygen_row_actions]" id="tbex-options-oxygen-oxygen_row_actions">
+			<option value="yes" <?php selected( sanitize_key( $tbexob_options[ 'oxygen_row_actions' ] ), 'yes' ); ?>><?php ddw_tbex_string_yes( 'echo' ); ?></option>
+			<option value="no" <?php selected( sanitize_key( $tbexob_options[ 'oxygen_row_actions' ] ), 'no' ); ?>><?php ddw_tbex_string_no( 'echo' ); ?></option>
+		</select>
+		<label for="tbex-options-oxygen[oxygen_row_actions]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), ddw_tbex_string_yes( 'return', 'code' ) ); ?></span>
+		</label>
+		<p class="description">
+			<?php echo sprintf(
+				/* translators: %s - label, "Action Link" */
+				__( 'This %s will be added to any post type item that has Oxygen support and contains at least one Oxygen element already (means it was edited in Oxygen).', 'toolbar-extras-oxygen' ),
+				__( 'Action Link', 'toolbar-extras-oxygen' )
+			); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Select): Display post state?
+ *
+ * @since 1.0.0
+ *
+ * @uses ddw_tbex_string_yes()
+ * @uses ddw_tbex_string_no()
+ */
+function ddw_tbexob_settings_cb_oxygen_post_state() {
+
+	$tbexob_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<select name="tbex-options-oxygen[oxygen_post_state]" id="tbex-options-oxygen-oxygen_post_state">
+			<option value="yes" <?php selected( sanitize_key( $tbexob_options[ 'oxygen_post_state' ] ), 'yes' ); ?>><?php ddw_tbex_string_yes( 'echo' ); ?></option>
+			<option value="no" <?php selected( sanitize_key( $tbexob_options[ 'oxygen_post_state' ] ), 'no' ); ?>><?php ddw_tbex_string_no( 'echo' ); ?></option>
+		</select>
+		<label for="tbex-options-oxygen[oxygen_post_state]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), ddw_tbex_string_yes( 'return', 'code' ) ); ?></span>
+		</label>
+		<p class="description">
+			<?php echo sprintf(
+				/* translators: %s - label, "Post State label" */
+				__( 'This %s will be added to any post type item that has Oxygen support and contains at least one Oxygen element already (means it was edited in Oxygen).', 'toolbar-extras-oxygen' ),
+				__( 'Post State label', 'toolbar-extras-oxygen' )
+			); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Color Picker): Post state label color
+ *
+ * @since 1.0.0
+ */
+function ddw_tbexob_settings_cb_oxygen_post_state_color() {
+
+	$tbex_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<input type="text" class="tbex-color-picker tbex-input" id="tbex-options-oxygen-oxygen_post_state_color" name="tbex-options-oxygen[oxygen_post_state_color]" value="<?php echo sanitize_hex_color( $tbex_options[ 'oxygen_post_state_color' ] ); ?>" data-default-color="#7046db" />
+		<?php
+			do_action( 'tbex_settings_color_picker_items' );
+		?>
+	<?php
+
+}  // end function
+
+
+/**
+ * 2nd section: Toolbar items:
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/**
+ * User info for original Oxygen Toolbar item.
+ *
+ * @since 1.2.0
+ */
+function ddw_tbexob_settings_cb_oxygen_tl_note() {
+
+	?>
+		<p class="description">
+			<?php echo __( 'This is the very helpful top-level Toolbar item which appears when viewing website content on the frontend. The sub items get dynamically added by Oxygen based on the used Oxygen template for the current viewed page.', 'toolbar-extras-oxygen' ); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Select): Which icon to use for the original Oxygen Item
+ *
+ * @since 1.0.0
  */
 function ddw_tbexob_settings_cb_oxygen_tl_use_icon() {
 
@@ -236,9 +352,6 @@ function ddw_tbexob_settings_cb_oxygen_tl_priority() {
  * Setting (Select): Original Oxygen Item Parent
  *
  * @since 1.0.0
- *
- * @uses ddw_tbex_string_yes()
- * @uses ddw_tbex_string_no()
  */
 function ddw_tbexob_settings_cb_oxygen_tl_parent() {
 
@@ -258,31 +371,27 @@ function ddw_tbexob_settings_cb_oxygen_tl_parent() {
 
 
 /**
- * Setting (Select): Display row actions?
+ * Setting (Select): Display Oxygen Templates group?
  *
- * @since 1.0.0
+ * @since 1.2.0
  *
  * @uses ddw_tbex_string_yes()
  * @uses ddw_tbex_string_no()
  */
-function ddw_tbexob_settings_cb_oxygen_row_actions() {
+function ddw_tbexob_settings_cb_display_tpl_toolbar() {
 
 	$tbexob_options = get_option( 'tbex-options-oxygen' );
 
 	?>
-		<select name="tbex-options-oxygen[oxygen_row_actions]" id="tbex-options-oxygen-oxygen_row_actions">
-			<option value="yes" <?php selected( sanitize_key( $tbexob_options[ 'oxygen_row_actions' ] ), 'yes' ); ?>><?php ddw_tbex_string_yes( 'echo' ); ?></option>
-			<option value="no" <?php selected( sanitize_key( $tbexob_options[ 'oxygen_row_actions' ] ), 'no' ); ?>><?php ddw_tbex_string_no( 'echo' ); ?></option>
+		<select name="tbex-options-oxygen[display_tpl_toolbar]" id="tbex-options-oxygen-display_tpl_toolbar">
+			<option value="yes" <?php selected( sanitize_key( $tbexob_options[ 'display_tpl_toolbar' ] ), 'yes' ); ?>><?php ddw_tbex_string_yes( 'echo' ); ?></option>
+			<option value="no" <?php selected( sanitize_key( $tbexob_options[ 'display_tpl_toolbar' ] ), 'no' ); ?>><?php ddw_tbex_string_no( 'echo' ); ?></option>
 		</select>
-		<label for="tbex-options-oxygen[oxygen_row_actions]">
-			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), ddw_tbex_string_yes( 'return', 'code' ) ); ?></span>
+		<label for="tbex-options-oxygen[display_tpl_toolbar]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), ddw_tbex_string_no( 'return', 'code' ) ); ?></span>
 		</label>
 		<p class="description">
-			<?php echo sprintf(
-				/* translators: %s - label, "Action Link" */
-				__( 'This %s will be added to any post type item that has Oxygen support and contains at least one Oxygen element already (means it was edited in Oxygen).', 'toolbar-extras-oxygen' ),
-				__( 'Action Link', 'toolbar-extras-oxygen' )
-			); ?>
+
 		</p>
 	<?php
 
@@ -290,58 +399,380 @@ function ddw_tbexob_settings_cb_oxygen_row_actions() {
 
 
 /**
- * Setting (Select): Display post state?
+ * Setting (Select): Template Group Item Parent
  *
- * @since 1.0.0
- *
- * @uses ddw_tbex_string_yes()
- * @uses ddw_tbex_string_no()
+ * @since 1.2.0
  */
-function ddw_tbexob_settings_cb_oxygen_post_state() {
+function ddw_tbexob_settings_cb_display_tpl_parent() {
 
 	$tbexob_options = get_option( 'tbex-options-oxygen' );
 
 	?>
-		<select name="tbex-options-oxygen[oxygen_post_state]" id="tbex-options-oxygen-oxygen_post_state">
-			<option value="yes" <?php selected( sanitize_key( $tbexob_options[ 'oxygen_post_state' ] ), 'yes' ); ?>><?php ddw_tbex_string_yes( 'echo' ); ?></option>
-			<option value="no" <?php selected( sanitize_key( $tbexob_options[ 'oxygen_post_state' ] ), 'no' ); ?>><?php ddw_tbex_string_no( 'echo' ); ?></option>
+		<select name="tbex-options-oxygen[display_tpl_parent]" id="tbex-options-oxygen-display_tpl_parent">
+			<option value="top-level" <?php selected( sanitize_key( $tbexob_options[ 'display_tpl_parent' ] ), 'top-level' ); ?>><?php _e( 'Top-level item (no parent)', 'toolbar-extras-oxygen' ); ?></option>
+			<option value="build-group" <?php selected( sanitize_key( $tbexob_options[ 'display_tpl_parent' ] ), 'build-group' ); ?>><?php _e( 'In Build Group (as sub items group)', 'toolbar-extras-oxygen' ); ?></option>
 		</select>
-		<label for="tbex-options-oxygen[oxygen_post_state]">
-			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), ddw_tbex_string_yes( 'return', 'code' ) ); ?></span>
+		<label for="tbex-options-oxygen[display_tpl_parent]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), '<code>' . __( 'Top-level item (no parent)', 'toolbar-extras-oxygen' ) . '</code>' ); ?></span>
 		</label>
-		<p class="description">
-			<?php echo sprintf(
-				/* translators: %s - label, "Post State label" */
-				__( 'This %s will be added to any post type item that has Oxygen support and contains at least one Oxygen element already (means it was edited in Oxygen).', 'toolbar-extras-oxygen' ),
-				__( 'Post State label', 'toolbar-extras-oxygen' )
-			); ?>
-		</p>
 	<?php
 
 }  // end function
 
 
 /**
- * Setting (Color Picker): Post state label color
+ * Setting (Input, Text): Template Group top-level item Name
  *
- * @since 1.0.0
+ * @since 1.2.0
  */
-function ddw_tbexob_settings_cb_oxygen_post_state_color() {
+function ddw_tbexob_settings_cb_display_tpl_name() {
 
 	$tbex_options = get_option( 'tbex-options-oxygen' );
 
 	?>
-		<input type="text" class="tbex-color-picker tbex-input" id="tbex-options-oxygen-oxygen_post_state_color" name="tbex-options-oxygen[oxygen_post_state_color]" value="<?php echo sanitize_hex_color( $tbex_options[ 'oxygen_post_state_color' ] ); ?>" data-default-color="#7046db" />
-		<?php
-			do_action( 'tbex_settings_color_picker_items' );
-		?>
+		<input type="text" class="regular-text tbex-input" id="tbex-options-oxygen-display_tpl_name" name="tbex-options-oxygen[display_tpl_name]" value="<?php echo wp_filter_nohtml_kses( $tbex_options[ 'display_tpl_name' ] ); ?>" />
+		<label for="tbex-options-oxygen[display_tpl_name]">
+			<span class="description">
+				<?php echo sprintf(
+					__( 'Default: %s', 'toolbar-extras-oxygen' ),
+					'<code>' . __( 'Templates', 'toolbar-extras-oxygen' ) . '</code>'
+				); ?>
+			</span>
+		</label>
 	<?php
 
 }  // end function
 
 
 /**
- * 2nd section: Builder interface:
+ * Setting (Number): Number of Templates to Show
+ *
+ * @since 1.2.0
+ */
+function ddw_tbexob_settings_cb_display_tpl_count() {
+
+	$tbex_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<input type="number" class="small-text tbex-input" id="tbex-options-oxygen-display_tpl_count" name="tbex-options-oxygen[display_tpl_count]" value="<?php echo intval( $tbex_options[ 'display_tpl_count' ] ); ?>" step="1" min="-1" />
+		<label for="tbex-options-oxygen[display_tpl_count]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), '<code>10</code>' ); ?></span>
+		</label>
+		<p class="description">
+			<?php echo sprintf(
+				/* translators: %s - label, "Templates" */
+				__( 'This limits the number of %s that will be shown in the listing.', 'toolbar-extras-oxygen' ),
+				__( 'Templates', 'toolbar-extras-oxygen' )
+			); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Select): Which icon to use for the Templates Group
+ *
+ * @since 1.2.0
+ */
+function ddw_tbexob_settings_cb_display_tpl_use_icon() {
+
+	$tbexob_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<select name="tbex-options-oxygen[display_tpl_use_icon]" id="tbex-options-oxygen-display_tpl_use_icon">
+			<option value="none" <?php selected( sanitize_key( $tbexob_options[ 'display_tpl_use_icon' ] ), 'none' ); ?>><?php _e( 'None', 'toolbar-extras-oxygen' ); ?></option>
+			<option value="oxygen" <?php selected( sanitize_key( $tbexob_options[ 'display_tpl_use_icon' ] ), 'oxygen' ); ?>><?php _e( 'Oxygen Logo Icon', 'toolbar-extras-oxygen' ); ?></option>
+			<option value="dashicon" <?php selected( sanitize_key( $tbexob_options[ 'display_tpl_use_icon' ] ), 'dashicon' ); ?>><?php _e( 'Dashicon Icon', 'toolbar-extras-oxygen' ); ?></option>
+		</select>
+		<label for="tbex-options-oxygen[display_tpl_use_icon]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), '<code>' . __( 'Oxygen Logo Icon', 'toolbar-extras-oxygen' ) . '</code>' ); ?></span>
+		</label>
+		<p class="description tbexob-tpl-icon-info">
+			<?php _e( 'When displaying within the Build Group the use of an icon is not recommended for styling reasons.', 'toolbar-extras-oxygen' ); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Dashicon picker): Templates Group Icon
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_string_choose_icon()
+ */
+function ddw_tbexob_settings_cb_display_tpl_icon() {
+
+	$tbex_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<input class="regular-text tbex-input" type="text" id="tbex-options-oxygen-display_tpl_icon" name="tbex-options-oxygen[display_tpl_icon]" value="<?php echo strtolower( sanitize_html_class( $tbex_options[ 'display_tpl_icon' ] ) ); ?>" />
+		<button class="button dashicons-picker" type="button" data-target="#tbex-options-oxygen-display_tpl_icon"><span class="dashicons-before dashicons-plus-alt"></span> <?php ddw_tbex_string_choose_icon( 'echo' ); ?></button>
+		<br />
+		<label for="tbex-options-oxygen[display_tpl_icon]">
+			<p class="description">
+				<?php
+					$current = sprintf(
+						'<code><span class="dashicons-before %1$s"></span> %1$s</code>',
+						$tbex_options[ 'display_tpl_icon' ]
+					);
+
+					echo sprintf(
+						/* translators: %s - a Dashicons CSS class name */
+						__( 'Current: %s', 'toolbar-extras-oxygen' ),
+						$current
+					);
+					echo '<br />';
+					echo sprintf(
+						/* translators: %s - a Dashicons CSS class name */
+						__( 'Default: %s', 'toolbar-extras-oxygen' ),
+						'<code><span class="dashicons-before dashicons-welcome-widgets-menus"></span> dashicons-welcome-widgets-menus</code>'
+					);
+				?>
+			</p>
+		</label>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Number): Display Templates Group Priority
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_explanation_toolbar_structure()
+ */
+function ddw_tbexob_settings_cb_display_tpl_priority() {
+
+	$tbex_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<input type="number" class="small-text tbex-input" id="tbex-options-oxygen-display_tpl_priority" name="tbex-options-oxygen[display_tpl_priority]" value="<?php echo absint( $tbex_options[ 'display_tpl_priority' ] ); ?>" step="1" min="0" />
+		<label for="tbex-options-oxygen[display_tpl_priority]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), '<code>1000</code>' ); ?></span>
+		</label>
+		<p class="description tbex-align-middle tbexob-tpl-priority-tl">
+			<?php _e( 'The default value means display at far right of the left Toolbar section/ column.', 'toolbar-extras-oxygen' ); ?> <?php _e( 'The smaller the value gets the more on the left the item will be displayed.', 'toolbar-extras-oxygen' ); ?> <?php ddw_tbex_explanation_toolbar_structure(); ?>
+		</p>
+		<p class="description tbex-align-middle tbexob-tpl-priority-bg">
+			<?php _e( 'With this value you can control where in the Build Group under Oxygen Templates the Template Group will appear. The higher the value, the lower the item group (listing) appears.', 'toolbar-extras-oxygen' ); ?> <?php echo sprintf(
+				__( 'The recommended value is %s.', 'toolbar-extras-oxygen' ),
+				'<code>10</code>'
+			); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Select): Display Oxygen editable Pages Group?
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_string_yes()
+ * @uses ddw_tbex_string_no()
+ */
+function ddw_tbexob_settings_cb_display_pages_toolbar() {
+
+	$tbexob_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<select name="tbex-options-oxygen[display_pages_toolbar]" id="tbex-options-oxygen-display_pages_toolbar">
+			<option value="yes" <?php selected( sanitize_key( $tbexob_options[ 'display_pages_toolbar' ] ), 'yes' ); ?>><?php ddw_tbex_string_yes( 'echo' ); ?></option>
+			<option value="no" <?php selected( sanitize_key( $tbexob_options[ 'display_pages_toolbar' ] ), 'no' ); ?>><?php ddw_tbex_string_no( 'echo' ); ?></option>
+		</select>
+		<label for="tbex-options-oxygen[display_pages_toolbar]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), ddw_tbex_string_no( 'return', 'code' ) ); ?></span>
+		</label>
+		<p class="description">
+
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Select): Pages Group Item Parent
+ *
+ * @since 1.2.0
+ */
+function ddw_tbexob_settings_cb_display_pages_parent() {
+
+	$tbexob_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<select name="tbex-options-oxygen[display_pages_parent]" id="tbex-options-oxygen-display_pages_parent">
+			<option value="top-level" <?php selected( sanitize_key( $tbexob_options[ 'display_pages_parent' ] ), 'top-level' ); ?>><?php _e( 'Top-level item (no parent)', 'toolbar-extras-oxygen' ); ?></option>
+			<option value="build-group" <?php selected( sanitize_key( $tbexob_options[ 'display_pages_parent' ] ), 'build-group' ); ?>><?php _e( 'In Build Group (as sub items group)', 'toolbar-extras-oxygen' ); ?></option>
+		</select>
+		<label for="tbex-options-oxygen[display_pages_parent]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), '<code>' . __( 'Top-level item (no parent)', 'toolbar-extras-oxygen' ) . '</code>' ); ?></span>
+		</label>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Input, Text): Pages Group top-level item Name
+ *
+ * @since 1.2.0
+ */
+function ddw_tbexob_settings_cb_display_pages_name() {
+
+	$tbex_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<input type="text" class="regular-text tbex-input" id="tbex-options-oxygen-display_pages_name" name="tbex-options-oxygen[display_pages_name]" value="<?php echo wp_filter_nohtml_kses( $tbex_options[ 'display_pages_name' ] ); ?>" />
+		<label for="tbex-options-oxygen[display_pages_name]">
+			<span class="description">
+				<?php echo sprintf(
+					__( 'Default: %s', 'toolbar-extras-oxygen' ),
+					'<code>' . __( 'Pages', 'toolbar-extras-oxygen' ) . '</code>'
+				); ?>
+			</span>
+		</label>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Number): Number of Pages to Show
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_explanation_toolbar_structure()
+ */
+function ddw_tbexob_settings_cb_display_pages_count() {
+
+	$tbex_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<input type="number" class="small-text tbex-input" id="tbex-options-oxygen-display_pages_count" name="tbex-options-oxygen[display_pages_count]" value="<?php echo intval( $tbex_options[ 'display_pages_count' ] ); ?>" step="1" min="-1" />
+		<label for="tbex-options-oxygen[display_pages_count]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), '<code>10</code>' ); ?></span>
+		</label>
+		<p class="description tbex-align-middle">
+			<?php echo sprintf(
+				/* translators: %s - label, "Oxygen-Edited Pages" */
+				__( 'This limits the number of %s that will be shown in the listing.', 'toolbar-extras-oxygen' ),
+				__( 'Oxygen-Edited Pages', 'toolbar-extras-oxygen' )
+			); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Select): Which icon to use for the Pages Group
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_string_yes()
+ * @uses ddw_tbex_string_no()
+ */
+function ddw_tbexob_settings_cb_display_pages_use_icon() {
+
+	$tbexob_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<select name="tbex-options-oxygen[display_pages_use_icon]" id="tbex-options-oxygen-display_pages_use_icon">
+			<option value="none" <?php selected( sanitize_key( $tbexob_options[ 'display_pages_use_icon' ] ), 'none' ); ?>><?php _e( 'None', 'toolbar-extras-oxygen' ); ?></option>
+			<option value="oxygen" <?php selected( sanitize_key( $tbexob_options[ 'display_pages_use_icon' ] ), 'oxygen' ); ?>><?php _e( 'Oxygen Logo Icon', 'toolbar-extras-oxygen' ); ?></option>
+			<option value="dashicon" <?php selected( sanitize_key( $tbexob_options[ 'display_pages_use_icon' ] ), 'dashicon' ); ?>><?php _e( 'Dashicon Icon', 'toolbar-extras-oxygen' ); ?></option>
+		</select>
+		<label for="tbex-options-oxygen[display_pages_use_icon]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), '<code>' . __( 'Oxygen Logo Icon', 'toolbar-extras-oxygen' ) . '</code>' ); ?></span>
+		</label>
+		<p class="description tbexob-pages-icon-info">
+			<?php _e( 'When displaying within the Build Group the use of an icon is not recommended for styling reasons.', 'toolbar-extras-oxygen' ); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Dashicon picker): Pages Group Icon
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_string_choose_icon()
+ */
+function ddw_tbexob_settings_cb_display_pages_icon() {
+
+	$tbex_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<input class="regular-text tbex-input" type="text" id="tbex-options-oxygen-display_pages_icon" name="tbex-options-oxygen[display_pages_icon]" value="<?php echo strtolower( sanitize_html_class( $tbex_options[ 'display_pages_icon' ] ) ); ?>" />
+		<button class="button dashicons-picker" type="button" data-target="#tbex-options-oxygen-display_pages_icon"><span class="dashicons-before dashicons-plus-alt"></span> <?php ddw_tbex_string_choose_icon( 'echo' ); ?></button>
+		<br />
+		<label for="tbex-options-oxygen[display_pages_icon]">
+			<p class="description">
+				<?php
+					$current = sprintf(
+						'<code><span class="dashicons-before %1$s"></span> %1$s</code>',
+						$tbex_options[ 'display_pages_icon' ]
+					);
+
+					echo sprintf(
+						/* translators: %s - a Dashicons CSS class name */
+						__( 'Current: %s', 'toolbar-extras-oxygen' ),
+						$current
+					);
+					echo '<br />';
+					echo sprintf(
+						/* translators: %s - a Dashicons CSS class name */
+						__( 'Default: %s', 'toolbar-extras-oxygen' ),
+						'<code><span class="dashicons-before dashicons-admin-page"></span> dashicons-admin-page</code>'
+					);
+				?>
+			</p>
+		</label>
+	<?php
+
+}  // end function
+
+
+/**
+ * Setting (Number): Display Pages Group Priority
+ *
+ * @since 1.2.0
+ *
+ * @uses ddw_tbex_explanation_toolbar_structure()
+ */
+function ddw_tbexob_settings_cb_display_pages_priority() {
+
+	$tbex_options = get_option( 'tbex-options-oxygen' );
+
+	?>
+		<input type="number" class="small-text tbex-input" id="tbex-options-oxygen-display_pages_priority" name="tbex-options-oxygen[display_pages_priority]" value="<?php echo absint( $tbex_options[ 'display_pages_priority' ] ); ?>" step="1" min="0" />
+		<label for="tbex-options-oxygen[display_pages_priority]">
+			<span class="description"><?php echo sprintf( __( 'Default: %s', 'toolbar-extras-oxygen' ), '<code>1000</code>' ); ?></span>
+		</label>
+		<p class="description tbex-align-middle tbexob-pages-priority-tl">
+			<?php _e( 'The default value means display at far right of the left Toolbar section/ column.', 'toolbar-extras-oxygen' ); ?> <?php _e( 'The smaller the value gets the more on the left the item will be displayed.', 'toolbar-extras-oxygen' ); ?> <?php ddw_tbex_explanation_toolbar_structure(); ?>
+		</p>
+		<p class="description tbex-align-middle tbexob-pages-priority-bg">
+			<?php _e( 'With this value you can control where in the Build Group the Pages Group will appear. The higher the value, the lower the item group (listing) appears.', 'toolbar-extras-oxygen' ); ?> <?php echo sprintf(
+				__( 'The recommended value is %s.', 'toolbar-extras-oxygen' ),
+				'<code>100</code>'
+			); ?>
+		</p>
+	<?php
+
+}  // end function
+
+
+/**
+ * 3rd section: Builder interface:
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /**
@@ -409,7 +840,7 @@ function ddw_tbexob_settings_cb_oxygen_btwp_links_blank() {
 
 
 /**
- * 3rd section: Tweaks:
+ * 4th section: Tweaks:
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /**
